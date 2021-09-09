@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood_p3_oc",
+  "version": "1.0.0",
+  "description": "Projet 3 open classroom",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/main.scss:.public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benoit7408/BenoitJaloux_3_08092021.git"
+  },
+  "author": "Benoit Jaloux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benoit7408/BenoitJaloux_3_08092021/issues"
+  },
+  "homepage": "https://github.com/Benoit7408/BenoitJaloux_3_08092021#readme"
+}
