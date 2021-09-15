@@ -1,0 +1,10 @@
+
+
+.localisation{
+  background-color: rgb(206, 199, 199);
+  &.map {
+    @extend %flex;}
+}
+.map__info{
+  background-color: gray;
+}

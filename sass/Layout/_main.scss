@@ -1,0 +1,44 @@
+main{background-color: gray;}
+
+.all__restaurant{
+  display: grid;
+  grid-template-columns: 100%;
+  width: 95vw;
+  margin: auto;
+  justify-items: center;
+}
+
+.restaurant{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin:20px 0;
+  height: 200px;
+  width: 90vw;
+}
+
+
+.thumbnail{
+  display:flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+
+    & .ancre-img{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 70%;
+      }
+    & .thumbnail__img{
+      
+      height: 100%;
+      width: 100%;
+      flex-grow: 1;
+      object-fit: cover;
+    }
+   & figcaption{
+      background-color: white;
+      height: 30%;
+  }
+}
