@@ -18,6 +18,8 @@ main{background-color: gray;}
 }
 
 
+
+
 .thumbnail{
   display:flex;
   flex-direction: column;
@@ -36,9 +38,13 @@ main{background-color: gray;}
       width: 100%;
       flex-grow: 1;
       object-fit: cover;
+      @extend %radius-top;
     }
    & figcaption{
       background-color: white;
       height: 30%;
+      @extend %radius-bottom;
+      @extend %flex;
   }
 }
+

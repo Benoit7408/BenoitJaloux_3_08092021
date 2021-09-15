@@ -8902,6 +8902,23 @@ readers do not read off random characters that represent icons */
   content: "\f1ba";
 }
 
+#ohmyfooter, .localisation, .thumbnail figcaption {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+}
+
+.stage__btn, .localisation .map__bouton, .thumbnail .thumbnail__img {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.stage__btn, .localisation .map__bouton, .thumbnail figcaption {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
 .hprojet {
   display: flex;
 }
@@ -8953,10 +8970,16 @@ main {
   height: 30%;
 }
 
+@font-face {
+  font-family: "Roboto", "Shrikhand", Arial, Helvetica, sans-serif;
+  src: url(../police/roboto/Roboto-Regular.ttf);
+  src: url(../police/Shrikhand/Shrikhand-Regular.ttf);
+}
 html, body {
   margin: 0;
   padding: 0;
   width: 100vv;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 a, ul {
@@ -8967,20 +8990,52 @@ a, ul {
 
 .localisation {
   background-color: #cec7c7;
+  padding-bottom: 10px;
 }
-.map__info {
+.localisation .map__info {
   background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.localisation .map__bouton {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  border: 2px black solid;
+  padding: 10px;
+  margin: auto;
+  background-color: #FF79DA;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
 }
 
 #ohmyfooter {
   background-color: black;
 }
+#ohmyfooter .footer__titre {
+  margin-left: 40px;
+  color: white;
+}
+#ohmyfooter .flist {
+  margin: 10px 0;
+}
+#ohmyfooter .flist .flist__text {
+  color: white;
+  margin: 10px 0;
+}
 
-.localisation.map {
+.stage__btn {
+  width: 20%;
   display: flex;
-  flex-direction: column;
-  width: 70%;
-  margin: 10px auto;
+  justify-content: center;
+  border: 2px black solid;
+  padding: 10px;
+  margin: auto;
+  background-color: #FF79DA;
 }
 
 /*# sourceMappingURL=style.css.map */
