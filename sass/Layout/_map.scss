@@ -1,14 +1,14 @@
 
 
 .map{
-  background-color: rgb(206, 199, 199);
+  background-color: $couleur-background;
   @extend %flexCol;
   padding-bottom: 30px;
 
   
     & .map__info{
       width: 100vw;
-      background-color: gray;
+      background-color:$couleur-background;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -36,7 +36,7 @@
       padding : 10px 30px;
       margin: 15px auto;
       @extend %radius;
-      box-shadow: 2px 2px 2px black;
+      @extend %ombre;
       background-color: $couleur-secondaire;
 
       & .map__bouton{

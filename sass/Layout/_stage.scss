@@ -21,7 +21,7 @@
       padding : 1rem 2rem 1rem 0 ;
       margin: 1rem;
       border-radius: 15px;
-      background-color: rgb(223, 215, 215);
+      background-color:$couleur-background;
       position: relative;
       justify-content: space-between;
       @extend %ombre;

@@ -8907,24 +8907,24 @@ readers do not read off random characters that represent icons */
   flex-direction: column;
 }
 
-.map .map__form {
+#commande button, .map .map__form {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
 }
 
-.restaurants__thumbnail .image {
+.carte .entre, .carte .plat, .carte .dessert, .restaurants__thumbnail .image {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 
-.restaurants__thumbnail figcaption {
+.carte .entre, .carte .plat, .carte .dessert, .restaurants__thumbnail figcaption {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
-.stage__block__btn, .restaurants {
+#commande button, .carte .entre, .carte .plat, .carte .dessert, .stage__block__btn, .map .map__form, .restaurants {
   box-shadow: 2px 2px 2px black;
   border-radius: 15px;
 }
@@ -8937,7 +8937,7 @@ readers do not read off random characters that represent icons */
 }
 
 main {
-  background-color: #e4dcdc;
+  background-color: #e6dede;
 }
 
 .all__restaurants {
@@ -9007,6 +9007,8 @@ a, ul {
   list-style-type: none;
   text-decoration: none;
   color: black;
+  padding: 0;
+  margin: 0;
 }
 
 h2, h3, p {
@@ -9014,12 +9016,12 @@ h2, h3, p {
 }
 
 .map {
-  background-color: #cec7c7;
+  background-color: #e6dede;
   padding-bottom: 30px;
 }
 .map .map__info {
   width: 100vw;
-  background-color: gray;
+  background-color: #e6dede;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9043,7 +9045,6 @@ h2, h3, p {
   text-align: center;
   padding: 10px 30px;
   margin: 15px auto;
-  box-shadow: 2px 2px 2px black;
   background-color: #FF79DA;
 }
 .map .map__form .map__bouton {
@@ -9063,7 +9064,7 @@ h2, h3, p {
 }
 #ohmyfooter .flist .flist__text {
   color: white;
-  margin: 10px 0;
+  margin: 10px 0 0 10px;
 }
 
 .stage {
@@ -9087,7 +9088,7 @@ h2, h3, p {
   padding: 1rem 2rem 1rem 0;
   margin: 1rem;
   border-radius: 15px;
-  background-color: #dfd7d7;
+  background-color: #e6dede;
   position: relative;
   justify-content: space-between;
 }
@@ -9106,6 +9107,65 @@ h2, h3, p {
   background-color: #9356DC;
   opacity: 0.5;
   font-weight: bold;
+}
+
+.restaurants__thumbnail__figcaption {
+  display: flex;
+  background-color: #e6dede;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: absolute;
+  width: 100vw;
+  margin-top: -30px;
+}
+.restaurants__thumbnail__figcaption h1 {
+  flex: 1 60%;
+  margin: 10px 10px;
+}
+.restaurants__thumbnail__figcaption .heart {
+  flex: 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.carte {
+  margin-top: 50px;
+}
+.carte .entre, .carte .plat, .carte .dessert {
+  background-color: white;
+  width: 95vw;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.carte .entre h3, .carte .plat h3, .carte .dessert h3 {
+  width: 100%;
+}
+.carte .entre p, .carte .plat p, .carte .dessert p {
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.price {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+#commande {
+  text-align: center;
+  margin-bottom: 30px;
+}
+#commande button {
+  width: 60%;
+  text-align: center;
+  padding: 10px 30px;
+  margin: 15px auto;
+  background-color: #FF79DA;
 }
 
 /*# sourceMappingURL=style.css.map */
