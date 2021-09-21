@@ -1,19 +1,30 @@
-%flex{
+%flexCol{
   display:flex;
   flex-direction: column;
-  width: 100%;
-  margin: 0;
+  
 }
 
-
-%radius-top{
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+%radius{
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
-%radius-bottom{
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+%radius-top-thumbnail{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+%radius-bottom-thumbnail{
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+%ombre{
+  box-shadow:2px 2px 2px black ;
+  border-radius: 15px;
+
 }
 
 %margin-titre{

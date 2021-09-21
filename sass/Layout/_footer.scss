@@ -1,6 +1,6 @@
 #ohmyfooter{
   background-color: black;
-  @extend %flex;
+  @extend %flexCol;
   & .footer__titre{
     margin-left:40px;
     color: white;

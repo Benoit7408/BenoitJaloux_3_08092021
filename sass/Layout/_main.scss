@@ -1,6 +1,6 @@
-main{background-color: gray;}
+main{background-color: rgb(228, 220, 220);}
 
-.all__restaurant{
+.all__restaurants{
   display: grid;
   grid-template-columns: 100%;
   width: 95vw;
@@ -8,21 +8,18 @@ main{background-color: gray;}
   justify-items: center;
 }
 
-.restaurant{
+.restaurants{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin:20px 0;
   height: 200px;
   width: 90vw;
+  @extend %ombre;
 }
 
-
-
-
-.thumbnail{
-  display:flex;
-  flex-direction: column;
+.restaurants__thumbnail{
+  @extend %flexCol;
   margin: 0;
   height: 100%;
 
@@ -32,19 +29,33 @@ main{background-color: gray;}
       flex-wrap: wrap;
       height: 70%;
       }
-    & .thumbnail__img{
+    & .image{
       
       height: 100%;
       width: 100%;
       flex-grow: 1;
       object-fit: cover;
-      @extend %radius-top;
+      @extend %radius-top-thumbnail;
     }
    & figcaption{
       background-color: white;
       height: 30%;
-      @extend %radius-bottom;
-      @extend %flex;
+      @extend %radius-bottom-thumbnail;
+      @extend %flexCol;
+      flex-wrap: wrap;
+      & .ancre-figcaption__titre{
+        height: 100%;
+      }
+      & .ancre-figcaption__icon{
+        display:flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        & .fa-heart{
+          font-size: 30px;
+        }
+      }
+
   }
 }
 
