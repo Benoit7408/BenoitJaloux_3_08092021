@@ -37,7 +37,7 @@
       margin: 15px auto;
       @extend %radius;
       @extend %ombre;
-      background-color: $couleur-secondaire;
+      @extend %gradient;
 
       & .map__bouton{
       

@@ -1,5 +1,8 @@
 .stage{
-      width: 10vw;
+      width: 100vw;
+      justify-content: space-evenly;
+      display: flex;
+      flex-direction: column;
 
       & .stage__header {
             width: 90vw;
@@ -23,24 +26,50 @@
       border-radius: 15px;
       background-color:$couleur-background;
       position: relative;
-      justify-content: space-between;
+      justify-content: space-evenly;
       @extend %ombre;
-
-      & .sbb__number{
-            padding: 10px 15px;
-            background-color: $couleur-primaire;
-            border-top-left-radius: 40px;
-            border-top-right-radius: 40px;
-            border-bottom-left-radius: 40px;
-            border-bottom-right-radius: 40px;
-            margin-right: -10px;
-            position: absolute;
-            margin-right: -10px;
-      }
 
       &:hover {
             background-color:$couleur-primaire;
             opacity: 0.5;
             font-weight: bold;
       }
+}
+
+.stage__number{
+      
+      position: absolute;
+      
+}
+.number1{
+      
+      padding: 10px 15px;
+      background-color: $couleur-primaire;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px; 
+      margin-right: 90%;
+}
+
+.number2{
+      
+      padding: 10px 15px;
+      background-color: $couleur-primaire;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      margin-right: 90%;
+}
+
+.number3{
+      
+      padding: 10px 15px;
+      background-color: $couleur-primaire;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      margin-right: 90%;
 }

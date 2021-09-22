@@ -31,3 +31,7 @@
   margin:0 0 0 10px;
   padding:2px 0 ;
 }
+
+%gradient{
+  background:linear-gradient(180deg,$couleur-secondaire,$couleur-primaire);
+}

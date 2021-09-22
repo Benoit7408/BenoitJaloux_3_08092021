@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="public/css/style.css">
-  <title>ohmyfood</title>
+  <title>Le délice des sens</title>
 </head>
 <body>
 
@@ -23,21 +23,22 @@
 
 <main>
   <main>
-    <figure class="picture">
-      <img src="src/images/restaurants/le-delice-des-sens.jpg">
+    <figure class="restaurants__thumbnail">
+      <img class="image__header" src="src/images/restaurants/le-delice-des-sens.jpg">
     </figure>
-      <figcaption>
+      <figcaption class="restaurants__thumbnail__figcaption">
         <h1>A la francaise</h1>
-        <i class="heart fas fa-heart"></i>
+        <i class="heart far fa-heart"></i>
+        <i class="heart heart__2 far fa-heart"></i>
       </figcaption>
     </figure>
     
-<section class="global__card">
-  <article class="card">
-    <h2 class="card__title">Entrée</h2>
+<section class="carte">
+  <article class="menu menu__entre">
+    <h2 class="menu__entre__titre">Entrée</h2>
     <ul>
 
-      <li class="card__element">
+      <li class="entre entre__1">
         <h3>tartare de thon</h3>
         <p>Assaisonné au yuzu</p>
         <div class="price">
@@ -45,7 +46,7 @@
         </div>
       </li>
      
-      <li class="card__element">
+      <li class="entre entre__2">
         <h3>Bouchée de homard croustillant</h3>
         <p>Et sa farandole de petits légumes</p>
         <div class="price">
@@ -53,7 +54,7 @@
         </div>
       </li>
 
-      <li class="card__element">
+      <li class="entre entre__3">
         <h3>Velouté de cèpes</h3>
         <p>ux truffes</p>
         <div class="price">
@@ -65,24 +66,24 @@
 
   </article>
 
-  <article class="card">
-    <h2 class="card__title">PLATS</h2>
+  <article class="menu menu__plat">
+    <h2 class="menu__plat__titre">PLATS</h2>
     <ul>
-      <li class="card__element">
+      <li class="plat plat__1">
         <h3>Poulet roti aux herbes de provence</h3>
         <p>Et sa crèmes de truffe</p>
         <div class="price">
           <strong>40€</strong>
         </div>
       </li>
-      <li class="card__element">
+      <li class="plat plat__2">
         <h3>langouste rotie</h3>
         <p>Et ses légumes de saison</p>
         <div class="price">
           <strong>35€</strong>
         </div>
       </li>
-      <li class="card__element">
+      <li class="plat plat__3">
         <h3>Cote de boeuf angus</h3>
         <p>Et sa purée de panais</p>
         <div class="price">
@@ -90,23 +91,25 @@
         </div>
       </li> 
     </ul>
-    <h2 class="card__title">Desserts</h2>
+  </article>
+  <article class="menu menu__dessert">
+    <h2 class="menu__dessert__titre">Desserts</h2>
     <ul>
-      <li class="card__element">
+      <li class="dessert dessert__1">
         <h3>farandole de dessert</h3>
         <p>Du chef</p>
         <div class="price">
           <strong>18€</strong>
         </div>
       </li>
-      <li class="card__element">
+      <li class="dessert dessert__2">
         <h3>Crème brulée</h3>
         <p>Revisité</p>
         <div class="price">
           <strong>22€</strong>
         </div>
       </li>
-      <li class="card__element">
+      <li class="dessert dessert__3">
         <h3>Tiramisu</h3>
         <p>A la noisette</p>
         <div class="price">
@@ -118,6 +121,11 @@
 
 
 </section>
+<form id="commande">
+  <button>commander</button>
+
+</form>
+
 </main>
 
 
@@ -130,7 +138,7 @@
 
   <ul>
     <li class="flist">
-      <a class="flist__text" href="#"><i class="flist__icon fas fa-ustensils"></i>proposer un restaurant</a>
+      <a class="flist__text" href="#"><i class="flist__icon fas fa-utensils"></i>proposer un restaurant</a>
     </li>
     <li class="flist">
       <a class="flist__text" href="#"><i class="flist__icon fas fa-hands-helping"></i>devenir partenaire</a>
