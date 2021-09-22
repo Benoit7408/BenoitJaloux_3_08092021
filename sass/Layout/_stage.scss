@@ -3,6 +3,7 @@
       justify-content: space-evenly;
       display: flex;
       flex-direction: column;
+      align-items: center;
 
       & .stage__header {
             width: 90vw;
@@ -12,9 +13,11 @@
 
 .stage__block{
       @extend %flexCol;
-      width: 100vw;
+      width: 95vw;
+      align-items: center;
       margin-bottom: 2rem;
       padding: 0;
+      
 }
 
 .stage__block__btn{
@@ -26,8 +29,10 @@
       border-radius: 15px;
       background-color:$couleur-background;
       position: relative;
-      justify-content: space-evenly;
+      justify-content: space-around;
+      max-width: 368px;
       @extend %ombre;
+      width: 80vw;
 
       &:hover {
             background-color:$couleur-primaire;

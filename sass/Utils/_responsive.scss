@@ -33,20 +33,22 @@
 @media screen and (min-width:(map-get($breakpoints , desktop ))){
   
   nav{
-    display: grid;
-    grid-template-columns: 30vw;
-    grid-template-rows: 1fr 1fr;
+    
     width: 30vw;
-    & .map *{width:30vw!important;}
+    & .map *{width:20vw!important;}
     & .stage{width: 30vw;
     & .stage__header {width: auto;}
     & .stage__block{
-      display: block;
+      display: flex;
       width: 30vw;
-      & .stage__block__btn{width: 80%;}
+      margin-top: 2rem;
+      
+      & .stage__block__btn{width: 25vw;}
     }
   }
 }
+
+.map__info__lieu{flex: 1 10% !important ;}
 body{
   display:flex;
   flex-wrap: wrap;
@@ -58,7 +60,7 @@ body{
     & .flist{
       display: flex;
       flex-wrap: wrap;
-    width: 30vw;}
+      width: 30vw;}
   }
 
 main{width: 70vw;}
@@ -83,3 +85,80 @@ main{width: 70vw;}
 }
 
   
+@media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
+
+  .menu{
+      display:grid;
+      grid-template-columns: 1fr 2fr;
+      border: 2px solid black;
+      width: 95vw;
+      margin: auto;
+    & .menu__entre__titre,
+      .menu__plat__titre,
+      .menu__dessert__titre{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    & .entre,.plat,.dessert{
+      width: 60vw;
+    }
+
+  }
+
+}
+
+@media screen and (min-width:(map-get($breakpoints , desktop ))){
+
+#body__restaurants{
+  display: block;
+  background-color: $couleur-background;
+}
+
+#main__restaurants{
+  width: 100%;
+  height: auto;
+  background: url("../../src/images/restaurants/la-palette-du-gout.jpg");
+  opacity: 0.9;
+  background-size: cover;
+}
+
+.restaurants__thumbnail{
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  display: none;
+  & .restaurants__thumbnail__figcaption{
+    width: 20vw;
+    height: auto;
+    margin-top: 0;
+    position:static
+  }
+}
+
+.menu__entre{display: flex;
+  width: 25vw;
+  background-color: $couleur-tertiaire;
+  margin:0px 1000px ;
+  border-radius: 15%;
+  opacity: 0.8;}
+
+.menu__plat{display: flex;
+  width: 25vw;
+  background-color: $couleur-secondaire;
+  margin: 0 150px;
+  border-radius: 15%;
+  opacity: 0.8;}
+
+.menu__dessert{
+  display: flex;
+  width: 25vw;
+  background-color: $couleur-primaire;
+  margin: 40px 1200px;
+  border-radius: 15%;
+  opacity: 0.8;
+}
+.entre,.plat,.dessert{
+  width: 15vw !important;
+}
+}

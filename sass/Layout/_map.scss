@@ -3,7 +3,8 @@
 .map{
   background-color: $couleur-background;
   @extend %flexCol;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  justify-content: center;
 
   
     & .map__info{
