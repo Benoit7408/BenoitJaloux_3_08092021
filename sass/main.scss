@@ -4,8 +4,11 @@
 @import'font-awesome/regular.scss';
 @import 'font-awesome/v4-shims.scss';
 
+
 @import 'Utils/Variables';
+@import 'Utils/animation';
 @import 'Utils/placeholders';
+
 @import 'Layout/header';
 @import 'Layout/main';
 @import 'Layout/global';
@@ -13,3 +16,5 @@
 @import 'Layout/footer';
 @import 'Layout/stage';
 @import 'Layout/restaurants';
+
+@import 'Utils/responsive';
