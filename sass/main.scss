@@ -4,17 +4,18 @@
 @import'font-awesome/regular.scss';
 @import 'font-awesome/v4-shims.scss';
 
-
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import 'Utils/Variables';
 @import 'Utils/animation';
 @import 'Utils/placeholders';
 
+@import 'Layout/global';
 @import 'Layout/header';
 @import 'Layout/main';
-@import 'Layout/global';
+@import 'Layout/stage';
 @import 'Layout/map';
 @import 'Layout/footer';
-@import 'Layout/stage';
+
 @import 'Layout/restaurants';
 
 @import 'Utils/responsive';

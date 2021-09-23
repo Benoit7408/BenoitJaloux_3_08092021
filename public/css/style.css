@@ -2,6 +2,7 @@
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 .fa,
 .fas,
 .far,
@@ -8914,7 +8915,7 @@ readers do not read off random characters that represent icons */
   animation: heart;
 }
 
-.stage__block, #ohmyfooter, .map, .restaurants__thumbnail figcaption, .restaurants__thumbnail {
+#ohmyfooter, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__thumbnail {
   display: flex;
   flex-direction: column;
 }
@@ -8936,13 +8937,37 @@ readers do not read off random characters that represent icons */
   border-bottom-right-radius: 15px;
 }
 
-#commande button, .carte .entre, .carte .plat, .carte .dessert, .stage__block__btn, .map .map__form, .restaurants {
+#commande button, .carte .entre, .carte .plat, .carte .dessert, .map .map__form, .stage__block__btn, .restaurants {
   box-shadow: 2px 2px 2px black;
   border-radius: 15px;
 }
 
 #commande button, .map .map__form {
   background: linear-gradient(180deg, #FF79DA, #9356DC);
+}
+
+@font-face {
+  font-family: "Roboto", "Shrikhand", Arial, Helvetica, sans-serif;
+  src: url(../police/roboto/Roboto-Regular.ttf);
+  src: url(../police/Shrikhand/Shrikhand-Regular.ttf);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font-family: "Roboto", "Shrikhand", Arial, Helvetica, sans-serif;
+}
+
+a, ul {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+
+h2, h3, p {
+  margin: 5px 10px;
 }
 
 .hprojet {
@@ -8975,7 +9000,7 @@ main {
 
 .restaurants__thumbnail {
   margin: 0;
-  height: 100%;
+  height: auto;
 }
 .restaurants__thumbnail .ancre-img {
   display: flex;
@@ -9005,82 +9030,6 @@ main {
 }
 .restaurants__thumbnail figcaption .ancre-figcaption__icon .fa-heart {
   font-size: 30px;
-}
-
-@font-face {
-  font-family: "Roboto", "Shrikhand", Arial, Helvetica, sans-serif;
-  src: url(../police/roboto/Roboto-Regular.ttf);
-  src: url(../police/Shrikhand/Shrikhand-Regular.ttf);
-}
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-}
-
-a, ul {
-  list-style-type: none;
-  text-decoration: none;
-  color: black;
-  padding: 0;
-  margin: 0;
-}
-
-h2, h3, p {
-  margin: 5px 10px;
-}
-
-.map {
-  background-color: #e6dede;
-  padding-bottom: 20px;
-  justify-content: center;
-}
-.map .map__info {
-  width: 100vw;
-  background-color: #e6dede;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.map .map__info .map__info__icone {
-  flex: 1 20%;
-  text-align: end;
-}
-.map .map__info .map__info__lieu {
-  flex: 1 60%;
-  text-align: start;
-  padding-left: 1rem;
-}
-.map .map__titre {
-  text-align: center;
-  width: 100vw;
-  margin: 15px auto;
-}
-.map .map__form {
-  width: 60%;
-  text-align: center;
-  padding: 10px 30px;
-  margin: 15px auto;
-}
-.map .map__form .map__bouton {
-  color: white;
-  font-size: larger;
-}
-
-#ohmyfooter {
-  background-color: black;
-}
-#ohmyfooter .footer__titre {
-  margin-left: 40px;
-  color: white;
-}
-#ohmyfooter .flist {
-  margin: 10px 0;
-}
-#ohmyfooter .flist .flist__text {
-  color: white;
-  margin: 10px 0 0 10px;
 }
 
 .stage {
@@ -9155,6 +9104,58 @@ h2, h3, p {
   margin-right: 90%;
 }
 
+.map {
+  background-color: #e6dede;
+  padding-bottom: 20px;
+  justify-content: center;
+}
+.map .map__info {
+  width: 100vw;
+  background-color: #e6dede;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.map .map__info .map__info__icone {
+  flex: 1 20%;
+  text-align: end;
+}
+.map .map__info .map__info__lieu {
+  flex: 1 60%;
+  text-align: start;
+  padding-left: 1rem;
+}
+.map .map__titre {
+  text-align: center;
+  width: 100vw;
+  margin: 15px auto;
+}
+.map .map__form {
+  width: 60%;
+  text-align: center;
+  padding: 10px 30px;
+  margin: 15px auto;
+}
+.map .map__form .map__bouton {
+  color: white;
+  font-size: larger;
+}
+
+#ohmyfooter {
+  background-color: black;
+}
+#ohmyfooter .footer__titre {
+  margin-left: 40px;
+  color: white;
+}
+#ohmyfooter .flist {
+  margin: 10px 0;
+}
+#ohmyfooter .flist .flist__text {
+  color: white;
+  margin: 10px 0 0 10px;
+}
+
 .restaurants__thumbnail__figcaption {
   display: flex;
   background-color: #e6dede;
@@ -9204,7 +9205,7 @@ h2, h3, p {
 
 #commande {
   text-align: center;
-  margin-bottom: 30px;
+  margin: 30px;
 }
 #commande button {
   width: 60%;
@@ -9212,6 +9213,10 @@ h2, h3, p {
   padding: 10px 30px;
   margin: 15px auto;
   color: white;
+}
+#commande #ohmyfooter ul {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (min-width: 800px) {
@@ -9270,7 +9275,7 @@ h2, h3, p {
   }
   body header {
     width: 100vw;
-    height: 40px;
+    height: 65px;
   }
 
   #ohmyfooter {
@@ -9330,54 +9335,98 @@ h2, h3, p {
 
   #main__restaurants {
     width: 100%;
-    height: auto;
-    background: url("../../src/images/restaurants/la-palette-du-gout.jpg");
-    opacity: 0.9;
-    background-size: cover;
+    height: 120vh;
+  }
+
+  .hprojet {
+    justify-content: space-around;
+    align-items: center;
   }
 
   .restaurants__thumbnail {
     display: flex;
-    flex-direction: column;
-    width: 20vw;
-    display: none;
+    width: 100vw;
+    position: absolute;
   }
   .restaurants__thumbnail .restaurants__thumbnail__figcaption {
-    width: 20vw;
-    height: auto;
-    margin-top: 0;
-    position: static;
+    width: 100vw;
+    height: 70px;
+    border-radius: 0;
+    display: flex;
+  }
+  .restaurants__thumbnail .restaurants__thumbnail__figcaption .restaurants__thumbnail__figcaption__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .restaurants__thumbnail .restaurants__thumbnail__figcaption .restaurants__thumbnail__figcaption__header h1 {
+    width: 100%;
+    text-align: center;
+    font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  }
+  .restaurants__thumbnail .restaurants__thumbnail__figcaption .restaurants__thumbnail__figcaption__header .heart {
+    flex: 0 0;
+    width: max-content;
+    position: absolute;
+    margin-right: 35%;
+  }
+
+  .image__header {
+    height: 120vh;
+  }
+
+  .carte {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
   }
 
   .menu__entre {
     display: flex;
-    width: 25vw;
+    width: 30vw;
+    min-width: 500px;
     background-color: #99E2D0;
-    margin: 0px 1000px;
     border-radius: 15%;
     opacity: 0.8;
+    margin: 20px;
+    padding: 20px;
   }
 
   .menu__plat {
     display: flex;
-    width: 25vw;
+    width: 30vw;
     background-color: #FF79DA;
-    margin: 0 150px;
+    min-width: 500px;
     border-radius: 15%;
     opacity: 0.8;
+    margin: 20px;
+    padding: 20px;
   }
 
   .menu__dessert {
     display: flex;
-    width: 25vw;
+    width: 30vw;
     background-color: #9356DC;
-    margin: 40px 1200px;
+    min-width: 500px;
     border-radius: 15%;
     opacity: 0.8;
+    margin: 20px;
+    padding: 20px;
   }
 
   .entre, .plat, .dessert {
-    width: 15vw !important;
+    width: 90% !important;
+  }
+
+  #commande {
+    position: relative;
+    z-index: 1;
+  }
+
+  #ohmyfooter {
+    position: absolute;
   }
 }
 
