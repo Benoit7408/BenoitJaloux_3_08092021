@@ -8968,11 +8968,20 @@ footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__t
 
 @media screen and (min-width: 1200px) {
   #body__restaurants #body__restaurants {
-    display: block;
     background-color: #e6dede;
   }
   #body__restaurants #main__restaurants {
     width: 100%;
+  }
+  #body__restaurants .restaurants__thumbnail {
+    height: 30vw;
+  }
+  #body__restaurants .restaurants__thumbnail .image__header {
+    object-fit: cover;
+    height: 90%;
+  }
+  #body__restaurants .restaurants__thumbnail__figcaption {
+    height: 10%;
   }
   #body__restaurants .hprojet {
     justify-content: space-around;

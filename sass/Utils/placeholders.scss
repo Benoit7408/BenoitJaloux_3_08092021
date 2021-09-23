@@ -64,14 +64,23 @@
   @media screen and (min-width:(map-get($breakpoints , desktop ))){
 
     #body__restaurants{
-      display: block;
+    
       background-color: $couleur-background;
     }
     
     #main__restaurants{
       width: 100%;
     }
-    
+    .restaurants__thumbnail{
+      height: 30vw;
+    & .image__header{
+      object-fit: cover;
+      height: 90%;
+    }
+    }
+    & .restaurants__thumbnail__figcaption{
+      height: 10%;
+    }
     .hprojet{
       justify-content: space-around;
       align-items: center;
