@@ -102,7 +102,7 @@
 
 %responsive__tablette__index{
   @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
-
+   
     .stage__block{
       display: grid;
       justify-content: center;
