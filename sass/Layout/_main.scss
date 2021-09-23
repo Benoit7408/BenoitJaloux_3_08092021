@@ -21,7 +21,7 @@ main{background-color:$couleur-background}
 .restaurants__thumbnail{
   @extend %flexCol;
   margin: 0;
-  height: auto;
+  height: 100%;
 
     & .ancre-img{
       display: flex;

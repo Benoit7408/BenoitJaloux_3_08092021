@@ -137,12 +137,13 @@
     
     #ohmyfooter__restaurants{
       width: 100vw;
-      position: absolute;
+      & ul{display: flex;
+
       & .flist{
         display: flex;
         flex-wrap: wrap;
         width: 30vw;}
-
+      }
     }
   }
 }

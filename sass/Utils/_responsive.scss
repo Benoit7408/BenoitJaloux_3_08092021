@@ -58,12 +58,14 @@
   }
   #ohmyfooter__index{
     width: 100vw;
+    & ul{
+    display: flex;
     & .flist{
       display: flex;
       flex-wrap: wrap;
       width: 30vw;}
   }
-
+  }
 #main__index{width: 70vw;}
 
 .all__restaurants{

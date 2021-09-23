@@ -9035,9 +9035,11 @@ footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__t
   }
   #body__restaurants #ohmyfooter__restaurants {
     width: 100vw;
-    position: absolute;
   }
-  #body__restaurants #ohmyfooter__restaurants .flist {
+  #body__restaurants #ohmyfooter__restaurants ul {
+    display: flex;
+  }
+  #body__restaurants #ohmyfooter__restaurants ul .flist {
     display: flex;
     flex-wrap: wrap;
     width: 30vw;
@@ -9098,7 +9100,7 @@ main {
 
 .restaurants__thumbnail {
   margin: 0;
-  height: auto;
+  height: 100%;
 }
 .restaurants__thumbnail .ancre-img {
   display: flex;
@@ -9375,7 +9377,10 @@ footer .flist .flist__text {
   #ohmyfooter__index {
     width: 100vw;
   }
-  #ohmyfooter__index .flist {
+  #ohmyfooter__index ul {
+    display: flex;
+  }
+  #ohmyfooter__index ul .flist {
     display: flex;
     flex-wrap: wrap;
     width: 30vw;
