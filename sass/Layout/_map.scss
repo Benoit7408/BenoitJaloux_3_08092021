@@ -1,0 +1,52 @@
+
+
+.map{
+  background-color: $couleur-background;
+  @extend %flexCol;
+  padding-bottom: 20px;
+  justify-content: center;
+
+  
+    & .map__info{
+      width: 100vw;
+      background-color:$couleur-background;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & .map__info__icone{
+        flex: 1 20%;
+        text-align: end;
+      }
+        .map__info__lieu{
+          flex: 1 60%;
+          text-align: start;
+          padding-left: 1rem;
+        }
+      }
+
+    & .map__titre{
+      text-align: center;
+      width: 100vw;
+      margin: 15px auto;
+    }
+
+    & .map__form{
+      width: 60%;
+      text-align: center;
+      padding : 10px 30px;
+      margin: 15px auto;
+      @extend %radius;
+      @extend %ombre;
+      @extend %gradient;
+
+      & .map__bouton{
+      
+        color: white;
+        font-size: larger;
+      }
+
+    }
+  }
+
+

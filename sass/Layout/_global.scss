@@ -1,0 +1,28 @@
+
+
+@font-face {
+  font-family:"Roboto","Shrikhand",Arial, Helvetica, sans-serif ;
+  src: url(../police/roboto/Roboto-Regular.ttf);
+  src: url(../police/Shrikhand/Shrikhand-Regular.ttf);
+}
+
+
+html,body{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font-family: "Roboto","Shrikhand", Arial, Helvetica, sans-serif;
+  
+}
+
+a,ul{
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  padding: 0;
+  margin:0;
+}
+
+h2,h3,p{
+  margin: 5px 10px;
+}

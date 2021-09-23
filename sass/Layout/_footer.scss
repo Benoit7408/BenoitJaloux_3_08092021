@@ -1,0 +1,16 @@
+footer{
+  background-color: black;
+  @extend %flexCol;
+  & .footer__titre{
+    margin-left:40px;
+    color: white;
+  }
+  
+  & .flist{margin: 10px 0;
+    
+    & .flist__text{
+      color: white;
+      margin: 10px 0 0 10px;
+      }
+    }
+  }
