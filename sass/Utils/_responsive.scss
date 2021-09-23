@@ -50,13 +50,13 @@
 
 .map__info__lieu{flex: 1 10% !important ;}
 
-body{
+#body__index{
   display:flex;
   flex-wrap: wrap;
   & header{width: 100vw;
           height: 65px;}
   }
-  #ohmyfooter{
+  #ohmyfooter__index{
     width: 100vw;
     & .flist{
       display: flex;
@@ -64,7 +64,7 @@ body{
       width: 30vw;}
   }
 
-main{width: 70vw;}
+#main__index{width: 70vw;}
 
 .all__restaurants{
   grid-template-columns: 1fr 1fr;

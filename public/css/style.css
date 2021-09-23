@@ -8915,7 +8915,7 @@ readers do not read off random characters that represent icons */
   animation: heart;
 }
 
-#ohmyfooter, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__thumbnail {
+footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__thumbnail {
   display: flex;
   flex-direction: column;
 }
@@ -9033,19 +9033,14 @@ readers do not read off random characters that represent icons */
     position: relative;
     z-index: 1;
   }
-  #body__restaurants #ohmyfooter {
+  #body__restaurants #ohmyfooter__restaurants {
     width: 100vw;
+    position: absolute;
   }
-  #body__restaurants #ohmyfooter .flist {
+  #body__restaurants #ohmyfooter__restaurants .flist {
     display: flex;
     flex-wrap: wrap;
     width: 30vw;
-  }
-  #body__restaurants #ohmyfooter #ohmyfooter {
-    position: absolute;
-  }
-  #body__restaurants #ohmyfooter #ohmyfooter ul {
-    display: flex;
   }
 }
 
@@ -9244,17 +9239,17 @@ main {
   font-size: larger;
 }
 
-#ohmyfooter {
+footer {
   background-color: black;
 }
-#ohmyfooter .footer__titre {
+footer .footer__titre {
   margin-left: 40px;
   color: white;
 }
-#ohmyfooter .flist {
+footer .flist {
   margin: 10px 0;
 }
-#ohmyfooter .flist .flist__text {
+footer .flist .flist__text {
   color: white;
   margin: 10px 0 0 10px;
 }
@@ -9368,25 +9363,25 @@ main {
     flex: 1 10% !important;
   }
 
-  body {
+  #body__index {
     display: flex;
     flex-wrap: wrap;
   }
-  body header {
+  #body__index header {
     width: 100vw;
     height: 65px;
   }
 
-  #ohmyfooter {
+  #ohmyfooter__index {
     width: 100vw;
   }
-  #ohmyfooter .flist {
+  #ohmyfooter__index .flist {
     display: flex;
     flex-wrap: wrap;
     width: 30vw;
   }
 
-  main {
+  #main__index {
     width: 70vw;
   }
 

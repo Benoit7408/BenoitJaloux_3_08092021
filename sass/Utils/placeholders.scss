@@ -135,19 +135,14 @@
       z-index: 1;
     }
     
-    #ohmyfooter{
+    #ohmyfooter__restaurants{
       width: 100vw;
+      position: absolute;
       & .flist{
         display: flex;
         flex-wrap: wrap;
         width: 30vw;}
 
-    #ohmyfooter{
-      position: absolute;}
-    
-    #ohmyfooter ul{
-        display: flex;
-      }
     }
   }
 }
