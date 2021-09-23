@@ -8946,6 +8946,26 @@ footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__t
   background: linear-gradient(180deg, #FF79DA, #9356DC);
 }
 
+@media screen and (min-width: 800px) {
+  #body__restaurants .menu {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: 2px solid black;
+    width: 95vw;
+    margin: auto;
+  }
+  #body__restaurants .menu .menu__entre__titre,
+#body__restaurants .menu .menu__plat__titre,
+#body__restaurants .menu .menu__dessert__titre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #body__restaurants .menu .entre, #body__restaurants .menu .plat, #body__restaurants .menu .dessert {
+    width: 60vw;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   #body__restaurants #body__restaurants {
     display: block;
@@ -8953,93 +8973,18 @@ footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__t
   }
   #body__restaurants #main__restaurants {
     width: 100%;
-    height: 120vh;
   }
   #body__restaurants .hprojet {
     justify-content: space-around;
     align-items: center;
   }
-  #body__restaurants .restaurants__thumbnail {
-    display: flex;
-    width: 100vw;
-    position: absolute;
-  }
-  #body__restaurants .restaurants__thumbnail .restaurants__thumbnail__figcaption {
-    width: 100vw;
-    height: 70px;
-    border-radius: 0;
-    display: flex;
-  }
-  #body__restaurants .restaurants__thumbnail .restaurants__thumbnail__figcaption .restaurants__thumbnail__figcaption__header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  #body__restaurants .restaurants__thumbnail .restaurants__thumbnail__figcaption .restaurants__thumbnail__figcaption__header h1 {
-    width: 100%;
-    text-align: center;
-    font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-  }
-  #body__restaurants .restaurants__thumbnail .restaurants__thumbnail__figcaption .restaurants__thumbnail__figcaption__header .heart {
-    flex: 0 0;
-    width: max-content;
-    position: absolute;
-    margin-right: 35%;
-  }
-  #body__restaurants .image__header {
-    height: 120vh;
-  }
-  #body__restaurants .carte {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 90%;
-  }
-  #body__restaurants .menu__entre {
-    display: flex;
-    width: 30vw;
-    min-width: 500px;
-    background-color: #99E2D0;
-    border-radius: 15%;
-    opacity: 0.8;
-    margin: 20px;
-    padding: 20px;
-  }
-  #body__restaurants .menu__plat {
-    display: flex;
-    width: 30vw;
-    background-color: #FF79DA;
-    min-width: 500px;
-    border-radius: 15%;
-    opacity: 0.8;
-    margin: 20px;
-    padding: 20px;
-  }
-  #body__restaurants .menu__dessert {
-    display: flex;
-    width: 30vw;
-    background-color: #9356DC;
-    min-width: 500px;
-    border-radius: 15%;
-    opacity: 0.8;
-    margin: 20px;
-    padding: 20px;
-  }
-  #body__restaurants .entre, #body__restaurants .plat, #body__restaurants .dessert {
-    width: 90% !important;
-  }
-  #body__restaurants #commande {
-    position: relative;
-    z-index: 1;
-  }
-  #body__restaurants #ohmyfooter__restaurants {
+  #body__restaurants #ohmyfooter__index {
     width: 100vw;
   }
-  #body__restaurants #ohmyfooter__restaurants ul {
+  #body__restaurants #ohmyfooter__index ul {
     display: flex;
   }
-  #body__restaurants #ohmyfooter__restaurants ul .flist {
+  #body__restaurants #ohmyfooter__index ul .flist {
     display: flex;
     flex-wrap: wrap;
     width: 30vw;
@@ -9047,26 +8992,6 @@ footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__t
 }
 
 @media screen and (min-width: 1200px) {
-  #body__index nav {
-    width: 30vw;
-  }
-  #body__index nav .map * {
-    width: 20vw !important;
-  }
-  #body__index nav .stage {
-    width: 30vw;
-  }
-  #body__index nav .stage .stage__header {
-    width: auto;
-  }
-  #body__index nav .stage .stage__block {
-    display: flex;
-    width: 30vw;
-    margin-top: 2rem;
-  }
-  #body__index nav .stage .stage__block .stage__block__btn {
-    width: 25vw;
-  }
   #body__index .map__info__lieu {
     flex: 1 10% !important;
   }
@@ -9090,23 +9015,23 @@ footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__t
     width: 30vw;
   }
   #body__index #main__index {
-    width: 70vw;
+    width: 100vw;
   }
   #body__index .all__restaurants {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 40px 1fr 1fr;
     gap: 10px 10px;
-    width: 70vw;
+    width: 100vw;
     margin: 0;
   }
   #body__index .all__restaurants .all__restaurants__header {
     grid-column: 1/span 2;
-    place-items: auto;
-    width: 65vw;
+    width: 100vw;
+    text-align: center;
   }
   #body__index .all__restaurants .restaurants {
-    width: 30vw;
-    height: 50vh;
+    width: 45vw;
+    height: 30vh;
   }
 }
 
@@ -9322,10 +9247,9 @@ footer .flist .flist__text {
 
 .restaurants__thumbnail__figcaption {
   display: flex;
-  background-color: #e6dede;
+  background-color: white;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  position: absolute;
   width: 100vw;
   margin-top: -55px;
 }
@@ -9377,50 +9301,6 @@ footer .flist .flist__text {
   padding: 10px 30px;
   margin: 15px auto;
   color: white;
-}
-
-@media screen and (min-width: 800px) {
-  .stage__block {
-    display: grid;
-    justify-content: center;
-  }
-  .stage__block .stage__block__btn {
-    width: 50vw;
-  }
-
-  .all__restaurants {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40px 1fr 1fr;
-    gap: 10px 10px;
-    width: 98vw;
-  }
-  .all__restaurants .all__restaurants__header {
-    grid-column: 1/span 2;
-    place-items: auto;
-    width: 90vw;
-  }
-  .all__restaurants .restaurants {
-    width: 40vw;
-  }
-}
-@media screen and (min-width: 800px) {
-  .menu {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    border: 2px solid black;
-    width: 95vw;
-    margin: auto;
-  }
-  .menu .menu__entre__titre,
-.menu .menu__plat__titre,
-.menu .menu__dessert__titre {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .menu .entre, .menu .plat, .menu .dessert {
-    width: 60vw;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

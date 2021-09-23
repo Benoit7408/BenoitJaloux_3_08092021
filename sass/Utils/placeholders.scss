@@ -36,6 +36,30 @@
   background:linear-gradient(180deg,$couleur-secondaire,$couleur-primaire);
 }
 
+%responsive__tablette__restaurants{
+  @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
+
+  .menu{
+      display:grid;
+      grid-template-columns: 1fr 2fr;
+      border: 2px solid black;
+      width: 95vw;
+      margin: auto;
+    & .menu__entre__titre,
+      .menu__plat__titre,
+      .menu__dessert__titre{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    & .entre,.plat,.dessert{
+      width: 60vw;
+    }
+
+  }
+
+}}
+
 %responsive__desktop__restaurants{
   @media screen and (min-width:(map-get($breakpoints , desktop ))){
 
@@ -46,136 +70,13 @@
     
     #main__restaurants{
       width: 100%;
-      height: 120vh;
     }
     
     .hprojet{
-      
       justify-content: space-around;
       align-items: center;
     }
-    
-    
-    .restaurants__thumbnail{
-      display: flex;
-      width: 100vw;
-      position: absolute;
-      & .restaurants__thumbnail__figcaption{
-        width: 100vw;
-        height: 70px;
-        border-radius: 0;
-        display: flex;
-    
-      & .restaurants__thumbnail__figcaption__header{display: flex;
-        align-items: center;
-        justify-content: flex-end;
-      & h1{
-        width: 100%;
-        text-align: center;
-        font-family:"Shrikhand",Arial, Helvetica, sans-serif;
-      }
-        & .heart{
-        flex: 0 0;
-        width: max-content;
-        position: absolute;
-        margin-right: 35%;
-      }
-      }
-      }
-    }
-    .image__header{height: 120vh;}
-    .carte{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      height: 90%;
-     
-      }
-    
-    
-    .menu__entre{
-      display: flex;
-      width: 30vw;
-      min-width: 500px;
-      background-color: $couleur-tertiaire;
-      border-radius: 15%;
-      opacity: 0.8;
-      margin: 20px;
-      padding: 20px;
-    }
-    
-    .menu__plat{
-      display: flex;
-      width: 30vw;
-      background-color: $couleur-secondaire;
-      min-width: 500px;
-      border-radius: 15%;
-      opacity: 0.8;
-      margin: 20px;
-      padding: 20px;
-    }
-    
-    .menu__dessert{
-      display: flex;
-      width: 30vw;
-      background-color: $couleur-primaire;
-     min-width: 500px;
-      border-radius: 15%;
-      opacity: 0.8;
-      margin: 20px;
-      padding:20px;
-    }
-    .entre,.plat,.dessert{
-      width: 90% !important;
-    }
-    
-    #commande{
-      position: relative;
-      z-index: 1;
-    }
-    
-    #ohmyfooter__restaurants{
-      width: 100vw;
-      & ul{display: flex;
 
-      & .flist{
-        display: flex;
-        flex-wrap: wrap;
-        width: 30vw;}
-      }
-    }
-  }
-}
-
-
-%responsive__desktop__index{
-  @media screen and (min-width:(map-get($breakpoints , desktop ))){
-  
-    nav{
-      
-      width: 30vw;
-      & .map *{width:20vw!important;}
-      & .stage{width: 30vw;
-      & .stage__header {width: auto;}
-      & .stage__block{
-        display: flex;
-        width: 30vw;
-        margin-top: 2rem;
-        
-        & .stage__block__btn{width: 25vw;}
-      }
-    }
-  }
-  
-  .map__info__lieu{flex: 1 10% !important ;}
-  
-  #body__index{
-    display:flex;
-    flex-wrap: wrap;
-    & header{width: 100vw;
-            height: 65px;}
-    }
     #ohmyfooter__index{
       width: 100vw;
       & ul{
@@ -183,29 +84,94 @@
       & .flist{
         display: flex;
         flex-wrap: wrap;
-        width: 30vw;}
+        width: 30vw;
+      }
     }
+  }
+  }
+}
+
+%responsive__tablette__index{
+  @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
+
+    .stage__block{
+      display: grid;
+      justify-content: center;
+    
+    & .stage__block__btn{
+      width: 50vw;
     }
-  #main__index{width: 70vw;}
+  }
+  
+.all__restaurants{
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 1fr 1fr;
+  gap: 10px 10px;
+  width: 98vw;
+
+  & .all__restaurants__header{
+    grid-column: 1 /span 2;
+    place-items: auto;
+    width: 90vw;
+  }
+
+  & .restaurants{
+    width: 40vw;
+  }
+
+  }
+  }}
+
+%responsive__desktop__index{
+  @media screen and (min-width:(map-get($breakpoints , desktop ))){
+  
+    
+  
+  .map__info__lieu{
+    flex: 1 10% !important;
+  }
+  
+  #body__index{
+    display:flex;
+    flex-wrap: wrap;
+    & header{
+      width: 100vw;
+      height: 65px;
+          }
+    }
+
+    #ohmyfooter__index{
+      width: 100vw;
+      & ul{
+      display: flex;
+      & .flist{
+        display: flex;
+        flex-wrap: wrap;
+        width: 30vw;
+        }
+      }
+    }
+  #main__index{
+    width: 100vw;
+  }
   
   .all__restaurants{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 40px 1fr 1fr;
     gap: 10px 10px;
-    width: 70vw;
+    width: 100vw;
     margin: 0;
   
     & .all__restaurants__header{
       grid-column: 1 /span 2;
-      place-items: auto;
-      width: 65vw;
+      width: 100vw;
+      text-align: center;
     }
   
     & .restaurants{
-      width: 30vw;
-      height: 50vh;
+      width: 45vw;
+      height: 30vh;
     }
   }
-  }
-  
+}
 }

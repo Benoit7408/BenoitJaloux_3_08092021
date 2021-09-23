@@ -1,9 +1,8 @@
 .restaurants__thumbnail__figcaption{
   display: flex;
-  background-color:$couleur-background;
+  background-color:white;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  position: absolute;
   width: 100vw;
   margin-top: -55px;
   & h1{
@@ -69,4 +68,5 @@
 
 #body__restaurants{
   @extend %responsive__desktop__restaurants;
+  @extend %responsive__tablette__restaurants;
 }

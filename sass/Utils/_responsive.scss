@@ -1,56 +1,6 @@
 
 
-  @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
 
-    .stage__block{
-      display: grid;
-      justify-content: center;
-    
-    & .stage__block__btn{
-      width: 50vw;
-    }
-  }
-  
-.all__restaurants{
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 40px 1fr 1fr;
-  gap: 10px 10px;
-  width: 98vw;
-
-  & .all__restaurants__header{
-    grid-column: 1 /span 2;
-    place-items: auto;
-    width: 90vw;
-  }
-
-  & .restaurants{
-    width: 40vw;
-  }
-
-  }
-}
 
 
   
-@media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
-
-  .menu{
-      display:grid;
-      grid-template-columns: 1fr 2fr;
-      border: 2px solid black;
-      width: 95vw;
-      margin: auto;
-    & .menu__entre__titre,
-      .menu__plat__titre,
-      .menu__dessert__titre{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    & .entre,.plat,.dessert{
-      width: 60vw;
-    }
-
-  }
-
-}
