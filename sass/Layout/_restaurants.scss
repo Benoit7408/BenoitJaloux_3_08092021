@@ -24,7 +24,7 @@
   margin-top: 50px;
   & .entre,.plat,.dessert{
       background-color: white;
-      width: 95vw;
+      width: 90vw;
       margin: 20px auto;
       @extend %radius-bottom-thumbnail;
       @extend %radius-top-thumbnail;
@@ -64,8 +64,9 @@
       color: white;
 }
 
-#ohmyfooter ul{
-  display: flex;
-  align-items: center;
+
 }
+
+#body__restaurants{
+  @extend %responsive;
 }
