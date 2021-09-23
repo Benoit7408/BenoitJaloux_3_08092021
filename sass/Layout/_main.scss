@@ -59,3 +59,6 @@ main{background-color:$couleur-background}
   }
 }
 
+#body__index{
+@extend %responsive__desktop__index
+}

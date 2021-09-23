@@ -9046,6 +9046,70 @@ footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__t
   }
 }
 
+@media screen and (min-width: 1200px) {
+  #body__index nav {
+    width: 30vw;
+  }
+  #body__index nav .map * {
+    width: 20vw !important;
+  }
+  #body__index nav .stage {
+    width: 30vw;
+  }
+  #body__index nav .stage .stage__header {
+    width: auto;
+  }
+  #body__index nav .stage .stage__block {
+    display: flex;
+    width: 30vw;
+    margin-top: 2rem;
+  }
+  #body__index nav .stage .stage__block .stage__block__btn {
+    width: 25vw;
+  }
+  #body__index .map__info__lieu {
+    flex: 1 10% !important;
+  }
+  #body__index #body__index {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #body__index #body__index header {
+    width: 100vw;
+    height: 65px;
+  }
+  #body__index #ohmyfooter__index {
+    width: 100vw;
+  }
+  #body__index #ohmyfooter__index ul {
+    display: flex;
+  }
+  #body__index #ohmyfooter__index ul .flist {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30vw;
+  }
+  #body__index #main__index {
+    width: 70vw;
+  }
+  #body__index .all__restaurants {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 1fr 1fr;
+    gap: 10px 10px;
+    width: 70vw;
+    margin: 0;
+  }
+  #body__index .all__restaurants .all__restaurants__header {
+    grid-column: 1/span 2;
+    place-items: auto;
+    width: 65vw;
+  }
+  #body__index .all__restaurants .restaurants {
+    width: 30vw;
+    height: 50vh;
+  }
+}
+
 @font-face {
   font-family: "Roboto", "Shrikhand", Arial, Helvetica, sans-serif;
   src: url(../police/roboto/Roboto-Regular.ttf);
@@ -9337,74 +9401,6 @@ footer .flist .flist__text {
   }
   .all__restaurants .restaurants {
     width: 40vw;
-  }
-}
-@media screen and (min-width: 1200px) {
-  nav {
-    width: 30vw;
-  }
-  nav .map * {
-    width: 20vw !important;
-  }
-  nav .stage {
-    width: 30vw;
-  }
-  nav .stage .stage__header {
-    width: auto;
-  }
-  nav .stage .stage__block {
-    display: flex;
-    width: 30vw;
-    margin-top: 2rem;
-  }
-  nav .stage .stage__block .stage__block__btn {
-    width: 25vw;
-  }
-
-  .map__info__lieu {
-    flex: 1 10% !important;
-  }
-
-  #body__index {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #body__index header {
-    width: 100vw;
-    height: 65px;
-  }
-
-  #ohmyfooter__index {
-    width: 100vw;
-  }
-  #ohmyfooter__index ul {
-    display: flex;
-  }
-  #ohmyfooter__index ul .flist {
-    display: flex;
-    flex-wrap: wrap;
-    width: 30vw;
-  }
-
-  #main__index {
-    width: 70vw;
-  }
-
-  .all__restaurants {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40px 1fr 1fr;
-    gap: 10px 10px;
-    width: 70vw;
-    margin: 0;
-  }
-  .all__restaurants .all__restaurants__header {
-    grid-column: 1/span 2;
-    place-items: auto;
-    width: 65vw;
-  }
-  .all__restaurants .restaurants {
-    width: 30vw;
-    height: 50vh;
   }
 }
 @media screen and (min-width: 800px) {
