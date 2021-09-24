@@ -6,59 +6,75 @@ main{background-color:$couleur-background}
   width: 95vw;
   margin: auto;
   justify-items: center;
-}
-
-.restaurants{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin:20px 0;
-  height: 200px;
-  width: 90vw;
-  @extend %ombre;
-}
-
-.restaurants__thumbnail{
-  @extend %flexCol;
-  margin: 0;
-  height: 100%;
-
-    & .ancre-img{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      height: 70%;
-      }
-    & .image{
-      
-      height: 100%;
-      width: 100%;
-      flex-grow: 1;
-      object-fit: cover;
-      @extend %radius-top-thumbnail;
+    & .all__restaurants__header{
+      width: 90vw;
     }
-   & figcaption{
-      background-color: white;
-      height: 30%;
-      @extend %radius-bottom-thumbnail;
-      @extend %flexCol;
+    & .restaurants{
+      display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
-      & .ancre-figcaption__titre{
+      margin:20px 0;
+      height: 200px;
+      width: 90vw;
+      @extend %ombre;
+    }
+      & .restaurants__thumbnail{
+        @extend %flexCol;
+        margin: 0;
         height: 100%;
-      }
-      & .ancre-figcaption__icon{
-        display:flex;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        & .fa-heart{
-          font-size: 30px;
+
+          & .ancre-img{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 70%;
+            }
+          & .image{
+            
+            height: 100%;
+            width: 100%;
+            flex-grow: 1;
+            object-fit: cover;
+            @extend %radius-top-thumbnail;
+          }
+        & figcaption{
+            background-color:white;
+            height: 30%;
+            @extend %radius-bottom-thumbnail;
+            @extend %flexCol;
+            flex-wrap: wrap;
+            & .ancre-figcaption__titre{
+              height: 100%;
+            }
+            & .ancre-figcaption__icon{
+              display:flex;
+              height: 100%;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              & .fa-heart{
+                font-size: 30px;
+              }
+              & .heart__2{
+                position: absolute;
+              }  
+              }
+            }
+
         }
       }
+  
 
-  }
+
+.new-restaurant{
+  position: absolute;
+  background-color: $couleur-tertiaire;
+  margin: 10px;
+  padding: 0.5rem 1em;
+ 
+  align-self: end;
+
 }
-
 #body__index{
 @extend %responsive__desktop__index
 }

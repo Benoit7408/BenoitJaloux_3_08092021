@@ -1,6 +1,11 @@
 .hprojet{
   display: flex;
+  
   & .hprojet__img{
+    
+   
     margin:10px auto 10px auto;
+    text-align: center;
+    opacity: 0.8;
   }
 }

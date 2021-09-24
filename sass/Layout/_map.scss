@@ -9,33 +9,40 @@
   
     & .map__info{
       width: 100vw;
-      background-color:$couleur-background;
+      background-color:$couleur-background2;
+      border-top: 2px solid $couleur-border;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
       & .map__info__icone{
-        flex: 1 20%;
+        flex: 1 30%;
         text-align: end;
+        color: $couleur-border;
       }
         .map__info__lieu{
-          flex: 1 60%;
+          flex: 1 50%;
           text-align: start;
           padding-left: 1rem;
+          color: $couleur-border;
         }
       }
 
     & .map__titre{
       text-align: center;
       width: 100vw;
-      margin: 15px auto;
+      margin: 10px auto;
+      & .map__titre__decouvrir{
+        font-size: larger;
+        color: $couleur-border;
+      }
     }
 
     & .map__form{
       width: 60%;
       text-align: center;
-      padding : 10px 30px;
-      margin: 15px auto;
+      padding : 10px 10px;
+      margin: 5px auto;
       @extend %radius;
       @extend %ombre;
       @extend %gradient;
@@ -43,7 +50,7 @@
       & .map__bouton{
       
         color: white;
-        font-size: larger;
+        font-size: medium;
       }
 
     }

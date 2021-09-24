@@ -1,29 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="public/css/style.css">
-  <title>ohmyfood</title>
+  <link rel="stylesheet" href="../public/css/style.css">
+  <title>Le délice des sens</title>
 </head>
 <body id="body__restaurants">
 
-  <header class="hprojet">
-    <a href="index.html">
-      <i class="fa-arrow-left"></i>
-      </a>
-      <img src="src/images/logo/ohmyfood@2x.svg" alt="logo du site ohmyfood">
-    
-  </header>
 
-  <main id="main__restaurants">
-    <figure class="restaurants__thumbnail">
-      <img class="image__header" src="src/images/restaurants/la-note-enchantée.jpg">
+
+
+
+ <header class="hprojet hprojet__restaurants">
+  <a href="index.html">
+    <i class="fa-regular fa-arrow-left"></i>
+  </a>
+    <img class="hprojet__img" src="../src/images/logo/ohmyfood@2x.svg" alt="logo du site ohmyfood">
+  
+</header>
+
+
+<main id="main__restaurants">
+  <main>
+    <figure class="restaurants__header">
+      <img class="image__header" src="../src/images/restaurants/le-delice-des-sens.jpg">
     
-      <figcaption class="restaurants__thumbnail__figcaption">
-        <div class="restaurants__thumbnail__figcaption__header">
-        <h1>La note enchantée</h1>
+      <figcaption class="restaurants__header__figcaption">
+        <div class="restaurants__header__figcaption__header">
+        <h1>Le delice des sens</h1>
+        </div>
+        <div id="restaurants__heart">
         <i class="heart far fa-heart"></i>
         <i class="heart heart__2 far fa-heart"></i>
         </div>
@@ -32,40 +41,33 @@
     
 <section class="carte">
   <article class="menu menu__entre">
-    <h2 class="menu__entre__titre">ENTREES</h2>
+    <h2 class="menu__entre__titre">Entrée</h2>
     <ul>
 
       <li class="entre entre__1">
-        <h3>Ravioles de foie gras</h3>
-        <p>Accompagnes de leur crème à la truffe</p>
+        <h3>tartare de thon</h3>
+        <p>Assaisonné au yuzu</p>
         <div class="price">
           <strong>25€</strong>
         </div>
       </li>
      
       <li class="entre entre__2">
-        <h3>Caviar osciètre</h3>
-        <p>Sur bikini à la farine de blé noir</p>
+        <h3>Bouchée de homard croustillant</h3>
+        <p>Et sa farandole de petits légumes</p>
         <div class="price">
           <strong>35€</strong>
         </div>
       </li>
 
       <li class="entre entre__3">
-        <h3>Homard et espuma </h3>
-        <p>Marinée au zest d'orange</p>
+        <h3>Velouté de cèpes</h3>
+        <p>ux truffes</p>
         <div class="price">
           <strong>20€</strong>
         </div>
       </li>
-
-      <li class="entre entre__4">
-        <h3>Foie gras de canard cuit entier</h3>
-        <p>Confiture de figue et pain toasté</p>
-        <div class="price">
-          <strong>35€</strong>
-        </div>
-      </li>
+      
     </ul>
 
   </article>
@@ -74,60 +76,64 @@
     <h2 class="menu__plat__titre">PLATS</h2>
     <ul>
       <li class="plat plat__1">
-        <h3>Noix de coquilles Saint-Jacques/h3>
-        <p>Sur lit de purée de celeri-rave</p>
+        <h3>Poulet roti aux herbes de provence</h3>
+        <p>Et sa crèmes de truffe</p>
         <div class="price">
           <strong>40€</strong>
         </div>
       </li>
       <li class="plat plat__2">
-        <h3>Langoustine poélée</h3>
-        <p>Purée de patate douce</p>
+        <h3>langouste rotie</h3>
+        <p>Et ses légumes de saison</p>
         <div class="price">
           <strong>35€</strong>
         </div>
       </li>
       <li class="plat plat__3">
-        <h3>Mijoté de queue de boeuf</h3>
-        <p>Et riz sauvage aux zests de citron</p>
+        <h3>Cote de boeuf angus</h3>
+        <p>Et sa purée de panais</p>
         <div class="price">
-          <strong>44€</strong>
+          <strong>20€</strong>
         </div>
       </li> 
     </ul>
-    </article>
-    <article class="menu menu__dessert">
-    <h2 class="menu menu__titre">Desserts</h2>
+  </article>
+  <article class="menu menu__dessert">
+    <h2 class="menu__dessert__titre">Desserts</h2>
     <ul>
       <li class="dessert dessert__1">
-        <h3>Macaron noisette et chocolat</h3>
-        <p>Glace au caramel et sel de guérande</p>
+        <h3>farandole de dessert</h3>
+        <p>Du chef</p>
         <div class="price">
           <strong>18€</strong>
         </div>
       </li>
       <li class="dessert dessert__2">
-        <h3>Baba au rhum revisité</h3>
-        <p>Avec son coulis de citron</p>
+        <h3>Crème brulée</h3>
+        <p>Revisité</p>
         <div class="price">
           <strong>22€</strong>
         </div>
       </li>
       <li class="dessert dessert__3">
-        <h3>Tarte au citron meringuée</h3>
-        <p>destructurée</p>
+        <h3>Tiramisu</h3>
+        <p>A la noisette</p>
         <div class="price">
           <strong>23€</strong>
         </div>
       </li> 
     </ul>
   </article>
+
+
 </section>
 <form id="commande">
   <button>commander</button>
 
 </form>
-  </main>
+
+</main>
+
 
 <footer id="ohmyfooter__restaurants">
   <a class = "ancre-footer" href="#">
@@ -138,7 +144,7 @@
 
   <ul>
     <li class="flist">
-      <a class="flist__text" href="#"><i class="flist__icon fas fa-ustensils"></i>proposer un restaurant</a>
+      <a class="flist__text" href="#"><i class="flist__icon fas fa-utensils"></i>proposer un restaurant</a>
     </li>
     <li class="flist">
       <a class="flist__text" href="#"><i class="flist__icon fas fa-hands-helping"></i>devenir partenaire</a>
@@ -153,5 +159,3 @@
   </ul>
 
 </footer>
-
-</body>

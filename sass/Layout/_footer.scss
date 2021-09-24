@@ -1,16 +1,27 @@
 footer{
   background-color: black;
+  opacity: 0.8;
   @extend %flexCol;
   & .footer__titre{
-    margin-left:40px;
+    font-family: "Shrikhand";
+    font-size: larger;
+    font-weight: 200;
+    width: 90vw;
+    margin: auto;
     color: white;
   }
+  & ul{
+      width: 90vw;
+      margin:auto;
+    }
   
-  & .flist{margin: 10px 0;
+  
+  & .flist{
+    margin: 10px 0;
     
     & .flist__text{
       color: white;
-      margin: 10px 0 0 10px;
+      
       }
     }
   }
