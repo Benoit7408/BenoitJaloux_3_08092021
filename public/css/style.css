@@ -8921,10 +8921,10 @@ footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__t
 }
 
 #commande button, .map .map__form {
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .carte .entre, .carte .plat, .carte .dessert, .restaurants__thumbnail .image {
@@ -8938,8 +8938,7 @@ footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__t
 }
 
 #commande button, .carte .entre, .carte .plat, .carte .dessert, .map .map__form, .stage__block__btn, .restaurants {
-  box-shadow: 2px 2px 2px black;
-  border-radius: 15px;
+  box-shadow: 5px 5px 10px #868585;
 }
 
 #commande button, .map .map__form {
@@ -8968,7 +8967,7 @@ footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__t
 
 @media screen and (min-width: 1200px) {
   #body__restaurants #body__restaurants {
-    background-color: #e6dede;
+    background-color: #f6f3f3;
   }
   #body__restaurants #main__restaurants {
     width: 100%;
@@ -9036,6 +9035,28 @@ footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__t
     width: 100vw;
     height: 65px;
   }
+  #body__index .map {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+  }
+  #body__index .map.map__titre {
+    width: 40%;
+  }
+  #body__index .map .map__form {
+    width: 50%;
+  }
+  #body__index .stage {
+    background-color: white;
+    opacity: 0.8;
+  }
+  #body__index .stage .stage__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
   #body__index #ohmyfooter__index {
     width: 100vw;
   }
@@ -9092,15 +9113,18 @@ h2, h3, p {
   margin: 5px 10px;
 }
 
-.hprojet {
+.hprojet__index {
   display: flex;
 }
-.hprojet .hprojet__img {
+.hprojet__index .hprojet__img {
   margin: 10px auto 10px auto;
+  align-items: center;
+  text-align: center;
+  opacity: 0.8;
 }
 
 main {
-  background-color: #e6dede;
+  background-color: #f6f3f3;
 }
 
 .all__restaurants {
@@ -9177,14 +9201,14 @@ main {
   display: flex;
   align-items: center;
   text-align: center;
-  padding: 1rem 2rem 1rem 0;
+  padding: 1rem 2rem 1rem 1rem;
   margin: 1rem;
   border-radius: 15px;
-  background-color: #e6dede;
+  background-color: #f6f3f3;
   position: relative;
   justify-content: space-around;
   max-width: 368px;
-  width: 80vw;
+  width: 70vw;
 }
 .stage__block__btn:hover {
   background-color: #9356DC;
@@ -9227,13 +9251,14 @@ main {
 }
 
 .map {
-  background-color: #e6dede;
+  background-color: #f6f3f3;
   padding-bottom: 20px;
   justify-content: center;
 }
 .map .map__info {
   width: 100vw;
-  background-color: #e6dede;
+  background-color: #bdbcbc;
+  border-top: 2px solid #868585;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9241,26 +9266,32 @@ main {
 .map .map__info .map__info__icone {
   flex: 1 20%;
   text-align: end;
+  color: #868585;
 }
 .map .map__info .map__info__lieu {
   flex: 1 60%;
   text-align: start;
   padding-left: 1rem;
+  color: #868585;
 }
 .map .map__titre {
   text-align: center;
   width: 100vw;
-  margin: 15px auto;
+  margin: 10px auto;
+}
+.map .map__titre .map__titre__decouvrir {
+  font-size: larger;
+  color: #868585;
 }
 .map .map__form {
   width: 60%;
   text-align: center;
-  padding: 10px 30px;
-  margin: 15px auto;
+  padding: 10px 10px;
+  margin: 5px auto;
 }
 .map .map__form .map__bouton {
   color: white;
-  font-size: larger;
+  font-size: medium;
 }
 
 footer {

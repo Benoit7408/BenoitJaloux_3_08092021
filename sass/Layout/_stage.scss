@@ -24,7 +24,7 @@
       display: flex;
       align-items: center;
       text-align: center;
-      padding : 1rem 2rem 1rem 0 ;
+      padding : 1rem 2rem 1rem 1rem ;
       margin: 1rem;
       border-radius: 15px;
       background-color:$couleur-background;
@@ -32,7 +32,7 @@
       justify-content: space-around;
       max-width: 368px;
       @extend %ombre;
-      width: 80vw;
+      width: 70vw;
 
       &:hover {
             background-color:$couleur-primaire;

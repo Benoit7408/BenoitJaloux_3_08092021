@@ -5,10 +5,10 @@
 }
 
 %radius{
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 %radius-top-thumbnail{
@@ -22,8 +22,8 @@
 }
 
 %ombre{
-  box-shadow:2px 2px 2px black ;
-  border-radius: 15px;
+  box-shadow:5px 5px 10px $couleur-border ;
+  
 
 }
 
@@ -148,6 +148,31 @@
       height: 65px;
           }
     }
+    .map{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      background-color: black;
+      color: white;
+      &.map__titre{
+        width: 40%;}
+      & .map__form{
+        width: 50%;
+      }
+    }
+  
+    .stage{
+
+      background-color: white;
+      opacity: 0.8;
+
+    & .stage__block{
+    
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
 
     #ohmyfooter__index{
       width: 100vw;
