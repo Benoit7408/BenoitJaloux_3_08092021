@@ -8915,7 +8915,7 @@ readers do not read off random characters that represent icons */
   animation: heart;
 }
 
-footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__thumbnail {
+#ohmyfooter__index, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaption, .all__restaurants .restaurants__thumbnail {
   display: flex;
   flex-direction: column;
 }
@@ -8927,17 +8927,17 @@ footer, .map, .stage__block, .restaurants__thumbnail figcaption, .restaurants__t
   border-bottom-right-radius: 50px;
 }
 
-.carte .entre, .carte .plat, .carte .dessert, .restaurants__thumbnail .image {
+.carte .entre, .carte .plat, .carte .dessert, .all__restaurants .restaurants__thumbnail .image {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 
-.carte .entre, .carte .plat, .carte .dessert, .restaurants__thumbnail figcaption {
+.carte .entre, .carte .plat, .carte .dessert, .all__restaurants .restaurants__thumbnail figcaption {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
-#commande button, .carte .entre, .carte .plat, .carte .dessert, .map .map__form, .stage__block__btn, .restaurants {
+#commande button, .carte .entre, .carte .plat, .carte .dessert, .map .map__form, .stage__block__btn, .all__restaurants .restaurants {
   box-shadow: 5px 5px 10px #868585;
 }
 
@@ -9134,8 +9134,10 @@ main {
   margin: auto;
   justify-items: center;
 }
-
-.restaurants {
+.all__restaurants .all__restaurants__header {
+  width: 90vw;
+}
+.all__restaurants .restaurants {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -9143,39 +9145,50 @@ main {
   height: 200px;
   width: 90vw;
 }
-
-.restaurants__thumbnail {
+.all__restaurants .restaurants__thumbnail {
   margin: 0;
   height: 100%;
 }
-.restaurants__thumbnail .ancre-img {
+.all__restaurants .restaurants__thumbnail .ancre-img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   height: 70%;
 }
-.restaurants__thumbnail .image {
+.all__restaurants .restaurants__thumbnail .image {
   height: 100%;
   width: 100%;
   flex-grow: 1;
   object-fit: cover;
 }
-.restaurants__thumbnail figcaption {
+.all__restaurants .restaurants__thumbnail figcaption {
   background-color: white;
   height: 30%;
   flex-wrap: wrap;
 }
-.restaurants__thumbnail figcaption .ancre-figcaption__titre {
+.all__restaurants .restaurants__thumbnail figcaption .ancre-figcaption__titre {
   height: 100%;
 }
-.restaurants__thumbnail figcaption .ancre-figcaption__icon {
+.all__restaurants .restaurants__thumbnail figcaption .ancre-figcaption__icon {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
-.restaurants__thumbnail figcaption .ancre-figcaption__icon .fa-heart {
+.all__restaurants .restaurants__thumbnail figcaption .ancre-figcaption__icon .fa-heart {
   font-size: 30px;
+}
+.all__restaurants .restaurants__thumbnail figcaption .ancre-figcaption__icon .heart__2 {
+  position: absolute;
+}
+
+.new-restaurant {
+  position: absolute;
+  background-color: #99E2D0;
+  margin: 10px;
+  padding: 0.5rem 1em;
+  align-self: end;
 }
 
 .stage {
@@ -9264,12 +9277,12 @@ main {
   align-items: center;
 }
 .map .map__info .map__info__icone {
-  flex: 1 20%;
+  flex: 1 30%;
   text-align: end;
   color: #868585;
 }
 .map .map__info .map__info__lieu {
-  flex: 1 60%;
+  flex: 1 50%;
   text-align: start;
   padding-left: 1rem;
   color: #868585;
@@ -9294,19 +9307,27 @@ main {
   font-size: medium;
 }
 
-footer {
+#ohmyfooter__index {
   background-color: black;
+  opacity: 0.8;
 }
-footer .footer__titre {
-  margin-left: 40px;
+#ohmyfooter__index .footer__titre {
+  font-family: "Shrikhand";
+  font-size: larger;
+  font-weight: 200;
+  width: 90vw;
+  margin: auto;
   color: white;
 }
-footer .flist {
+#ohmyfooter__index ul {
+  width: 90vw;
+  margin: auto;
+}
+#ohmyfooter__index .flist {
   margin: 10px 0;
 }
-footer .flist .flist__text {
+#ohmyfooter__index .flist .flist__text {
   color: white;
-  margin: 10px 0 0 10px;
 }
 
 .restaurants__thumbnail__figcaption {
