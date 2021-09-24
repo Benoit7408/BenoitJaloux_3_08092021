@@ -8915,7 +8915,7 @@ readers do not read off random characters that represent icons */
   animation: heart;
 }
 
-#ohmyfooter__index, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaption, .all__restaurants .restaurants__thumbnail {
+footer, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaption, .all__restaurants .restaurants__thumbnail {
   display: flex;
   flex-direction: column;
 }
@@ -9097,7 +9097,6 @@ readers do not read off random characters that represent icons */
 html, body {
   margin: 0;
   padding: 0;
-  width: 100vw;
   font-family: "Roboto", "Shrikhand", Arial, Helvetica, sans-serif;
 }
 
@@ -9113,12 +9112,11 @@ h2, h3, p {
   margin: 5px 10px;
 }
 
-.hprojet__index {
+.hprojet {
   display: flex;
 }
-.hprojet__index .hprojet__img {
+.hprojet .hprojet__img {
   margin: 10px auto 10px auto;
-  align-items: center;
   text-align: center;
   opacity: 0.8;
 }
@@ -9307,11 +9305,11 @@ main {
   font-size: medium;
 }
 
-#ohmyfooter__index {
+footer {
   background-color: black;
   opacity: 0.8;
 }
-#ohmyfooter__index .footer__titre {
+footer .footer__titre {
   font-family: "Shrikhand";
   font-size: larger;
   font-weight: 200;
@@ -9319,37 +9317,57 @@ main {
   margin: auto;
   color: white;
 }
-#ohmyfooter__index ul {
+footer ul {
   width: 90vw;
   margin: auto;
 }
-#ohmyfooter__index .flist {
+footer .flist {
   margin: 10px 0;
 }
-#ohmyfooter__index .flist .flist__text {
+footer .flist .flist__text {
   color: white;
 }
 
-.restaurants__thumbnail__figcaption {
+.restaurants__header {
+  height: 400px;
+  margin: 0;
+}
+.restaurants__header .image__header {
+  object-fit: cover;
+  height: 70%;
+  width: 100%;
+}
+
+.restaurants__header__figcaption {
+  height: 20%;
   display: flex;
-  background-color: white;
+  background-color: #f6f3f3;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   width: 100vw;
   margin-top: -55px;
+  position: absolute;
 }
-.restaurants__thumbnail__figcaption h1 {
-  flex: 1 60%;
+.restaurants__header__figcaption .restaurants__header__figcaption__header {
+  flex: 1 80%;
+  text-align: center;
+  margin: auto;
+  font-family: "Shrikhand";
+  font-size: larger;
+}
+.restaurants__header__figcaption .restaurants__header__figcaption__header h1 {
   margin: 10px 10px;
 }
-.restaurants__thumbnail__figcaption .heart {
-  flex: 1 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
+.restaurants__header__figcaption #restaurants__heart {
+  flex: 1 20%;
+  text-align: center;
+  margin: auto;
 }
-
+.restaurants__header__figcaption #restaurants__heart .heart {
+  position: absolute;
+  font-size: 30px;
+  width: max-content;
+}
 .carte {
   margin-top: 50px;
 }
