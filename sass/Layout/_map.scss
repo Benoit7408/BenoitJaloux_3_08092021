@@ -8,7 +8,7 @@
 
   
     & .map__info{
-      width: 100vw;
+      width: 100%;
       background-color:$couleur-background2;
       border-top: 2px solid $couleur-border;
       display: flex;
@@ -30,7 +30,7 @@
 
     & .map__titre{
       text-align: center;
-      width: 100vw;
+      width: 100%;
       margin: 10px auto;
       & .map__titre__decouvrir{
         font-size: larger;
