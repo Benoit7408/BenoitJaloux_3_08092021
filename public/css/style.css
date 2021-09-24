@@ -8938,7 +8938,7 @@ footer, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaptio
 }
 
 #commande button, .carte .entre, .carte .plat, .carte .dessert, .map .map__form, .stage__block__btn, .all__restaurants .restaurants {
-  box-shadow: 5px 5px 10px #868585;
+  box-shadow: 5px 5px 10px #b49c9c;
 }
 
 #commande button, .map .map__form {
@@ -8967,7 +8967,7 @@ footer, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaptio
 
 @media screen and (min-width: 1200px) {
   #body__restaurants #body__restaurants {
-    background-color: #f6f3f3;
+    background-color: #e9e3e3;
   }
   #body__restaurants #main__restaurants {
     width: 100%;
@@ -9127,7 +9127,7 @@ h2, h3, p {
 }
 
 main {
-  background-color: #f6f3f3;
+  background-color: #e9e3e3;
 }
 
 .all__restaurants {
@@ -9220,7 +9220,7 @@ main {
   padding: 1rem 2rem 1rem 1rem;
   margin: 1rem;
   border-radius: 15px;
-  background-color: #f6f3f3;
+  background-color: #e9e3e3;
   position: relative;
   justify-content: space-around;
   max-width: 368px;
@@ -9267,14 +9267,14 @@ main {
 }
 
 .map {
-  background-color: #f6f3f3;
+  background-color: #e9e3e3;
   padding-bottom: 20px;
   justify-content: center;
 }
 .map .map__info {
   width: 100vw;
-  background-color: #bdbcbc;
-  border-top: 2px solid #868585;
+  background-color: #cab9b9;
+  border-top: 2px solid #b49c9c;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9282,13 +9282,13 @@ main {
 .map .map__info .map__info__icone {
   flex: 1 30%;
   text-align: end;
-  color: #868585;
+  color: #b49c9c;
 }
 .map .map__info .map__info__lieu {
   flex: 1 50%;
   text-align: start;
   padding-left: 1rem;
-  color: #868585;
+  color: #b49c9c;
 }
 .map .map__titre {
   text-align: center;
@@ -9297,7 +9297,7 @@ main {
 }
 .map .map__titre .map__titre__decouvrir {
   font-size: larger;
-  color: #868585;
+  color: #b49c9c;
 }
 .map .map__form {
   width: 60%;
@@ -9346,7 +9346,7 @@ footer .flist .flist__text {
 .restaurants__header__figcaption {
   height: 20%;
   display: flex;
-  background-color: #f6f3f3;
+  background-color: #e9e3e3;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   width: 100vw;
