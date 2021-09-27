@@ -46,6 +46,7 @@ main{background-color:$couleur-background}
             @extend %radius-bottom-thumbnail;
             @extend %flexCol;
             flex-wrap: wrap;
+            justify-content: center;
             & .ancre-figcaption__titre{
               height: 100%;
             }

@@ -48,14 +48,14 @@
   .menu{
       display:grid;
       grid-template-columns: 1fr;
+      align-content:baseline ;
       
     & .menu__entre__titre,
       .menu__plat__titre{
         margin: auto 5%;
       }
       .menu__dessert__titre{
-      text-align: center;
-      margin:auto 5%; 
+      margin: auto;
     }
 
   }
@@ -93,7 +93,7 @@
       width: 100%;
     }
     .restaurants__thumbnail{
-      height: 30vw;
+      height: 30%;
     & .image__header{
       object-fit: cover;
       height: 90%;
@@ -108,6 +108,11 @@
     }
     .menu__dessert{
       grid-column:3 / 4 ;}
+    
+      .menu__dessert__titre{
+        width: 90%;
+        margin: auto 5%;
+      }
   
     .hprojet{
       justify-content: space-around;
@@ -238,7 +243,7 @@
       & .flist{
         display: flex;
         flex-wrap: wrap;
-        width: 30vw;
+        width: 30%;
         }
       }
     }
@@ -257,7 +262,7 @@
     & .restaurants{
       width: 45vw;
       max-width: 750px;
-      height: 40vh;
+      height: 50vh;
     }
   }
 }
