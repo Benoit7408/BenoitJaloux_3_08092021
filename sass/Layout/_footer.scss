@@ -1,4 +1,5 @@
-footer{
+#ohmyfooter__index,
+#ohmyfooter__restaurants{
   background-color: black;
   opacity: 0.8;
   @extend %flexCol;
@@ -6,12 +7,12 @@ footer{
     font-family: "Shrikhand";
     font-size: larger;
     font-weight: 200;
-    width: 90vw;
+    width: 90%;
     margin: auto;
     color: white;
   }
   & ul{
-      width: 90vw;
+      width: 90%;
       margin:auto;
     }
   

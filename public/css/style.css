@@ -8915,7 +8915,8 @@ readers do not read off random characters that represent icons */
   animation: heart;
 }
 
-footer, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaption, .all__restaurants .restaurants__thumbnail {
+#ohmyfooter__index,
+#ohmyfooter__restaurants, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaption, .all__restaurants .restaurants__thumbnail {
   display: flex;
   flex-direction: column;
 }
@@ -8927,17 +8928,17 @@ footer, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaptio
   border-bottom-right-radius: 50px;
 }
 
-.carte .entre, .carte .plat, .carte .dessert, .all__restaurants .restaurants__thumbnail .image {
+.carte .entre, .carte .plat, .carte .dessert, .all__restaurants .restaurants__thumbnail .image, .all__restaurants .restaurants__thumbnail {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 
-.carte .entre, .carte .plat, .carte .dessert, .all__restaurants .restaurants__thumbnail figcaption {
+.carte .entre, .carte .plat, .carte .dessert, .all__restaurants .restaurants__thumbnail figcaption, .all__restaurants .restaurants__thumbnail {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
-#commande button, .carte .entre, .carte .plat, .carte .dessert, .map .map__form, .stage__block__btn, .all__restaurants .restaurants {
+#commande button, .carte .entre, .carte .plat, .carte .dessert, .map .map__form, .stage__block__btn, .all__restaurants .restaurants__thumbnail {
   box-shadow: 5px 5px 10px #b49c9c;
 }
 
@@ -8946,22 +8947,37 @@ footer, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaptio
 }
 
 @media screen and (min-width: 800px) {
+  #body__restaurants .carte {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1600px;
+  }
   #body__restaurants .menu {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    border: 2px solid black;
-    width: 95vw;
-    margin: auto;
+    grid-template-columns: 1fr;
   }
   #body__restaurants .menu .menu__entre__titre,
-#body__restaurants .menu .menu__plat__titre,
-#body__restaurants .menu .menu__dessert__titre {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#body__restaurants .menu .menu__plat__titre {
+    margin: auto 5%;
   }
-  #body__restaurants .menu .entre, #body__restaurants .menu .plat, #body__restaurants .menu .dessert {
-    width: 60vw;
+  #body__restaurants .menu .menu__dessert__titre {
+    text-align: center;
+    margin: auto 5%;
+  }
+  #body__restaurants .menu__dessert {
+    grid-column: 1/3;
+  }
+  #body__restaurants #ohmyfooter__restaurants {
+    width: 100%;
+  }
+  #body__restaurants #ohmyfooter__restaurants ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  #body__restaurants #ohmyfooter__restaurants ul .flist {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30vw;
   }
 }
 
@@ -8982,17 +8998,25 @@ footer, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaptio
   #body__restaurants .restaurants__thumbnail__figcaption {
     height: 10%;
   }
+  #body__restaurants .carte {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #body__restaurants .menu__dessert {
+    grid-column: 3/4;
+  }
   #body__restaurants .hprojet {
     justify-content: space-around;
     align-items: center;
   }
-  #body__restaurants #ohmyfooter__index {
+  #body__restaurants #ohmyfooter__restaurants {
     width: 100%;
   }
-  #body__restaurants #ohmyfooter__index ul {
-    display: flex;
+  #body__restaurants #ohmyfooter__restaurants ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
-  #body__restaurants #ohmyfooter__index ul .flist {
+  #body__restaurants #ohmyfooter__restaurants ul .flist {
     display: flex;
     flex-wrap: wrap;
     width: 30vw;
@@ -9024,15 +9048,14 @@ footer, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaptio
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 40px 1fr 1fr;
     gap: 10px 10px;
-    width: 90vw;
+    width: 100%;
   }
   #body__index .all__restaurants .all__restaurants__header {
     grid-column: 1/span 2;
-    place-items: auto;
-    width: 90vw;
+    width: 96%;
   }
   #body__index .all__restaurants .restaurants {
-    width: 40vw;
+    width: 45vw;
   }
 }
 
@@ -9094,8 +9117,7 @@ footer, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaptio
   }
   #body__index .all__restaurants .all__restaurants__header {
     grid-column: 1/span 2;
-    width: 100%;
-    text-align: center;
+    width: 96%;
   }
   #body__index .all__restaurants .restaurants {
     width: 45vw;
@@ -9112,7 +9134,7 @@ footer, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaptio
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", "Shrikhand", Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   width: 100%;
 }
 
@@ -9238,8 +9260,8 @@ main {
   width: 70vw;
 }
 .stage__block__btn:hover {
-  background-color: #9356DC;
-  opacity: 0.5;
+  background-color: #e4d5f6;
+  opacity: 0.9;
   font-weight: bold;
 }
 
@@ -9321,26 +9343,31 @@ main {
   font-size: medium;
 }
 
-footer {
+#ohmyfooter__index,
+#ohmyfooter__restaurants {
   background-color: black;
   opacity: 0.8;
 }
-footer .footer__titre {
+#ohmyfooter__index .footer__titre,
+#ohmyfooter__restaurants .footer__titre {
   font-family: "Shrikhand";
   font-size: larger;
   font-weight: 200;
-  width: 90vw;
+  width: 90%;
   margin: auto;
   color: white;
 }
-footer ul {
-  width: 90vw;
+#ohmyfooter__index ul,
+#ohmyfooter__restaurants ul {
+  width: 90%;
   margin: auto;
 }
-footer .flist {
+#ohmyfooter__index .flist,
+#ohmyfooter__restaurants .flist {
   margin: 10px 0;
 }
-footer .flist .flist__text {
+#ohmyfooter__index .flist .flist__text,
+#ohmyfooter__restaurants .flist .flist__text {
   color: white;
 }
 
@@ -9365,7 +9392,7 @@ footer .flist .flist__text {
   position: absolute;
 }
 .restaurants__header__figcaption .restaurants__header__figcaption__header {
-  flex: 1 80%;
+  flex: 1 70%;
   text-align: center;
   margin: auto;
   font-family: "Shrikhand";
@@ -9375,9 +9402,10 @@ footer .flist .flist__text {
   margin: 10px 10px;
 }
 .restaurants__header__figcaption #restaurants__heart {
-  flex: 1 20%;
-  text-align: center;
-  margin: auto;
+  flex: 1 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .restaurants__header__figcaption #restaurants__heart .heart {
   position: absolute;
@@ -9385,15 +9413,18 @@ footer .flist .flist__text {
   width: max-content;
 }
 .carte {
-  margin-top: 50px;
+  display: grid;
+  justify-content: center;
+  margin: 50px auto;
 }
 .carte .entre, .carte .plat, .carte .dessert {
   background-color: white;
-  width: 90vw;
-  margin: 20px auto;
+  width: 90%;
+  margin: 2rem auto;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  max-width: 600px;
 }
 .carte .entre h3, .carte .plat h3, .carte .dessert h3 {
   width: 100%;
@@ -9416,9 +9447,11 @@ footer .flist .flist__text {
 }
 #commande button {
   width: 60%;
+  max-width: 400px;
   text-align: center;
-  padding: 10px 30px;
+  padding: 15px 30px;
   margin: 15px auto;
+  font-size: large;
   color: white;
 }
 
