@@ -5,6 +5,9 @@ $couleur-background:#e9e3e3;
 $couleur-background2:darken(#f6f3f3,20);
 $couleur-tertiaire10:darken(#99E2D0,10);
 $couleur-border:darken($couleur-background2,10);
+$couleur-primaireL:lighten($couleur-primaire,5);
+$couleur-secondaireL:lighten($couleur-secondaire,5);
+
 
 $breakpoints: (
   tablet-portrait:800px,

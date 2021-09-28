@@ -6,14 +6,14 @@
       align-items: center;
 
       & .stage__header {
-            width: 90vw;
+            width: 90%;
             margin: 1rem;     
       }
 }
 
 .stage__block{
       @extend %flexCol;
-      width: 95vw;
+      width: 95%;
       align-items: center;
       margin-bottom: 2rem;
       padding: 0;
@@ -32,7 +32,7 @@
       justify-content: space-around;
       max-width: 368px;
       @extend %ombre;
-      width: 70vw;
+      width: 70%;
 
       &:hover {
             background-color:lighten($couleur-primaire,30);

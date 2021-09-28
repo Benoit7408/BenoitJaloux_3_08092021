@@ -8921,7 +8921,7 @@ readers do not read off random characters that represent icons */
   flex-direction: column;
 }
 
-#commande button, .map .map__form {
+#commande button, .map .map__form .map__bouton {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
@@ -8938,12 +8938,17 @@ readers do not read off random characters that represent icons */
   border-bottom-right-radius: 15px;
 }
 
-#commande button, .carte .entre, .carte .plat, .carte .dessert, .map .map__form, .stage__block__btn, .all__restaurants .restaurants__thumbnail {
+#commande button, .carte .entre, .carte .plat, .carte .dessert, .map .map__form .map__bouton, .stage__block__btn, .all__restaurants .restaurants__thumbnail {
   box-shadow: 5px 5px 10px #b49c9c;
 }
 
-#commande button, .map .map__form {
+#commande button, .map .map__form .map__bouton {
   background: linear-gradient(180deg, #FF79DA, #9356DC);
+}
+
+#commande button:hover, .map .map__form .map__bouton:hover {
+  background: linear-gradient(180deg, #ff93e1, #a16be0);
+  box-shadow: 5px 5px 20px black;
 }
 
 @media screen and (min-width: 800px) {
@@ -8977,7 +8982,7 @@ readers do not read off random characters that represent icons */
   #body__restaurants #ohmyfooter__restaurants ul .flist {
     display: flex;
     flex-wrap: wrap;
-    width: 30vw;
+    width: 30%;
   }
 }
 
@@ -9023,7 +9028,7 @@ readers do not read off random characters that represent icons */
   #body__restaurants #ohmyfooter__restaurants ul .flist {
     display: flex;
     flex-wrap: wrap;
-    width: 30vw;
+    width: 30%;
   }
 }
 
@@ -9035,7 +9040,8 @@ readers do not read off random characters that represent icons */
   }
   #body__index .stage__block .stage__block__btn {
     align-self: center;
-    width: 30vw;
+    width: 30%;
+    min-width: 250px;
   }
   #body__index .stage__block .sbbtn3 {
     grid-column: 1/3;
@@ -9058,15 +9064,9 @@ readers do not read off random characters that represent icons */
     grid-column: 1/span 2;
     width: 96%;
   }
-  #body__index .all__restaurants .restaurants {
-    width: 45vw;
-  }
 }
 
 @media screen and (min-width: 1200px) {
-  #body__index .map__info__lieu {
-    flex: 1 10% !important;
-  }
   #body__index #body__index {
     display: flex;
     flex-wrap: wrap;
@@ -9079,14 +9079,6 @@ readers do not read off random characters that represent icons */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: black;
-    color: white;
-  }
-  #body__index .map.map__titre {
-    width: 40%;
-  }
-  #body__index .map .map__form {
-    width: 50%;
   }
   #body__index .stage {
     background-color: white;
@@ -9097,7 +9089,7 @@ readers do not read off random characters that represent icons */
   }
   #body__index .stage .stage__block .stage__block__btn {
     align-self: center;
-    width: 25vw;
+    width: 55%;
   }
   #body__index .stage .stage__block .sbbtn3 {
     grid-column: 3/3;
@@ -9124,9 +9116,8 @@ readers do not read off random characters that represent icons */
     width: 96%;
   }
   #body__index .all__restaurants .restaurants {
-    width: 45vw;
     max-width: 750px;
-    height: 50vh;
+    height: 40vh;
   }
 }
 
@@ -9170,12 +9161,12 @@ main {
 .all__restaurants {
   display: grid;
   grid-template-columns: 100%;
-  width: 95vw;
+  width: 95%;
   margin: auto;
   justify-items: center;
 }
 .all__restaurants .all__restaurants__header {
-  width: 90vw;
+  width: 90%;
 }
 .all__restaurants .restaurants {
   display: flex;
@@ -9183,7 +9174,7 @@ main {
   flex-wrap: wrap;
   margin: 20px 0;
   height: 200px;
-  width: 90vw;
+  width: 90%;
 }
 .all__restaurants .restaurants__thumbnail {
   margin: 0;
@@ -9240,12 +9231,12 @@ main {
   align-items: center;
 }
 .stage .stage__header {
-  width: 90vw;
+  width: 90%;
   margin: 1rem;
 }
 
 .stage__block {
-  width: 95vw;
+  width: 95%;
   align-items: center;
   margin-bottom: 2rem;
   padding: 0;
@@ -9262,7 +9253,7 @@ main {
   position: relative;
   justify-content: space-around;
   max-width: 368px;
-  width: 70vw;
+  width: 70%;
 }
 .stage__block__btn:hover {
   background-color: #e4d5f6;
@@ -9314,19 +9305,13 @@ main {
   background-color: #cab9b9;
   border-top: 2px solid #b49c9c;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
-.map .map__info .map__info__icone {
-  flex: 1 30%;
-  text-align: end;
-  color: #b49c9c;
-}
-.map .map__info .map__info__lieu {
-  flex: 1 50%;
-  text-align: start;
-  padding-left: 1rem;
-  color: #b49c9c;
+.map .map__info #localisation {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
 }
 .map .map__titre {
   text-align: center;
@@ -9338,16 +9323,15 @@ main {
   color: #b49c9c;
 }
 .map .map__form {
-  width: 60%;
   text-align: center;
-  padding: 10px 10px;
-  margin: 5px auto;
 }
 .map .map__form .map__bouton {
+  text-align: center;
+  padding: 10px 50px;
+  margin: 5px auto;
   color: white;
   font-size: medium;
 }
-
 #ohmyfooter__index,
 #ohmyfooter__restaurants {
   background-color: black;
@@ -9377,17 +9361,17 @@ main {
 }
 
 .restaurants__header {
-  height: 400px;
+  height: 350px;
   margin: 0;
 }
 .restaurants__header .image__header {
   object-fit: cover;
-  height: 70%;
+  height: 90%;
   width: 100%;
 }
 
 .restaurants__header__figcaption {
-  height: 20%;
+  height: 10%;
   display: flex;
   background-color: #e9e3e3;
   border-top-left-radius: 30px;
@@ -9397,13 +9381,14 @@ main {
   position: absolute;
 }
 .restaurants__header__figcaption .restaurants__header__figcaption__header {
-  flex: 1 70%;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin: auto;
   font-family: "Shrikhand";
-  font-size: larger;
+  font-size: small;
 }
 .restaurants__header__figcaption .restaurants__header__figcaption__header h1 {
+  min-width: 265px;
   margin: 10px 10px;
 }
 .restaurants__header__figcaption #restaurants__heart {
@@ -9420,7 +9405,7 @@ main {
 .carte {
   display: grid;
   justify-content: center;
-  margin: 50px auto;
+  margin: auto;
 }
 .carte .entre, .carte .plat, .carte .dessert {
   background-color: white;
@@ -9457,16 +9442,19 @@ main {
 
 #commande {
   text-align: center;
-  margin: 30px;
 }
 #commande button {
-  width: 60%;
+  width: 20%;
+  min-width: 300px;
   max-width: 400px;
   text-align: center;
   padding: 15px 30px;
   margin: 15px auto;
   font-size: large;
   color: white;
+}
+#commande button:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,22 +12,16 @@
       background-color:$couleur-background2;
       border-top: 2px solid $couleur-border;
       display: flex;
-      justify-content: space-between;
       align-items: center;
 
-      & .map__info__icone{
-        flex: 1 30%;
-        text-align: end;
-        color: $couleur-border;
-      }
-        .map__info__lieu{
-          flex: 1 50%;
-          text-align: start;
-          padding-left: 1rem;
-          color: $couleur-border;
+      & #localisation{
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;      
         }
       }
-
+    
     & .map__titre{
       text-align: center;
       width: 100%;
@@ -39,21 +33,25 @@
     }
 
     & .map__form{
-      width: 60%;
-      text-align: center;
-      padding : 10px 10px;
-      margin: 5px auto;
-      @extend %radius;
-      @extend %ombre;
-      @extend %gradient;
+      
+        text-align: center;
 
       & .map__bouton{
-      
+        
+        
+        text-align: center;
+        padding : 10px 50px;
+        margin: 5px auto;
+        @extend %radius;
+        @extend %ombre;
+        @extend %gradient;
         color: white;
         font-size: medium;
+      
+      &:hover{
+        @extend %boutonhover;
       }
-
     }
   }
-
+}
 

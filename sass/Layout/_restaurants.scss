@@ -3,19 +3,19 @@
   
 .restaurants__header{
   
-  height: 400px;
+  height: 350px;
   margin: 0;
   
   
   & .image__header{
     object-fit: cover;
-    height:70%;
+    height:90%;
     width: 100%;
 }
 }
 
 .restaurants__header__figcaption{
-  height: 20%;
+  height: 10%;
   display: flex;
   background-color:$couleur-background;
   border-top-left-radius: 30px;
@@ -25,13 +25,13 @@
   position: absolute;
 
   & .restaurants__header__figcaption__header{
-    flex: 1 70%;
-    text-align: center;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
     margin: auto;
     font-family:"Shrikhand";
-    font-size:larger;
+    font-size:small;
   & h1{
-    
+    min-width: 265px;
     margin:10px 10px;
   }
 }
@@ -55,7 +55,7 @@
 .carte{
   display: grid;
   justify-content: center;
-  margin: 50px auto;
+  margin:auto;
   & .entre,.plat,.dessert{
       background-color: white;
       width: 90%;
@@ -97,9 +97,10 @@
 
 #commande{
   text-align: center;
-  margin: 30px;
+  
   & button{
-      width: 60%;
+      width: 20%;
+      min-width: 300px;
       max-width: 400px;
       text-align: center;
       padding : 15px 30px;
@@ -109,5 +110,11 @@
       @extend %ombre;
       @extend %gradient;
       color: white;
+      &:hover{
+        cursor: pointer;
+        @extend %boutonhover;
+      }
 }
 }
+
+
