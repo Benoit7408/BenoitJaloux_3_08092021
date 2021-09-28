@@ -8982,7 +8982,6 @@ readers do not read off random characters that represent icons */
   #body__restaurants #ohmyfooter__restaurants ul .flist {
     display: flex;
     flex-wrap: wrap;
-    width: 30%;
   }
 }
 
@@ -9130,7 +9129,6 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  width: 100%;
 }
 
 a, ul {
@@ -9371,7 +9369,6 @@ main {
 }
 
 .restaurants__header__figcaption {
-  height: 10%;
   display: flex;
   background-color: #e9e3e3;
   border-top-left-radius: 30px;
