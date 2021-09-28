@@ -72,6 +72,7 @@ main{background-color:$couleur-background}
                   animation-name: heart;
                   background: linear-gradient(280deg, $couleur-secondaire, $couleur-primaire);
                   background-clip: text;
+                  -webkit-background-clip: text;
                   animation-duration: 2s;
                   cursor: pointer;
                   

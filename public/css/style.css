@@ -9219,6 +9219,7 @@ main {
   animation-name: heart;
   background: linear-gradient(280deg, #FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   animation-duration: 2s;
   cursor: pointer;
 }
