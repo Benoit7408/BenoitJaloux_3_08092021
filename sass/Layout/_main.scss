@@ -50,17 +50,33 @@ main{background-color:$couleur-background}
             & .ancre-figcaption__titre{
               height: 100%;
             }
-            & .ancre-figcaption__icon{
+            & .figcaption__icon{
               display:flex;
               height: 100%;
               align-items: center;
               justify-content: center;
               position: relative;
-              & .fa-heart{
+              & .heart__1{
                 font-size: 30px;
-              }
-              & .heart__2{
                 position: absolute;
+                background: linear-gradient(180deg, $couleur-secondaire, $couleur-primaire);
+                background-clip: text;
+              }
+
+              & .heart__2{
+                font-size: 30px;
+                position: absolute;
+                color: transparent;
+                &:hover{
+                  animation-name: heart;
+                  background: linear-gradient(180deg, $couleur-secondaire, $couleur-primaire);
+                  background-clip: text;
+                  animation-duration: 2s;
+                  cursor: pointer;
+                  
+
+                  
+                }
               }  
               }
             }

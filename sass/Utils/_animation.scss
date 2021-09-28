@@ -1,14 +1,19 @@
-@keyframes heart {
-  0%{
-    background-color: aliceblue;
+@keyframes heart{
+  0% {
+    
+    opacity: 0;
     }
   
-  100%{
-    background-color: black;
+  50% {
+   
+    opacity: 0.5;
+  }
+
+  100% {
+   
+    opacity: 1;
+    
+    
   }
 }
 
-
-.heart__2{
-animation: heart;
-}

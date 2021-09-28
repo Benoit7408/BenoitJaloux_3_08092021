@@ -8905,16 +8905,15 @@ readers do not read off random characters that represent icons */
 
 @keyframes heart {
   0% {
-    background-color: aliceblue;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
-    background-color: black;
+    opacity: 1;
   }
 }
-.heart__2 {
-  animation: heart;
-}
-
 #ohmyfooter__index,
 #ohmyfooter__restaurants, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaption, .all__restaurants .restaurants__thumbnail {
   display: flex;
@@ -9199,18 +9198,30 @@ main {
 .all__restaurants .restaurants__thumbnail figcaption .ancre-figcaption__titre {
   height: 100%;
 }
-.all__restaurants .restaurants__thumbnail figcaption .ancre-figcaption__icon {
+.all__restaurants .restaurants__thumbnail figcaption .figcaption__icon {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-.all__restaurants .restaurants__thumbnail figcaption .ancre-figcaption__icon .fa-heart {
+.all__restaurants .restaurants__thumbnail figcaption .figcaption__icon .heart__1 {
   font-size: 30px;
-}
-.all__restaurants .restaurants__thumbnail figcaption .ancre-figcaption__icon .heart__2 {
   position: absolute;
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  background-clip: text;
+}
+.all__restaurants .restaurants__thumbnail figcaption .figcaption__icon .heart__2 {
+  font-size: 30px;
+  position: absolute;
+  color: transparent;
+}
+.all__restaurants .restaurants__thumbnail figcaption .figcaption__icon .heart__2:hover {
+  animation-name: heart;
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  background-clip: text;
+  animation-duration: 2s;
+  cursor: pointer;
 }
 
 .new-restaurant {
@@ -9270,7 +9281,7 @@ main {
   border-top-right-radius: 40px;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
-  margin-right: 90%;
+  margin-right: 95%;
 }
 
 .number2 {
@@ -9280,7 +9291,7 @@ main {
   border-top-right-radius: 40px;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
-  margin-right: 90%;
+  margin-right: 95%;
 }
 
 .number3 {
@@ -9290,7 +9301,7 @@ main {
   border-top-right-radius: 40px;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
-  margin-right: 90%;
+  margin-right: 95%;
 }
 
 .map {
