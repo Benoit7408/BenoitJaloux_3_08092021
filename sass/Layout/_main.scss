@@ -59,17 +59,18 @@ main{background-color:$couleur-background}
               & .heart__1{
                 font-size: 30px;
                 position: absolute;
-                background: linear-gradient(180deg, $couleur-secondaire, $couleur-primaire);
-                background-clip: text;
+                
+                
+                color:black;
               }
 
               & .heart__2{
                 font-size: 30px;
                 position: absolute;
-                color: transparent;
+                color:transparent;
                 &:hover{
                   animation-name: heart;
-                  background: linear-gradient(180deg, $couleur-secondaire, $couleur-primaire);
+                  background: linear-gradient(280deg, $couleur-secondaire, $couleur-primaire);
                   background-clip: text;
                   animation-duration: 2s;
                   cursor: pointer;

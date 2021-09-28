@@ -9208,8 +9208,7 @@ main {
 .all__restaurants .restaurants__thumbnail figcaption .figcaption__icon .heart__1 {
   font-size: 30px;
   position: absolute;
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
-  background-clip: text;
+  color: black;
 }
 .all__restaurants .restaurants__thumbnail figcaption .figcaption__icon .heart__2 {
   font-size: 30px;
@@ -9218,7 +9217,7 @@ main {
 }
 .all__restaurants .restaurants__thumbnail figcaption .figcaption__icon .heart__2:hover {
   animation-name: heart;
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  background: linear-gradient(280deg, #FF79DA, #9356DC);
   background-clip: text;
   animation-duration: 2s;
   cursor: pointer;
