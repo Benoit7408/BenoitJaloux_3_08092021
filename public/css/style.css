@@ -8920,7 +8920,7 @@ readers do not read off random characters that represent icons */
   }
   100% {
     transform: scaleX(1);
-    width: 25%;
+    width: 50%;
   }
 }
 #ohmyfooter__index,
@@ -9419,6 +9419,20 @@ main {
   font-size: 30px;
   width: max-content;
 }
+.restaurants__header__figcaption #restaurants__heart .heart__2 {
+  font-size: 30px;
+  position: absolute;
+  color: transparent;
+}
+.restaurants__header__figcaption #restaurants__heart .heart__2:hover {
+  animation-name: heart;
+  background: linear-gradient(280deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation-duration: 2s;
+  cursor: pointer;
+}
+
 .carte {
   display: grid;
   justify-content: center;
@@ -9436,17 +9450,30 @@ main {
   cursor: pointer;
 }
 .carte .entre h3, .carte .plat h3, .carte .dessert h3 {
+  min-width: 100%;
   flex-shrink: 0;
 }
 .carte .entre p, .carte .plat p, .carte .dessert p {
   margin-bottom: 10px;
+  width: 100%;
+  grid-column: 1/2;
   flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  height: auto;
+  text-align: center;
+  flex-shrink: 0;
+  width: 100%;
+  grid-column: 2/3;
 }
 
 .block__menutext {
-  flex-basis: 0 0 80%;
-  display: flex;
-  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -9459,7 +9486,6 @@ main {
   animation-fill-mode: forwards;
   cursor: pointer;
   background-color: #99E2D0;
-  display: flex;
 }
 
 .animation__check {
@@ -9471,7 +9497,6 @@ main {
   background: #99E2D0;
   height: auto;
   color: white;
-  margin: 0 0 0 150px;
 }
 
 .menu__entre__titre::after,
@@ -9481,15 +9506,6 @@ main {
   display: block;
   width: 60px;
   content: "";
-}
-
-.price {
-  display: flex;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 50px;
 }
 
 #commande {

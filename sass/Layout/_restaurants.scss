@@ -1,21 +1,15 @@
 
-
-  
 .restaurants__header{
-  
   height: 350px;
   margin: 0;
-  
-  
   & .image__header{
     object-fit: cover;
     height:90%;
     width: 100%;
-}
+    }
 }
 
 .restaurants__header__figcaption{
-
   display: flex;
   background-color:$couleur-background;
   border-top-left-radius: 30px;
@@ -30,11 +24,13 @@
     margin: auto;
     font-family:"Shrikhand";
     font-size:small;
-  & h1{
-    min-width: 265px;
-    margin:10px 10px;
+
+    & h1{
+      min-width: 265px;
+      margin:10px 10px;
+    }
   }
-}
+
   & #restaurants__heart{
     flex: 1 30%;
     display: flex;
@@ -46,9 +42,19 @@
       font-size: 30px;
       width: max-content;
     }
+
     & .heart__2{
-      
-    }  
+      font-size: 30px;
+                position: absolute;
+                color:transparent;
+                &:hover{
+                  animation-name: heart;
+                  background: linear-gradient(280deg, $couleur-secondaire, $couleur-primaire);
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                  animation-duration: 2s;
+                  cursor: pointer;
+    }  }
   }
 }
 
@@ -72,20 +78,32 @@
       cursor: pointer;
 
       & h3{
+        min-width: 100%;
         flex-shrink: 0;
-        
       }
       & p{
         margin-bottom: 10px;
+        width: 100%;
+        grid-column: 1 / 2;
         flex-shrink: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
       }
   }
 }
-
+.price{
+  height: auto;
+  text-align: center;
+  flex-shrink: 0;
+  width: 100%;
+  grid-column: 2 / 3;
+}
 .block__menutext{
- flex-basis:0 0 80% ;
-  display: flex;
-  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  
+  grid-template-columns: 2fr 1fr;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -98,7 +116,7 @@
     animation-fill-mode: forwards;
     cursor: pointer;
     background-color: $couleur-tertiaire;
-    display: flex;
+    
   }
 }
 .animation__check{
@@ -112,7 +130,7 @@
   background:$couleur-tertiaire;
   height: auto;
   color: white;
-  margin: 0 0 0 150px ;
+  
   
   
 }
@@ -127,14 +145,7 @@
   content:"";
 }
 
-.price{
-  display: flex;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 50px;
-}
+
 
 #commande{
   text-align: center;

@@ -1,32 +1,21 @@
 @keyframes heart{
-  0% {
-    
+  0%{
     opacity: 0;
     }
-  
-  50% {
-   
+  50%{
     opacity: 0.5;
-  }
-
-  100% {
-   
+    }
+  100%{
     opacity: 1;
-    
-    
-  }
+      }
 }
 
 @keyframes block-translation-hover{
-0% {
-
-transform: scaleX(0);
-}
-
-
-100% {
-transform: scaleX(1);
-width: 25%;
-}
-  
+  0% {
+  transform: scaleX(0);
+    }
+  100% {
+  transform: scaleX(1);
+  width: 50%;
+  }
 }
