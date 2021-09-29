@@ -8914,6 +8914,15 @@ readers do not read off random characters that represent icons */
     opacity: 1;
   }
 }
+@keyframes block-translation-hover {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+    width: 25%;
+  }
+}
 #ohmyfooter__index,
 #ohmyfooter__restaurants, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaption, .all__restaurants .restaurants__thumbnail {
   display: flex;
@@ -8986,7 +8995,7 @@ readers do not read off random characters that represent icons */
 
 @media screen and (min-width: 1200px) {
   #body__restaurants #body__restaurants {
-    background-color: #e9e3e3;
+    background-color: #f6f6f6;
   }
   #body__restaurants #main__restaurants {
     width: 100%;
@@ -9152,7 +9161,7 @@ h2, h3, p {
 }
 
 main {
-  background-color: #e9e3e3;
+  background-color: #f6f6f6;
 }
 
 .all__restaurants {
@@ -9258,7 +9267,7 @@ main {
   padding: 1rem 2rem 1rem 1rem;
   margin: 1rem;
   border-radius: 15px;
-  background-color: #e9e3e3;
+  background-color: #f6f6f6;
   position: relative;
   justify-content: space-around;
   max-width: 368px;
@@ -9305,7 +9314,7 @@ main {
 }
 
 .map {
-  background-color: #e9e3e3;
+  background-color: #f6f6f6;
   padding-bottom: 20px;
   justify-content: center;
 }
@@ -9381,7 +9390,7 @@ main {
 
 .restaurants__header__figcaption {
   display: flex;
-  background-color: #e9e3e3;
+  background-color: #f6f6f6;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   width: 100%;
@@ -9420,16 +9429,49 @@ main {
   width: 90%;
   margin: 2rem auto;
   display: flex;
-  flex-wrap: wrap;
   padding: 0;
   max-width: 600px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
 }
 .carte .entre h3, .carte .plat h3, .carte .dessert h3 {
-  width: 100%;
+  flex-shrink: 0;
 }
 .carte .entre p, .carte .plat p, .carte .dessert p {
   margin-bottom: 10px;
-  width: 80%;
+  flex-shrink: 0;
+}
+
+.block__menutext {
+  flex-basis: 0 0 80%;
+  display: flex;
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.entre:hover .animation__check,
+.plat:hover .animation__check,
+.dessert:hover .animation__check {
+  animation-name: block-translation-hover;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+  background-color: #99E2D0;
+  display: flex;
+}
+
+.animation__check {
+  display: flex;
+  transform-origin: right;
+  width: 0%;
+  align-items: center;
+  justify-content: center;
+  background: #99E2D0;
+  height: auto;
+  color: white;
+  margin: 0 0 0 150px;
 }
 
 .menu__entre__titre::after,
@@ -9443,9 +9485,11 @@ main {
 
 .price {
   display: flex;
-  height: 20px;
+  height: auto;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  width: 50px;
 }
 
 #commande {

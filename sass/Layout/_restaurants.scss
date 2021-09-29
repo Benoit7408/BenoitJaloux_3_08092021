@@ -56,6 +56,7 @@
   display: grid;
   justify-content: center;
   margin:auto;
+  
   & .entre,.plat,.dessert{
       background-color: white;
       width: 90%;
@@ -64,18 +65,56 @@
       @extend %radius-top-thumbnail;
       @extend %ombre;
       display: flex;
-      flex-wrap: wrap;
       padding:0;
       max-width: 600px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      cursor: pointer;
+
       & h3{
-        width:100%;
+        flex-shrink: 0;
         
       }
       & p{
         margin-bottom: 10px;
-        width: 80%;
+        flex-shrink: 0;
       }
   }
+}
+
+.block__menutext{
+ flex-basis:0 0 80% ;
+  display: flex;
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.entre,
+.plat,
+.dessert{
+  &:hover .animation__check{
+    animation-name: block-translation-hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+    background-color: $couleur-tertiaire;
+    display: flex;
+  }
+}
+.animation__check{
+  
+  
+  display: flex;
+  transform-origin: right;
+  width: 0%;
+  align-items: center;
+  justify-content: center;
+  background:$couleur-tertiaire;
+  height: auto;
+  color: white;
+  margin: 0 0 0 150px ;
+  
+  
 }
 
 .menu__entre__titre::after,
@@ -90,9 +129,11 @@
 
 .price{
   display: flex;
-  height: 20px;
+  height: auto;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  width: 50px;
 }
 
 #commande{
