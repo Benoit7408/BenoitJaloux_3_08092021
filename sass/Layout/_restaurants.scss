@@ -118,12 +118,14 @@
     animation-fill-mode: forwards;
     cursor: pointer;
     background-color: $couleur-tertiaire;
-    
   }
+  &:hover .fa-check-circle {
+  animation-name: rotation-icone;
+  animation-duration: 1s;
+  }
+
 }
 .animation__check{
-  
-  
   display: flex;
   transform-origin: right;
   width: 0%;
@@ -132,10 +134,9 @@
   background:$couleur-tertiaire;
   height: auto;
   color: white;
-  
-  
-  
 }
+
+
 
 .menu__entre__titre::after,
 .menu__plat__titre::after,

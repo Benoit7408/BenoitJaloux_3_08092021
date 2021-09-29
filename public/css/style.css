@@ -8923,6 +8923,17 @@ readers do not read off random characters that represent icons */
     width: 50%;
   }
 }
+@keyframes rotation-icone {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 #ohmyfooter__index,
 #ohmyfooter__restaurants, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaption, .all__restaurants .restaurants__thumbnail {
   display: flex;
@@ -9487,6 +9498,12 @@ main {
   animation-fill-mode: forwards;
   cursor: pointer;
   background-color: #99E2D0;
+}
+.entre:hover .fa-check-circle,
+.plat:hover .fa-check-circle,
+.dessert:hover .fa-check-circle {
+  animation-name: rotation-icone;
+  animation-duration: 1s;
 }
 
 .animation__check {
