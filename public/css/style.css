@@ -9457,6 +9457,11 @@ main {
   height: 350px;
   margin: 0;
 }
+.restaurants__header .a {
+  margin: auto 0;
+  width: 10%;
+  text-align: center;
+}
 .restaurants__header .image__header {
   object-fit: cover;
   height: 90%;
