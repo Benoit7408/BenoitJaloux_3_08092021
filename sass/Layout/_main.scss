@@ -94,7 +94,7 @@ main{
   background-color: $couleur-tertiaire;
   margin: 10px;
   padding: 0.5rem 1em;
- 
+  color:darken($couleur-tertiaire,40);
   align-self: end;
 
 }
