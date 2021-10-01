@@ -9333,6 +9333,11 @@ h2, h3, p {
   opacity: 0.8;
 }
 
+.fa-arrow-left {
+  font-size: 25px;
+  opacity: 0.8;
+}
+
 main {
   background-color: #f6f6f6;
 }
