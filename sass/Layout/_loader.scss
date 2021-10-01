@@ -1,0 +1,106 @@
+
+@keyframes rotation__couvert{
+  0%{
+    
+    transform: rotate(0);
+  }
+  100%{
+   
+    transform: rotate(1080deg);
+  }
+}
+@keyframes loader{
+  0%{
+    opacity: 01;
+    scale: 1;
+  }
+  20%{
+    opacity: 0.5;
+    scale: 0.8;
+  }
+  40%{
+    opacity: 1;
+    scale: 2;
+  }
+  60%{
+    opacity: 1;
+    scale: 2;
+  }
+  
+  100%{
+    opacity: 1;
+    
+    scale: 0;
+  }
+}
+
+
+#loader{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  animation-name: loader;
+  animation-duration: 3s;
+  animation-fill-mode:forwards;
+}
+
+#block{
+  
+  width: 200px;
+  height: 200px;
+  margin: 50vh auto;
+
+}
+
+.loader__animation{
+  background:darken($couleur-tertiaire,10);
+  width: 100%;
+  height: 100%;
+  border: 10px solid;
+  border-top-color: blue;
+  border-left-color: white;
+  border-right-color: white;
+  border-bottom-color:red ;
+  border-radius: 50%;
+ display: flex;
+}
+.couvert1{
+  
+ height: 80%;
+  z-index: 1;
+  animation-name: rotation__couvert;
+  animation-duration: 2s ; 
+  animation-fill-mode: forwards;
+  & img{height: 100%;}
+  
+}
+.couvert2{
+  
+  height:80%;
+  z-index: 1;
+  animation-name: rotation__couvert;
+  animation-duration: 2s ; 
+  animation-fill-mode: forwards;
+  & img{height: 100%;}
+  
+}
+
+#tour{
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  
+}
+.tour{
+  width: 100%;
+  height: 100%;
+ 
+}
+
+
+
+

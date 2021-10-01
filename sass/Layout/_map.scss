@@ -13,6 +13,7 @@
       border-top: 2px solid $couleur-border;
       display: flex;
       align-items: center;
+      margin-bottom:1rem;
 
       & #localisation{
       margin: auto;
@@ -25,7 +26,7 @@
     & .map__titre{
       text-align: center;
       width: 100%;
-      margin: 10px auto;
+      margin: 1rem auto;
       
       & .map__titre__decouvrir{
         font-size: larger;
@@ -36,7 +37,7 @@
     & .map__form{
       
         text-align: center;
-
+        margin: 1rem auto;
       & .map__bouton{
         
         

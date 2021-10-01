@@ -9164,7 +9164,6 @@ readers do not read off random characters that represent icons */
   }
   #body__index .stage {
     background-color: white;
-    opacity: 0.8;
   }
   #body__index .stage .stage__block {
     grid-template-columns: 1fr 1fr 1fr;
@@ -9201,6 +9200,101 @@ readers do not read off random characters that represent icons */
     max-width: 750px;
     height: 40vh;
   }
+}
+
+@keyframes rotation__couvert {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+  20% {
+    opacity: 0.5;
+    scale: 0.8;
+  }
+  40% {
+    opacity: 1;
+    scale: 2;
+  }
+  60% {
+    opacity: 1;
+    scale: 2;
+  }
+  100% {
+    opacity: 1;
+    scale: 0;
+  }
+}
+#loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  animation-name: loader;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+#block {
+  width: 200px;
+  height: 200px;
+  margin: 50vh auto;
+}
+
+.loader__animation {
+  background: #71d7be;
+  width: 100%;
+  height: 100%;
+  border: 10px solid;
+  border-top-color: blue;
+  border-left-color: white;
+  border-right-color: white;
+  border-bottom-color: red;
+  border-radius: 50%;
+  display: flex;
+}
+
+.couvert1 {
+  height: 80%;
+  z-index: 1;
+  animation-name: rotation__couvert;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.couvert1 img {
+  height: 100%;
+}
+
+.couvert2 {
+  height: 80%;
+  z-index: 1;
+  animation-name: rotation__couvert;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.couvert2 img {
+  height: 100%;
+}
+
+#tour {
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+.tour {
+  width: 100%;
+  height: 100%;
 }
 
 @font-face {
@@ -9359,7 +9453,7 @@ main {
 }
 
 .number1 {
-  padding: 10px 15px;
+  padding: 5px 10px;
   background-color: #9356DC;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -9369,7 +9463,7 @@ main {
 }
 
 .number2 {
-  padding: 10px 15px;
+  padding: 5px 10px;
   background-color: #9356DC;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -9379,7 +9473,7 @@ main {
 }
 
 .number3 {
-  padding: 10px 15px;
+  padding: 5px 10px;
   background-color: #9356DC;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -9399,6 +9493,7 @@ main {
   border-top: 2px solid #b49c9c;
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
 }
 .map .map__info #localisation {
   margin: auto;
@@ -9409,7 +9504,7 @@ main {
 .map .map__titre {
   text-align: center;
   width: 100%;
-  margin: 10px auto;
+  margin: 1rem auto;
 }
 .map .map__titre .map__titre__decouvrir {
   font-size: larger;
@@ -9417,6 +9512,7 @@ main {
 }
 .map .map__form {
   text-align: center;
+  margin: 1rem auto;
 }
 .map .map__form .map__bouton {
   text-align: center;
