@@ -9213,23 +9213,23 @@ readers do not read off random characters that represent icons */
 @keyframes loader {
   0% {
     opacity: 1;
-    scale: 1;
+    transform: scale(1);
   }
   20% {
     opacity: 0.5;
-    scale: 0.8;
+    transform: scale(1.5);
   }
   40% {
     opacity: 1;
-    scale: 2;
+    transform: scale(1);
   }
   60% {
     opacity: 1;
-    scale: 2;
+    transform: scale(1.5);
   }
   100% {
     opacity: 1;
-    scale: 0;
+    transform: scale(0);
   }
 }
 #loader {
