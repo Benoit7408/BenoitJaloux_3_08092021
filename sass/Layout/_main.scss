@@ -46,22 +46,23 @@ main{
           }
 
         & figcaption{
+            display: grid;
+            grid-template-columns: 1fr 100px;
             background-color:white;
-            height: 30%;
+            height: 100%;
             @extend %radius-bottom-thumbnail;
-            @extend %flexCol;
-            flex-wrap: wrap;
-            justify-content: center;
-
+            align-content: center;
+            
             & .ancre-figcaption__titre{
               height: 100%;
+              
             }
 
             & .figcaption__icon{
-              display:flex;
-              height: 100%;
+              width: max-content;
               align-items: center;
-              justify-content: center;
+              margin: 1rem 2rem;
+             
               position: relative;
               & .heart__1{
                 font-size: 30px;
@@ -73,21 +74,21 @@ main{
                 position: absolute;
                 color:transparent;
 
-                &:hover{
-                  animation-name: heart;
-                  background: linear-gradient(280deg, $couleur-secondaire, $couleur-primaire);
-                  background-clip: text;
-                  -webkit-background-clip: text;
-                  animation-duration: 2s;
-                  cursor: pointer;
-                }
+               
               }  
             }
           }
         }
       }
   
-
+.figcaption__icon :hover{
+  animation-name: heart;
+  background: linear-gradient(280deg, $couleur-secondaire, $couleur-primaire);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation-duration: 2s;
+  cursor: pointer;
+}
 
 .new-restaurant{
   position: absolute;

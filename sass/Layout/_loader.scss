@@ -2,11 +2,14 @@
 @keyframes rotation__couvert{
   0%{
     
-    transform: rotate(0);
+    transform: rotateX(0);
+    transform: rotateZ(0);
+    
   }
   100%{
    
-    transform: rotate(1080deg);
+    transform: rotateX(1080deg);
+    transform: rotateZ(1080deg);
   }
 }
 @keyframes loader{
@@ -40,8 +43,8 @@
 
 #block{
   
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   margin: 50vh auto;
 
 }

@@ -1,7 +1,7 @@
 
 .restaurants__header{
   height: 350px;
-  margin: 0;
+  margin:0 0 30px 0;
   
   & .image__header{
     object-fit: cover;
@@ -47,23 +47,25 @@ header>a{
     & .heart{
       position: absolute;
       font-size: 30px;
-      width: max-content;
+     
     }
 
     & .heart__2{
       font-size: 30px;
-                position: absolute;
-                color:transparent;
-                &:hover{
-                  animation-name: heart;
-                  background: linear-gradient(280deg, $couleur-secondaire, $couleur-primaire);
-                  background-clip: text;
-                  -webkit-background-clip: text;
-                  animation-duration: 2s;
-                  cursor: pointer;
-    }  }
+      position: absolute;
+      color:transparent;
+             
   }
 }
+
+#restaurants__heart :hover{
+  animation-name: heart;
+  background: linear-gradient(280deg, $couleur-secondaire, $couleur-primaire);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation-duration: 2s;
+  cursor: pointer;
+}  }
 
 .carte{
   display: grid;
@@ -116,6 +118,9 @@ header>a{
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+.fa-check-circle{font-size: 25px;}
+
 .entre,
 .plat,
 .dessert{
@@ -162,6 +167,7 @@ header>a{
 #commande{
   text-align: center;
   
+  
   & button{
       width: 20%;
       min-width: 300px;
@@ -174,6 +180,7 @@ header>a{
       @extend %ombre;
       @extend %gradient;
       color: white;
+      border: 0px solid transparent;
       &:hover{
         cursor: pointer;
         @extend %boutonhover;

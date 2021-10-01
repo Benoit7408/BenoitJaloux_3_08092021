@@ -40,7 +40,7 @@
         margin: 1rem auto;
       & .map__bouton{
         
-        
+        border:0px solid transparent;
         text-align: center;
         padding : 10px 50px;
         margin: 5px auto;
@@ -49,6 +49,7 @@
         @extend %gradient;
         color: white;
         font-size: medium;
+        white-space: nowrap;
       
       &:hover{
         @extend %boutonhover;

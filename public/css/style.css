@@ -8920,7 +8920,7 @@ readers do not read off random characters that represent icons */
   }
   100% {
     transform: scaleX(1);
-    width: 50%;
+    width: 28%;
   }
 }
 @keyframes rotation-icone {
@@ -8947,59 +8947,59 @@ readers do not read off random characters that represent icons */
 .entre__1 {
   animation-name: translationY;
   animation-duration: 1s;
-  animation-delay: 0.1s;
+  animation-delay: 0.3s;
 }
 
 .entre__2 {
   animation-name: translationY;
   animation-duration: 1s;
-  animation-delay: 0.2s;
+  animation-delay: 0.5s;
 }
 
 .entre__3 {
   animation-name: translationY;
   animation-duration: 1s;
-  animation-delay: 0.3s;
+  animation-delay: 0.7s;
 }
 
 .plat__1 {
   animation-name: translationY;
   animation-duration: 1s;
-  animation-delay: 0.4s;
+  animation-delay: 0.9s;
 }
 
 .plat__2 {
   animation-name: translationY;
   animation-duration: 1s;
-  animation-delay: 0.5s;
+  animation-delay: 1.1s;
 }
 
 .plat__3 {
   animation-name: translationY;
   animation-duration: 1s;
-  animation-delay: 0.6s;
+  animation-delay: 1.3s;
 }
 
 .dessert__1 {
   animation-name: translationY;
   animation-duration: 1s;
-  animation-delay: 0.7s;
+  animation-delay: 1.5s;
 }
 
 .dessert__2 {
   animation-name: translationY;
   animation-duration: 1s;
-  animation-delay: 0.8s;
+  animation-delay: 1.7s;
 }
 
 .dessert__3 {
   animation-name: translationY;
   animation-duration: 1s;
-  animation-delay: 0.9s;
+  animation-delay: 1.9s;
 }
 
 #ohmyfooter__index,
-#ohmyfooter__restaurants, .map, .stage__block, .all__restaurants .restaurants__thumbnail figcaption, .all__restaurants .restaurants__thumbnail {
+#ohmyfooter__restaurants, .map, .stage__block, .all__restaurants .restaurants__thumbnail {
   display: flex;
   flex-direction: column;
 }
@@ -9030,8 +9030,8 @@ readers do not read off random characters that represent icons */
 }
 
 #commande button:hover, .map .map__form .map__bouton:hover {
-  background: linear-gradient(180deg, #ff93e1, #a16be0);
-  box-shadow: 5px 5px 20px black;
+  background: linear-gradient(180deg, #ff88de, #9b63df);
+  box-shadow: 5px 5px 20px #5d5d5d;
 }
 
 @media screen and (min-width: 800px) {
@@ -9204,10 +9204,12 @@ readers do not read off random characters that represent icons */
 
 @keyframes rotation__couvert {
   0% {
-    transform: rotate(0);
+    transform: rotateX(0);
+    transform: rotateZ(0);
   }
   100% {
-    transform: rotate(1080deg);
+    transform: rotateX(1080deg);
+    transform: rotateZ(1080deg);
   }
 }
 @keyframes loader {
@@ -9233,8 +9235,8 @@ readers do not read off random characters that represent icons */
   }
 }
 #block {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   margin: 50vh auto;
 }
 
@@ -9370,19 +9372,19 @@ main {
   object-fit: cover;
 }
 .all__restaurants .restaurants__thumbnail figcaption {
+  display: grid;
+  grid-template-columns: 1fr 100px;
   background-color: white;
-  height: 30%;
-  flex-wrap: wrap;
-  justify-content: center;
+  height: 100%;
+  align-content: center;
 }
 .all__restaurants .restaurants__thumbnail figcaption .ancre-figcaption__titre {
   height: 100%;
 }
 .all__restaurants .restaurants__thumbnail figcaption .figcaption__icon {
-  display: flex;
-  height: 100%;
+  width: max-content;
   align-items: center;
-  justify-content: center;
+  margin: 1rem 2rem;
   position: relative;
 }
 .all__restaurants .restaurants__thumbnail figcaption .figcaption__icon .heart__1 {
@@ -9395,7 +9397,8 @@ main {
   position: absolute;
   color: transparent;
 }
-.all__restaurants .restaurants__thumbnail figcaption .figcaption__icon .heart__2:hover {
+
+.figcaption__icon :hover {
   animation-name: heart;
   background: linear-gradient(280deg, #FF79DA, #9356DC);
   background-clip: text;
@@ -9447,8 +9450,6 @@ main {
 }
 .stage__block__btn:hover {
   background-color: #e4d5f6;
-  opacity: 0.9;
-  font-weight: bold;
 }
 
 .stage__number {
@@ -9518,11 +9519,13 @@ main {
   margin: 1rem auto;
 }
 .map .map__form .map__bouton {
+  border: 0px solid transparent;
   text-align: center;
   padding: 10px 50px;
   margin: 5px auto;
   color: white;
   font-size: medium;
+  white-space: nowrap;
 }
 #ohmyfooter__index,
 #ohmyfooter__restaurants {
@@ -9554,7 +9557,7 @@ main {
 
 .restaurants__header {
   height: 350px;
-  margin: 0;
+  margin: 0 0 30px 0;
 }
 .restaurants__header .image__header {
   object-fit: cover;
@@ -9597,14 +9600,13 @@ header > a {
 .restaurants__header__figcaption #restaurants__heart .heart {
   position: absolute;
   font-size: 30px;
-  width: max-content;
 }
 .restaurants__header__figcaption #restaurants__heart .heart__2 {
   font-size: 30px;
   position: absolute;
   color: transparent;
 }
-.restaurants__header__figcaption #restaurants__heart .heart__2:hover {
+.restaurants__header__figcaption #restaurants__heart :hover {
   animation-name: heart;
   background: linear-gradient(280deg, #FF79DA, #9356DC);
   background-clip: text;
@@ -9659,6 +9661,10 @@ header > a {
   overflow: hidden;
 }
 
+.fa-check-circle {
+  font-size: 25px;
+}
+
 .entre:hover .animation__check,
 .plat:hover .animation__check,
 .dessert:hover .animation__check {
@@ -9707,6 +9713,7 @@ header > a {
   margin: 15px auto;
   font-size: large;
   color: white;
+  border: 0px solid transparent;
 }
 #commande button:hover {
   cursor: pointer;
