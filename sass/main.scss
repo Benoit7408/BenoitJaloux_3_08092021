@@ -6,7 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import 'Utils/Variables';
-@import 'Utils/animation';
+@import 'Utils/keyframes';
 @import 'Utils/placeholders';
 
 @import 'Layout/loader';
@@ -16,7 +16,9 @@
 @import 'Layout/stage';
 @import 'Layout/map';
 @import 'Layout/footer';
-
 @import 'Layout/restaurants';
 @import 'Layout/responsive';
+@import 'Layout/animation-pseudo-element';
+
+
 @import 'Utils/responsive';

@@ -10,12 +10,6 @@
     }
 }
 
-header>a{
-  margin: auto 0;
-  width: 10%;
-  text-align: center;
-}
-
 .restaurants__header__figcaption{
   display: flex;
   background-color:$couleur-background;
@@ -58,14 +52,7 @@ header>a{
   }
 }
 
-#restaurants__heart :hover{
-  animation-name: heart;
-  background: linear-gradient(280deg, $couleur-secondaire, $couleur-primaire);
-  background-clip: text;
-  -webkit-background-clip: text;
-  animation-duration: 2s;
-  cursor: pointer;
-}  }
+  }
 
 .carte{
   display: grid;
@@ -109,58 +96,39 @@ header>a{
   flex-shrink: 0;
   width: 100%;
   grid-column: 2 / 3;
+  margin: auto;
 }
 .block__menutext{
   width: 100%;
   display: grid;
-  
   grid-template-columns: 2fr 1fr;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.fa-check-circle{font-size: 25px;}
-
-.entre,
-.plat,
-.dessert{
-  &:hover .animation__check{
-    animation-name: block-translation-hover;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    cursor: pointer;
-    background-color: $couleur-tertiaire;
-  }
-  &:hover .fa-check-circle {
-  animation-name: rotation-icone;
-  animation-duration: 1s;
-  }
-
+.fa-check-circle{
+  font-size: 25px;
 }
+
+
 .animation__check{
   display: flex;
-  transform-origin: right;
-  width: 0%;
+  margin: 0 -28% 0 0;
+  width: 28%;
+  transition: margin 2s;
+  
+  overflow: hidden;
   align-items: center;
   justify-content: center;
   background:$couleur-tertiaire;
   height: auto;
   color: white;
-}
-
-
-
-
-
-.menu__entre__titre::after,
-.menu__plat__titre::after,
-.menu__dessert__titre::after{
-  border-top: 4px solid $couleur-tertiaire;
-  display: block;
   
-  width: 60px;
-  content:"";
 }
+
+
+
+
 
 
 

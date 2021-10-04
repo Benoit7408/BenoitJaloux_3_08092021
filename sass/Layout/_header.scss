@@ -1,16 +1,23 @@
+
+/*le logo du site pour toutes les pages*/
+
 .hprojet{
   display: flex;
-  
   & .hprojet__img{
-    
-   
     margin:10px auto 10px auto;
     text-align: center;
     opacity: 0.8;
   }
 }
 
+/*sert uniquement pour les pages restaurants*/
 .fa-arrow-left{
   font-size: 25px;
   opacity: 0.8;
+}
+
+header>a{
+  margin: auto 0;
+  width: 10%;
+  text-align: center;
 }

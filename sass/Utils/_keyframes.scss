@@ -1,0 +1,85 @@
+/* les animation de mon loader */
+
+
+@keyframes rotation__couvert{
+  0%{
+    transform: rotateZ(0);
+  }
+  100%{
+    transform: rotateZ(1100deg);
+  }
+}
+
+@keyframes duration__loader{
+  0%{
+    
+  }
+  100%{
+   z-index: -3;
+  }
+}
+
+@keyframes duration__loader__animation{
+  0%{
+    opacity: 1;
+    transform:scale(0);
+  }
+  
+  40%{
+    opacity: 1;
+    transform: scale(2);
+  }
+  
+  100%{
+    opacity: 1;
+    transform:scale(0); 
+  }
+}
+
+
+
+/* les animation de mes coeurs */
+
+@keyframes heart{
+  0%{
+    opacity: 0;
+    }
+  50%{
+    opacity: 0.5;
+    }
+  100%{
+    opacity: 1;
+      }
+}
+/* ma translation des éléments de menu */
+
+
+
+
+
+/* Mon icone à l'interieur de la translation, le hover est sur le meme bock que la translation */
+@keyframes rotation-icone{
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/* Ma translation sur y des blocks du menu */
+@keyframes translationY{
+  0%{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
