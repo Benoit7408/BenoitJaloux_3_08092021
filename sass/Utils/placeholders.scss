@@ -143,10 +143,10 @@
 %responsive__tablette__index{
   @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
     #block{
-      transform: scale(0);
+      
       width: 260px;
       height: 260px;
-      margin: auto;
+      margin: 50vh auto;
     }
 
 

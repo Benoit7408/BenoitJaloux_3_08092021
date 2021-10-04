@@ -82,13 +82,13 @@
 
 
 .couvert{
-  animation: rotation__couvert 3s cubic-bezier(0.2, 1.6, 0.5, 1.53) forwards 0.3s;
+  animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.53) forwards 0.3s;
 }
 
 #loader{
   animation: duration__loader 3s step-end forwards;
 }
 #block{
-  animation:duration__loader__animation 2.2s forwards 0.8s linear;
+  animation:duration__loader__animation 2.2s forwards linear;
   
 }

@@ -6,7 +6,7 @@
     transform: rotateZ(0);
   }
   100%{
-    transform: rotateZ(1100deg);
+    transform: rotateZ(840deg);
   }
 }
 
@@ -21,39 +21,38 @@
 
 @keyframes duration__loader__animation{
   0%{
-    opacity: 1;
-    transform:scale(0);
-    margin-left: 10%;
-  }
-  30%{
-    margin-left:30%;
-    opacity: 1;
+    
     transform: scale(1);
   }
-  40%{
-    opacity: 1;
-    transform: scale(1.5);
-    margin-left:40%;
-  }
-  50%{
-    opacity: 1;
-    transform: scale(1.9);
-    margin-left:50%;
-  }
-  60%{
-    opacity: 1;
-    transform: scale(1.5);
-    margin-left:60%;
-  }
-  100%{
-    opacity: 1;
-    margin-left: 90%;
-    transform:scale(0);
+  10%{
     
+    transform: scale(0.9);
   }
+  20%{
+    
+    transform: scale(1.1);
+  }
+  30%{
+    
+    transform: scale(0.9);
+  }
+  40%{
+    
+    transform: scale(1.1);
+  }
+50%{
+  
+  transform: scale(0.9);
 }
 
-
+  60%{
+    transform: scale(1.1);
+  
+}
+100%{
+  transform: scale(0);
+}
+}
 
 /* les animation de mes coeurs */
 

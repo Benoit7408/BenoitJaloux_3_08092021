@@ -8910,7 +8910,7 @@ readers do not read off random characters that represent icons */
     transform: rotateZ(0);
   }
   100% {
-    transform: rotateZ(1100deg);
+    transform: rotateZ(840deg);
   }
 }
 @keyframes duration__loader {
@@ -8920,33 +8920,27 @@ readers do not read off random characters that represent icons */
 }
 @keyframes duration__loader__animation {
   0% {
-    opacity: 1;
-    transform: scale(0);
-    margin-left: 10%;
-  }
-  30% {
-    margin-left: 30%;
-    opacity: 1;
     transform: scale(1);
   }
+  10% {
+    transform: scale(0.9);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  30% {
+    transform: scale(0.9);
+  }
   40% {
-    opacity: 1;
-    transform: scale(1.5);
-    margin-left: 40%;
+    transform: scale(1.1);
   }
   50% {
-    opacity: 1;
-    transform: scale(1.9);
-    margin-left: 50%;
+    transform: scale(0.9);
   }
   60% {
-    opacity: 1;
-    transform: scale(1.5);
-    margin-left: 60%;
+    transform: scale(1.1);
   }
   100% {
-    opacity: 1;
-    margin-left: 90%;
     transform: scale(0);
   }
 }
@@ -9104,10 +9098,9 @@ readers do not read off random characters that represent icons */
 
 @media screen and (min-width: 800px) {
   #body__index #block {
-    transform: scale(0);
     width: 260px;
     height: 260px;
-    margin: auto;
+    margin: 50vh auto;
   }
   #body__index .stage__block {
     display: grid;
@@ -9201,18 +9194,16 @@ readers do not read off random characters that represent icons */
   width: 100%;
   height: 100%;
   position: absolute;
-  background: transparent;
+  background-color: rgba(255, 255, 255, 0.7);
   display: flex;
-  justify-content: center;
   z-index: 1;
 }
 
 /*Les élements d'origine de ma div qui est animer */
 #block {
-  transform: scale(0);
-  width: 100px;
-  height: 100px;
-  margin: auto;
+  margin: 50vh auto;
+  width: 60px;
+  height: 60px;
 }
 
 /*Les élements interieur graphique ou de placements de mon animation */
@@ -9230,18 +9221,17 @@ readers do not read off random characters that represent icons */
   border-radius: 50%;
 }
 .loader__animation .couvert {
-  height: 80%;
+  height: 100%;
   z-index: 1;
 }
 .loader__animation .couvert img {
-  height: 80%;
+  height: 100%;
 }
 .loader__animation #tour {
   text-align: center;
-  height: 80%;
 }
 .loader__animation #tour img {
-  height: 100%;
+  width: 70%;
 }
 
 @font-face {
@@ -9723,7 +9713,7 @@ body {
 }
 
 .couvert {
-  animation: rotation__couvert 3s cubic-bezier(0.2, 1.6, 0.5, 1.53) forwards 0.3s;
+  animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.53) forwards 0.3s;
 }
 
 #loader {
@@ -9731,7 +9721,7 @@ body {
 }
 
 #block {
-  animation: duration__loader__animation 2.2s forwards 0.8s linear;
+  animation: duration__loader__animation 2.2s forwards linear;
 }
 
 /*# sourceMappingURL=style.css.map */
