@@ -90,14 +90,7 @@
       }
   }
 }
-.price{
-  height: auto;
-  text-align: center;
-  flex-shrink: 0;
-  width: 100%;
-  grid-column: 2 / 3;
-  margin: auto;
-}
+
 .block__menutext{
   width: 100%;
   display: grid;
@@ -105,6 +98,14 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+.price{
+  height: auto;
+  text-align: center;
+  grid-column: 2 / 3;
+  margin: auto 0 auto 50%;
+}
+
 
 .fa-check-circle{
   font-size: 25px;

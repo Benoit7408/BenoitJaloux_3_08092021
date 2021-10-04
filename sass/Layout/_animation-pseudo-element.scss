@@ -62,8 +62,6 @@
 .dessert{
   &:hover .animation__check{
     margin: 0 0 0 0;
-    
-    
   }
   &:hover .fa-check-circle {
   animation-name: rotation-icone 1s;
@@ -88,8 +86,9 @@
 }
 
 #loader{
-  animation: duration__loader 2.8s step-end forwards;
+  animation: duration__loader 3s step-end forwards;
 }
 #block{
-  animation: duration__loader__animation 2s forwards 0.8s;
+  animation:duration__loader__animation 2.2s forwards 0.8s linear;
+  
 }
