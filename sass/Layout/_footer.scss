@@ -6,24 +6,25 @@
     font-family: "Shrikhand";
     font-size: larger;
     font-weight: 200;
-    width: 90%;
+    width: 95%;
     max-width: 1570px;
     margin: auto;
     color: white;
   }
   & ul{
-      width: 90%;
+      width: 95%;
       max-width: 1570px;
       margin:auto;
     }
   
   
   & .flist{
-    width: 50%;
+    width: 100%;
     margin: 10px 0;
     
     & .flist__text{
       color: white;
+      width: 100%;
       & i{
         padding-right: 5px;
       }

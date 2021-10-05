@@ -7,14 +7,14 @@
      
 
       & .stage__header {
-            width: 90%;
+            width: 95%;
             margin: 1rem;     
       }
 }
 
 .stage__block{
       @extend %flexCol;
-      width: 95%;
+      width: 100%;
       align-items: center;
       margin-bottom: 2rem;
       padding: 0;
@@ -31,7 +31,7 @@
       background-color:$couleur-background;
       position: relative;
       justify-content: space-around;
-      max-width: 368px;
+      max-width: 380px;
       @extend %ombre;
       width: 70%;
 

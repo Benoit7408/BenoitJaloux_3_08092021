@@ -3,6 +3,7 @@
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 .fa,
 .fas,
@@ -8904,303 +8905,19 @@ readers do not read off random characters that represent icons */
   content: "\f1ba";
 }
 
-/* les animation de mon loader */
-@keyframes rotation__couvert {
-  0% {
-    transform: rotateZ(0);
-  }
-  100% {
-    transform: rotateZ(1080deg);
-  }
-}
-@keyframes duration__loader {
-  100% {
-    z-index: -3;
-    background-color: transparent;
-  }
-}
-@keyframes duration__loader__animation {
-  0% {
-    transform: scale(1);
-  }
-  10% {
-    transform: scale(0.9);
-  }
-  20% {
-    transform: scale(1.1);
-  }
-  30% {
-    transform: scale(0.9);
-  }
-  40% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-  60% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-/* les animation de mes coeurs */
-@keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* Mon icone à l'interieur de la translation, le hover est sur le meme bock que la translation */
-@keyframes rotation-icone {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/* Ma translation sur y des blocks du menu */
-@keyframes translationY {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-#ohmyfooter__index,
-#ohmyfooter__restaurants, .map, .stage__block, .all__restaurants .restaurants__thumbnail {
-  display: flex;
-  flex-direction: column;
-}
-
-#commande button, .map .map__form .map__bouton {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
-.carte .entre, .carte .plat, .carte .dessert, .all__restaurants .restaurants__thumbnail .image, .all__restaurants .restaurants__thumbnail {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-.carte .entre, .carte .plat, .carte .dessert, .all__restaurants .restaurants__thumbnail figcaption, .all__restaurants .restaurants__thumbnail {
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-
-#commande button, .carte .entre, .carte .plat, .carte .dessert, .map .map__form .map__bouton, .stage__block__btn, .all__restaurants .restaurants__thumbnail {
-  box-shadow: 5px 5px 10px #b49c9c;
-}
-
-#commande button, .map .map__form .map__bouton {
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
-}
-
-#commande button:hover, .map .map__form .map__bouton:hover {
-  background: linear-gradient(180deg, #ff88de, #9b63df);
-  box-shadow: 5px 5px 20px #5d5d5d;
-}
-
-@media screen and (min-width: 800px) {
-  #body__restaurants .carte {
-    grid-template-columns: 1fr 1fr;
-    max-width: 1600px;
-  }
-  #body__restaurants .menu {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-content: baseline;
-  }
-  #body__restaurants .menu .menu__entre__titre,
-#body__restaurants .menu .menu__plat__titre {
-    margin: auto 5%;
-  }
-  #body__restaurants .menu .menu__dessert__titre {
-    margin: auto;
-  }
-  #body__restaurants .menu__dessert {
-    grid-column: 1/3;
-  }
-  #body__restaurants #ohmyfooter__restaurants {
-    width: 100%;
-  }
-  #body__restaurants #ohmyfooter__restaurants ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  #body__restaurants #ohmyfooter__restaurants ul .flist {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  #body__restaurants #body__restaurants {
-    background-color: #f6f6f6;
-  }
-  #body__restaurants #main__restaurants {
-    width: 100%;
-  }
-  #body__restaurants .restaurants__thumbnail {
-    height: 30%;
-  }
-  #body__restaurants .restaurants__thumbnail .image__header {
-    object-fit: cover;
-    height: 90%;
-  }
-  #body__restaurants .restaurants__thumbnail__figcaption {
-    height: 10%;
-  }
-  #body__restaurants .carte {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  #body__restaurants .menu__dessert {
-    grid-column: 3/4;
-  }
-  #body__restaurants .menu__dessert__titre {
-    width: 90%;
-    margin: auto 5%;
-  }
-  #body__restaurants .hprojet {
-    justify-content: space-around;
-    align-items: center;
-  }
-  #body__restaurants #ohmyfooter__restaurants {
-    width: 100%;
-  }
-  #body__restaurants #ohmyfooter__restaurants ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  #body__restaurants #ohmyfooter__restaurants ul .flist {
-    display: flex;
-    flex-wrap: wrap;
-    width: 30%;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  #body__index #block {
-    width: 260px;
-    height: 260px;
-    margin: 50vh auto;
-  }
-  #body__index .stage__block {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr;
-  }
-  #body__index .stage__block .stage__block__btn {
-    align-self: center;
-    width: 30%;
-    min-width: 250px;
-  }
-  #body__index .stage__block .sbbtn3 {
-    grid-column: 1/3;
-  }
-  #body__index #ohmyfooter__index {
-    width: 100%;
-  }
-  #body__index #ohmyfooter__index ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  #body__index .all__restaurants {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40px 1fr 1fr;
-    gap: 10px 10px;
-    width: 100%;
-  }
-  #body__index .all__restaurants .all__restaurants__header {
-    grid-column: 1/span 2;
-    width: 96%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  #body__index #body__index {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #body__index #body__index header {
-    width: 100%;
-    height: 65px;
-  }
-  #body__index .map {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  #body__index .stage {
-    background-color: white;
-  }
-  #body__index .stage .stage__block {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  #body__index .stage .stage__block .stage__block__btn {
-    align-self: center;
-    width: 55%;
-  }
-  #body__index .stage .stage__block .sbbtn3 {
-    grid-column: 3/3;
-  }
-  #body__index #ohmyfooter__index {
-    width: 100%;
-  }
-  #body__index #ohmyfooter__index ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  #body__index #ohmyfooter__index ul .flist {
-    display: flex;
-    flex-wrap: wrap;
-    width: 30%;
-  }
-  #body__index .all__restaurants {
-    width: 100%;
-    margin: 0;
-  }
-  #body__index .all__restaurants .all__restaurants__header {
-    grid-column: 1/span 2;
-    width: 90%;
-  }
-  #body__index .all__restaurants .restaurants {
-    max-width: 750px;
-    height: 40vh;
-  }
-}
-
 /* Ma div loader par dessus mon body */
 #loader {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 100vh;
   z-index: 1;
 }
 
 /*Les élements d'origine de ma div qui est animer */
 #block {
-  margin: auto;
   width: 60px;
   height: 60px;
 }
@@ -9234,11 +8951,6 @@ readers do not read off random characters that represent icons */
   width: 70%;
 }
 
-@font-face {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  src: url(../police/roboto/Roboto-Regular.ttf);
-  src: url(../police/Shrikhand/Shrikhand-Regular.ttf);
-}
 html, body {
   width: 100%;
   height: 100%;
@@ -9391,12 +9103,12 @@ body {
   align-items: center;
 }
 .stage .stage__header {
-  width: 90%;
+  width: 95%;
   margin: 1rem;
 }
 
 .stage__block {
-  width: 95%;
+  width: 100%;
   align-items: center;
   margin-bottom: 2rem;
   padding: 0;
@@ -9412,7 +9124,7 @@ body {
   background-color: #f6f6f6;
   position: relative;
   justify-content: space-around;
-  max-width: 368px;
+  max-width: 380px;
   width: 70%;
 }
 .stage__block__btn:hover {
@@ -9488,25 +9200,26 @@ body {
   font-family: "Shrikhand";
   font-size: larger;
   font-weight: 200;
-  width: 90%;
+  width: 95%;
   max-width: 1570px;
   margin: auto;
   color: white;
 }
 #ohmyfooter__index ul,
 #ohmyfooter__restaurants ul {
-  width: 90%;
+  width: 95%;
   max-width: 1570px;
   margin: auto;
 }
 #ohmyfooter__index .flist,
 #ohmyfooter__restaurants .flist {
-  width: 50%;
+  width: 100%;
   margin: 10px 0;
 }
 #ohmyfooter__index .flist .flist__text,
 #ohmyfooter__restaurants .flist .flist__text {
   color: white;
+  width: 100%;
 }
 #ohmyfooter__index .flist .flist__text i,
 #ohmyfooter__restaurants .flist .flist__text i {
@@ -9637,6 +9350,297 @@ body {
   cursor: pointer;
 }
 
+/* les animation de mon loader */
+@keyframes duration__loader {
+  0% {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    z-index: -3;
+    background-color: transparent;
+  }
+}
+@keyframes duration__loader__animation {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  30% {
+    transform: scale(0.9);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes rotation__couvert {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(1080deg);
+  }
+}
+/* les animation de mes coeurs */
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Mon icone à l'interieur de la translation, le hover est sur le meme bock que la translation */
+@keyframes rotation-icone {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Ma translation sur y des blocks du menu */
+@keyframes translationY {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.all__restaurants .restaurants__thumbnail, .stage__block, .map, #ohmyfooter__index,
+#ohmyfooter__restaurants {
+  display: flex;
+  flex-direction: column;
+}
+
+.map .map__form .map__bouton, #commande button {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.all__restaurants .restaurants__thumbnail, .all__restaurants .restaurants__thumbnail .image, .carte .entre, .carte .plat, .carte .dessert {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.all__restaurants .restaurants__thumbnail, .all__restaurants .restaurants__thumbnail figcaption, .carte .entre, .carte .plat, .carte .dessert {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.all__restaurants .restaurants__thumbnail, .stage__block__btn, .map .map__form .map__bouton, .carte .entre, .carte .plat, .carte .dessert, #commande button {
+  box-shadow: 5px 5px 10px #b49c9c;
+}
+
+.map .map__form .map__bouton, #commande button {
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+}
+
+.map .map__form .map__bouton:hover, #commande button:hover {
+  background: linear-gradient(180deg, #ff88de, #9b63df);
+  box-shadow: 5px 5px 20px #5d5d5d;
+}
+
+@media screen and (min-width: 800px) {
+  #body__restaurants .carte {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1600px;
+  }
+  #body__restaurants .menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: baseline;
+  }
+  #body__restaurants .menu .menu__entre__titre,
+#body__restaurants .menu .menu__plat__titre {
+    margin: auto 5%;
+  }
+  #body__restaurants .menu .menu__dessert__titre {
+    margin: auto;
+  }
+  #body__restaurants .menu__dessert {
+    grid-column: 1/3;
+  }
+  #body__restaurants #ohmyfooter__restaurants {
+    width: 100%;
+  }
+  #body__restaurants #ohmyfooter__restaurants ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #body__restaurants #body__restaurants {
+    background-color: #f6f6f6;
+  }
+  #body__restaurants #main__restaurants {
+    width: 100%;
+  }
+  #body__restaurants .restaurants__thumbnail {
+    height: 30%;
+  }
+  #body__restaurants .restaurants__thumbnail .image__header {
+    object-fit: cover;
+    height: 90%;
+  }
+  #body__restaurants .restaurants__thumbnail__figcaption {
+    height: 10%;
+  }
+  #body__restaurants .carte {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #body__restaurants .menu__dessert {
+    grid-column: 3/4;
+  }
+  #body__restaurants .menu__dessert__titre {
+    width: 90%;
+    margin: auto 5%;
+  }
+  #body__restaurants .hprojet {
+    justify-content: space-around;
+    align-items: center;
+  }
+  #body__restaurants #ohmyfooter__restaurants {
+    width: 100%;
+  }
+  #body__restaurants #ohmyfooter__restaurants ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  #body__restaurants #ohmyfooter__restaurants ul .flist {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #body__index #block {
+    width: 260px;
+    height: 260px;
+    margin: 50vh auto;
+  }
+  #body__index .stage__block {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  #body__index .stage__block .stage__block__btn {
+    align-self: center;
+    width: 30%;
+    min-width: 250px;
+  }
+  #body__index .stage__block .sbbtn3 {
+    grid-column: 1/3;
+  }
+  #body__index #ohmyfooter__index {
+    width: 100%;
+  }
+  #body__index #ohmyfooter__index ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  #body__index .all__restaurants {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 1fr 1fr;
+    gap: 10px 10px;
+    width: 100%;
+  }
+  #body__index .all__restaurants .all__restaurants__header {
+    grid-column: 1/span 2;
+    width: 95%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #body__index #body__index {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #body__index #body__index header {
+    width: 100%;
+    height: 65px;
+  }
+  #body__index .map {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #body__index .stage {
+    background-color: white;
+  }
+  #body__index .stage .stage__block {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #body__index .stage .stage__block .stage__block__btn {
+    align-self: center;
+    width: 55%;
+  }
+  #body__index .stage .stage__block .sbbtn3 {
+    grid-column: 3/3;
+  }
+  #body__index #ohmyfooter__index ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  #body__index .all__restaurants {
+    width: 100%;
+    margin: 0;
+  }
+  #body__index .all__restaurants .all__restaurants__header {
+    grid-column: 1/span 2;
+  }
+  #body__index .all__restaurants .restaurants {
+    max-width: 90%;
+    height: 45vh;
+  }
+}
+
+/*Mon loader dans sont ensemble, keyframes dans utils/keyframes*/
+#loader {
+  animation: duration__loader 3s step-end forwards;
+}
+
+/*Mon animation du block contient 3 svg, keyframes dans utils/keyframes*/
+#block {
+  animation: duration__loader__animation 2.2s forwards linear;
+}
+
+/*l'animation de deux svg a l'interieur de block, keyframes dans utils/keyframes*/
+.couvert {
+  animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.53) forwards 0.3s;
+}
+
 .entre__1 {
   animation-name: translationY;
   animation-duration: 1s;
@@ -9719,18 +9723,6 @@ body {
   width: 50px;
   margin-top: 7px;
   content: "";
-}
-
-.couvert {
-  animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.53) forwards 0.3s;
-}
-
-#loader {
-  animation: duration__loader 3s step-end forwards;
-}
-
-#block {
-  animation: duration__loader__animation 2.2s forwards linear;
 }
 
 /*# sourceMappingURL=style.css.map */

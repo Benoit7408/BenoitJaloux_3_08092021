@@ -1,3 +1,22 @@
+
+/*Mon loader dans sont ensemble, keyframes dans utils/keyframes*/
+
+#loader{
+  animation: duration__loader 3s step-end forwards;
+}
+
+/*Mon animation du block contient 3 svg, keyframes dans utils/keyframes*/
+#block{
+  animation:duration__loader__animation 2.2s forwards linear;
+  
+}
+/*l'animation de deux svg a l'interieur de block, keyframes dans utils/keyframes*/
+.couvert{
+  animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.53) forwards 0.3s;
+}
+
+
+
 .entre__1{
   animation-name: translationY;
   animation-duration: 1s;
@@ -80,15 +99,3 @@
   content:"";
 }
 
-
-.couvert{
-  animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.53) forwards 0.3s;
-}
-
-#loader{
-  animation: duration__loader 3s step-end forwards;
-}
-#block{
-  animation:duration__loader__animation 2.2s forwards linear;
-  
-}

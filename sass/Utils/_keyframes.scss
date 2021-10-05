@@ -1,25 +1,15 @@
 /* les animation de mon loader */
 
 
-@keyframes rotation__couvert{
-  0%{
-    transform: rotateZ(0);
-  }
-  100%{
-    transform: rotateZ(1080deg);
-  }
-}
-
 @keyframes duration__loader{
   0%{
-    
+    background-color: rgba($color: #ffffff, $alpha: 0.6);
   }
   100%{
    z-index: -3;
    background-color: transparent;
   }
 }
-
 @keyframes duration__loader__animation{
   0%{
     
@@ -54,6 +44,20 @@
   transform: scale(0);
 }
 }
+@keyframes rotation__couvert{
+  0%{
+    transform: rotateZ(0);
+  }
+  100%{
+    transform: rotateZ(1080deg);
+  }
+}
+
+
+
+
+
+
 
 /* les animation de mes coeurs */
 

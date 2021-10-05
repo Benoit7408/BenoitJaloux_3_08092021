@@ -74,11 +74,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      & .flist{
-        display: flex;
-        flex-wrap: wrap;
-        
-      }
+      
     }
   }
   
@@ -185,7 +181,8 @@
 
   & .all__restaurants__header{
     grid-column: 1 /span 2;
-    width: 96%;
+    width: 95%;
+    margin:auto;
   }
 
   
@@ -198,11 +195,6 @@
 
 %responsive__desktop__index{
   @media screen and (min-width:(map-get($breakpoints , desktop ))){
-  
-    
-  
-  
-  
   #body__index{
     display:flex;
     flex-wrap: wrap;
@@ -239,16 +231,11 @@
   }
 
     #ohmyfooter__index{
-      width: 100%;
+      
       & ul{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;;
-      & .flist{
-        display: flex;
-        flex-wrap: wrap;
-        width: 30%;
-        }
       }
     }
  
@@ -259,14 +246,14 @@
   
     & .all__restaurants__header{
       grid-column: 1 /span 2;
-      width: 90%;
+     
       
     }
   
     & .restaurants{
       
-      max-width: 750px;
-      height: 40vh;
+      max-width: 90%;
+      height: 45vh;
     }
   }
 }
