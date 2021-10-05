@@ -1,28 +1,32 @@
 #ohmyfooter__index,
 #ohmyfooter__restaurants{
-  background-color: black;
-  opacity: 0.8;
+  background-color: rgba($color:#000000, $alpha: 0.8);
   @extend %flexCol;
   & .footer__titre{
     font-family: "Shrikhand";
     font-size: larger;
     font-weight: 200;
     width: 90%;
+    max-width: 1570px;
     margin: auto;
     color: white;
   }
   & ul{
       width: 90%;
+      max-width: 1570px;
       margin:auto;
     }
   
   
   & .flist{
+    width: 50%;
     margin: 10px 0;
     
     & .flist__text{
       color: white;
-      
+      & i{
+        padding-right: 5px;
+      }
       }
     }
   }

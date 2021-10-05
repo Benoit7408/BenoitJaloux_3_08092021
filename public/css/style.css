@@ -8910,12 +8910,13 @@ readers do not read off random characters that represent icons */
     transform: rotateZ(0);
   }
   100% {
-    transform: rotateZ(840deg);
+    transform: rotateZ(1080deg);
   }
 }
 @keyframes duration__loader {
   100% {
     z-index: -3;
+    background-color: transparent;
   }
 }
 @keyframes duration__loader__animation {
@@ -8956,7 +8957,6 @@ readers do not read off random characters that represent icons */
     opacity: 1;
   }
 }
-/* ma translation des éléments de menu */
 /* Mon icone à l'interieur de la translation, le hover est sur le meme bock que la translation */
 @keyframes rotation-icone {
   0% {
@@ -9194,14 +9194,13 @@ readers do not read off random characters that represent icons */
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: flex;
+  background-color: rgba(255, 255, 255, 0.6);
   z-index: 1;
 }
 
 /*Les élements d'origine de ma div qui est animer */
 #block {
-  margin: 50vh auto;
+  margin: auto;
   width: 60px;
   height: 60px;
 }
@@ -9213,7 +9212,7 @@ readers do not read off random characters that represent icons */
   background: #4acbab;
   width: 100%;
   height: 100%;
-  border: 30px solid;
+  border: 25px solid;
   border-top-color: blue;
   border-left-color: white;
   border-right-color: white;
@@ -9226,6 +9225,7 @@ readers do not read off random characters that represent icons */
 }
 .loader__animation .couvert img {
   height: 100%;
+  color: #9356DC;
 }
 .loader__animation #tour {
   text-align: center;
@@ -9240,6 +9240,8 @@ readers do not read off random characters that represent icons */
   src: url(../police/Shrikhand/Shrikhand-Regular.ttf);
 }
 html, body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -9257,14 +9259,32 @@ h2, h3, p {
   margin: 5px 10px;
 }
 
-/*le logo du site pour toutes les pages*/
-.hprojet {
-  display: flex;
+h2 {
+  font-size: medium;
+  font-weight: 200;
 }
-.hprojet .hprojet__img {
+
+i:not(.flist__icon) {
+  font-size: 25px;
+}
+
+/*le logo du site pour toutes les pages*/
+.hprojet__restaurants {
+  display: grid;
+  grid-template-columns: 30px 2fr;
+  max-width: 1570px;
+  margin: auto;
+  padding: 5px;
+}
+.hprojet__restaurants .hprojet__img {
   margin: 10px auto 10px auto;
   text-align: center;
   opacity: 0.8;
+}
+
+.hprojet__index {
+  text-align: center;
+  padding: 5px;
 }
 
 /*sert uniquement pour les pages restaurants*/
@@ -9476,8 +9496,7 @@ body {
 }
 #ohmyfooter__index,
 #ohmyfooter__restaurants {
-  background-color: black;
-  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 #ohmyfooter__index .footer__titre,
 #ohmyfooter__restaurants .footer__titre {
@@ -9485,25 +9504,32 @@ body {
   font-size: larger;
   font-weight: 200;
   width: 90%;
+  max-width: 1570px;
   margin: auto;
   color: white;
 }
 #ohmyfooter__index ul,
 #ohmyfooter__restaurants ul {
   width: 90%;
+  max-width: 1570px;
   margin: auto;
 }
 #ohmyfooter__index .flist,
 #ohmyfooter__restaurants .flist {
+  width: 50%;
   margin: 10px 0;
 }
 #ohmyfooter__index .flist .flist__text,
 #ohmyfooter__restaurants .flist .flist__text {
   color: white;
 }
+#ohmyfooter__index .flist .flist__text i,
+#ohmyfooter__restaurants .flist .flist__text i {
+  padding-right: 5px;
+}
 
 .restaurants__header {
-  height: 350px;
+  height: 400px;
   margin: 0 0 30px 0;
 }
 .restaurants__header .image__header {
@@ -9523,29 +9549,30 @@ body {
 }
 .restaurants__header__figcaption .restaurants__header__figcaption__header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 20%;
+  width: 100%;
+  max-width: 1570px;
   margin: auto;
   font-family: "Shrikhand";
   font-size: small;
 }
 .restaurants__header__figcaption .restaurants__header__figcaption__header h1 {
-  min-width: 265px;
-  margin: 10px 10px;
+  margin-left: 14px;
 }
 .restaurants__header__figcaption #restaurants__heart {
-  flex: 1 30%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
+  margin-right: 15px;
 }
-.restaurants__header__figcaption #restaurants__heart .heart {
+.restaurants__header__figcaption #restaurants__heart .heart__1 {
   position: absolute;
-  font-size: 30px;
+  font-size: 25px;
 }
 .restaurants__header__figcaption #restaurants__heart .heart__2 {
-  font-size: 30px;
   position: absolute;
   color: transparent;
+  font-size: 25px;
 }
 
 .carte {
@@ -9593,15 +9620,11 @@ body {
   margin: auto 0 auto 50%;
 }
 
-.fa-check-circle {
-  font-size: 25px;
-}
-
 .animation__check {
   display: flex;
   margin: 0 -28% 0 0;
   width: 28%;
-  transition: margin 2s;
+  transition: margin ease-in-out 1s;
   overflow: hidden;
   align-items: center;
   justify-content: center;
@@ -9612,6 +9635,7 @@ body {
 
 #commande {
   text-align: center;
+  margin-bottom: 5vh;
 }
 #commande button {
   width: 20%;
@@ -9699,7 +9723,7 @@ body {
 .entre:hover .fa-check-circle,
 .plat:hover .fa-check-circle,
 .dessert:hover .fa-check-circle {
-  animation-name: rotation-icone 1s;
+  animation: rotation-icone 1.2s;
 }
 
 .menu__entre__titre::after,

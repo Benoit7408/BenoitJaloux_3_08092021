@@ -6,7 +6,7 @@
     transform: rotateZ(0);
   }
   100%{
-    transform: rotateZ(840deg);
+    transform: rotateZ(1080deg);
   }
 }
 
@@ -16,6 +16,7 @@
   }
   100%{
    z-index: -3;
+   background-color: transparent;
   }
 }
 
@@ -67,9 +68,6 @@
     opacity: 1;
       }
 }
-/* ma translation des éléments de menu */
-
-
 
 
 

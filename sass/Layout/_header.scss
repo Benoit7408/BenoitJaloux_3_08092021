@@ -1,13 +1,22 @@
 
 /*le logo du site pour toutes les pages*/
 
-.hprojet{
-  display: flex;
+.hprojet__restaurants{
+  display: grid;
+  grid-template-columns: 30px 2fr;
+  max-width: 1570px;
+  margin: auto;
+  padding: 5px;
   & .hprojet__img{
     margin:10px auto 10px auto;
     text-align: center;
     opacity: 0.8;
   }
+}
+
+.hprojet__index{
+  text-align: center;
+  padding: 5px;
 }
 
 /*sert uniquement pour les pages restaurants*/
