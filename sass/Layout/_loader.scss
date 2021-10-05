@@ -32,18 +32,17 @@
   border-bottom-color:red ;
   border-radius: 50%;
   & .couvert{
-    height: 100%;
-    z-index: 1;
-    & img{
-      height:100%;
-      color: $couleur-primaire;
+    width:100%;
+    
+  & embed{
+   width: 100%;
     }  
   }
 
   & #tour{
     text-align: center;
     
-      & img{
+      & embed{
       
       width: 70%;
       }

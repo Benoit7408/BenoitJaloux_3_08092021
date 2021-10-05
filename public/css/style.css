@@ -8937,17 +8937,15 @@ readers do not read off random characters that represent icons */
   border-radius: 50%;
 }
 .loader__animation .couvert {
-  height: 100%;
-  z-index: 1;
+  width: 100%;
 }
-.loader__animation .couvert img {
-  height: 100%;
-  color: #9356DC;
+.loader__animation .couvert embed {
+  width: 100%;
 }
 .loader__animation #tour {
   text-align: center;
 }
-.loader__animation #tour img {
+.loader__animation #tour embed {
   width: 70%;
 }
 
