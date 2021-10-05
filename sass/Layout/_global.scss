@@ -1,7 +1,7 @@
 
 
 @font-face {
-  font-family:"Roboto","Shrikhand",Arial, Helvetica, sans-serif ;
+  font-family:"Roboto",Arial, Helvetica, sans-serif ;
   src: url(../police/roboto/Roboto-Regular.ttf);
   src: url(../police/Shrikhand/Shrikhand-Regular.ttf);
 }
@@ -28,9 +28,9 @@ h2,h3,p{
   margin: 5px 10px;
 }
 
-h2{
-  font-size: medium;
+#body__restaurants h2{
   font-weight: 200;
+  font-size: 20px;
 }
 
 i:not(.flist__icon){

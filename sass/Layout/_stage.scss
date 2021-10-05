@@ -37,18 +37,16 @@
 
       &:hover {
             background-color:lighten($couleur-primaire,30);
-            
-            
+      }
+      &:hover .sbb__icon{
+            color:$couleur-primaire;
       }
 }
 
 .stage__number{
       
       position: absolute;
-      
-}
-.number1{
-      
+      color: white;
       padding: 5px 10px;
       background-color: $couleur-primaire;
       border-top-left-radius: 40px;
@@ -58,24 +56,7 @@
       margin-right: 95%;
 }
 
-.number2{
-      
-      padding: 5px 10px;
-      background-color: $couleur-primaire;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-      margin-right: 95%;
+.sbb__icon{
+      color: rgba($color: #000000, $alpha: 0.5);
 }
 
-.number3{
-      
-      padding: 5px 10px;
-      background-color: $couleur-primaire;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-      margin-right: 95%;
-}

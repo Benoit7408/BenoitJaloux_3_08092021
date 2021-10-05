@@ -9181,7 +9181,7 @@ readers do not read off random characters that represent icons */
   }
   #body__index .all__restaurants .all__restaurants__header {
     grid-column: 1/span 2;
-    width: 96%;
+    width: 90%;
   }
   #body__index .all__restaurants .restaurants {
     max-width: 750px;
@@ -9235,7 +9235,7 @@ readers do not read off random characters that represent icons */
 }
 
 @font-face {
-  font-family: "Roboto", "Shrikhand", Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   src: url(../police/roboto/Roboto-Regular.ttf);
   src: url(../police/Shrikhand/Shrikhand-Regular.ttf);
 }
@@ -9259,9 +9259,9 @@ h2, h3, p {
   margin: 5px 10px;
 }
 
-h2 {
-  font-size: medium;
+#body__restaurants h2 {
   font-weight: 200;
+  font-size: 20px;
 }
 
 i:not(.flist__icon) {
@@ -9418,12 +9418,13 @@ body {
 .stage__block__btn:hover {
   background-color: #e4d5f6;
 }
+.stage__block__btn:hover .sbb__icon {
+  color: #9356DC;
+}
 
 .stage__number {
   position: absolute;
-}
-
-.number1 {
+  color: white;
   padding: 5px 10px;
   background-color: #9356DC;
   border-top-left-radius: 40px;
@@ -9433,24 +9434,8 @@ body {
   margin-right: 95%;
 }
 
-.number2 {
-  padding: 5px 10px;
-  background-color: #9356DC;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  margin-right: 95%;
-}
-
-.number3 {
-  padding: 5px 10px;
-  background-color: #9356DC;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  margin-right: 95%;
+.sbb__icon {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .map {
