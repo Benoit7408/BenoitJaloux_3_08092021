@@ -19,9 +19,10 @@
   @extend %boutonhover;
 }
 
-.stage__block :hover {
+.stage__block :not(.stage__number):hover{
   background-color:lighten($couleur-primaire,30);
   cursor: pointer;
+
   &:hover .sbb__icon{
     color:$couleur-primaire;
   }
@@ -77,8 +78,8 @@
 
 
 
-#restaurants__heart :hover,
-.figcaption__icon :hover{
+.restaurants__heart :hover{
+
   animation-name: heart;
   background: linear-gradient(280deg, $couleur-secondaire, $couleur-primaire);
   background-clip: text;
@@ -87,9 +88,7 @@
   cursor: pointer;
 }
 
-.entre,
-.plat,
-.dessert{
+.menu li{
   &:hover .animation__check{
     margin: 0 0 0 0;
   }
@@ -100,9 +99,7 @@
 
 
 
-.menu__entre__titre::after,
-.menu__plat__titre::after,
-.menu__dessert__titre::after{
+.menu h2:after{
   border-top: 4px solid $couleur-tertiaire;
   display: block;
   width: 50px;
@@ -110,3 +107,8 @@
   content:"";
 }
 
+
+button :hover{
+  cursor: pointer;
+  @extend %boutonhover;
+}
