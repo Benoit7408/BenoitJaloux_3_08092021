@@ -9319,31 +9319,33 @@ footer ul .flist .flist__text i {
 
 .carte {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-content: center;
   margin: auto;
 }
 @media screen and (min-width: 800px) {
   .carte {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    max-width: 1600px;
-  }
-  .carte .menu {
     display: grid;
-    align-content: baseline;
+    grid-template-columns: 1fr 1fr;
   }
-  .carte .menu .menu__dessert {
+  .carte .menu__dessert {
     grid-column: 1/3;
   }
-  .carte .menu .menu__entre__titre,
-.carte .menu .menu__plat__titre .menu__dessert__titre {
-    margin: auto 5%;
+  .carte .menu__dessert .menu__dessert__titre {
+    width: 100%;
+    text-align: center;
   }
 }
 @media screen and (min-width: 1200px) {
   .carte {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .carte .menu__dessert {
+    grid-column: 3/3;
+  }
+  .carte .menu__dessert .menu__dessert__titre {
+    text-align: start;
   }
 }
 
@@ -9356,15 +9358,6 @@ footer ul .flist .flist__text i {
   max-width: 600px;
   cursor: pointer;
   overflow: hidden;
-}
-@media screen and (min-width: 1200px) {
-  .entre .menu__dessert, .plat .menu__dessert, .dessert .menu__dessert {
-    grid-column: 3/4;
-  }
-  .entre .menu__dessert__titre, .plat .menu__dessert__titre, .dessert .menu__dessert__titre {
-    width: 90%;
-    margin: auto 5%;
-  }
 }
 .entre h3, .plat h3, .dessert h3 {
   white-space: nowrap;
