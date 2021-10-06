@@ -1,161 +1,221 @@
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../public/css/style.css">
-  <title>Le délice des sens</title>
-</head>
-<body id="body__restaurants">
 
+<html lang="fr">
 
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <title>Le délice des sens</title>
+  </head>
 
+  <body id="body__restaurants">
 
+    <header class="hprojet hprojet__restaurants">
+        <a href="../index.html">
+          <i class="fa fa-arrow-left"></i>
+        </a>
+        <img class="hprojet__img" src="../src/images/logo/ohmyfood@2x.svg" alt="logo du site ohmyfood">
+    </header>
 
- <header class="hprojet hprojet__restaurants">
-  <a href="index.html">
-    <i class="fa-regular fa-arrow-left"></i>
-  </a>
-    <img class="hprojet__img" src="../src/images/logo/ohmyfood@2x.svg" alt="logo du site ohmyfood">
-  
-</header>
-
-
-<main id="main__restaurants">
-  <main>
-    <figure class="restaurants__header">
-      <img class="image__header" src="../src/images/restaurants/le-delice-des-sens.jpg">
-    
-      <figcaption class="restaurants__header__figcaption">
-        <div class="restaurants__header__figcaption__header">
-        <h1>Le delice des sens</h1>
-        </div>
-        <div id="restaurants__heart">
-        <i class="heart far fa-heart"></i>
-        <i class="heart heart__2 far fa-heart"></i>
-        </div>
-      </figcaption>
-    </figure>
-    
-<section class="carte">
-  <article class="menu menu__entre">
-    <h2 class="menu__entre__titre">Entrée</h2>
-    <ul>
-
-      <li class="entre entre__1">
-        <h3>tartare de thon</h3>
-        <p>Assaisonné au yuzu</p>
-        <div class="price">
-          <strong>25€</strong>
-        </div>
-      </li>
-     
-      <li class="entre entre__2">
-        <h3>Bouchée de homard croustillant</h3>
-        <p>Et sa farandole de petits légumes</p>
-        <div class="price">
-          <strong>35€</strong>
-        </div>
-      </li>
-
-      <li class="entre entre__3">
-        <h3>Velouté de cèpes</h3>
-        <p>ux truffes</p>
-        <div class="price">
-          <strong>20€</strong>
-        </div>
-      </li>
+    <main id="main__restaurants">
+      <figure class="restaurants__header">
+        <img class="image__header" src="../src/images/restaurants/le-delice-des-sens.jpg" alt="image restaurant">
+        <figcaption class="restaurants__header__figcaption">
+          <div class="restaurants__header__figcaption__header">
+            <h1>Le délice des sens</h1>
+            <div id="restaurants__heart">
+              <i class="heart heart__1 far fa-heart"></i>
+              <i class="heart heart__2 fas fa-heart"></i>
+            </div>
+          </div>
+        </figcaption>
+      </figure>
       
-    </ul>
+      <section class="carte">
 
-  </article>
+        <article class="menu menu__entre">
 
-  <article class="menu menu__plat">
-    <h2 class="menu__plat__titre">PLATS</h2>
-    <ul>
-      <li class="plat plat__1">
-        <h3>Poulet roti aux herbes de provence</h3>
-        <p>Et sa crèmes de truffe</p>
-        <div class="price">
-          <strong>40€</strong>
-        </div>
-      </li>
-      <li class="plat plat__2">
-        <h3>langouste rotie</h3>
-        <p>Et ses légumes de saison</p>
-        <div class="price">
-          <strong>35€</strong>
-        </div>
-      </li>
-      <li class="plat plat__3">
-        <h3>Cote de boeuf angus</h3>
-        <p>Et sa purée de panais</p>
-        <div class="price">
-          <strong>20€</strong>
-        </div>
-      </li> 
-    </ul>
-  </article>
-  <article class="menu menu__dessert">
-    <h2 class="menu__dessert__titre">Desserts</h2>
-    <ul>
-      <li class="dessert dessert__1">
-        <h3>farandole de dessert</h3>
-        <p>Du chef</p>
-        <div class="price">
-          <strong>18€</strong>
-        </div>
-      </li>
-      <li class="dessert dessert__2">
-        <h3>Crème brulée</h3>
-        <p>Revisité</p>
-        <div class="price">
-          <strong>22€</strong>
-        </div>
-      </li>
-      <li class="dessert dessert__3">
-        <h3>Tiramisu</h3>
-        <p>A la noisette</p>
-        <div class="price">
-          <strong>23€</strong>
-        </div>
-      </li> 
-    </ul>
-  </article>
+          <h2 class="menu__entre__titre">ENTRÉES</h2>
 
+          <ul>
 
-</section>
-<form id="commande">
-  <button>commander</button>
+            <li class="entre entre__1">
+              <div class="block__menutext">
+                <h3>Tartare de thon</h3>
+                <p>Assaisonné au yuzu</p>
+                <div class="price">
+                  <strong>25€</strong>
+                </div>
+              </div>
+              <div class="animation__check">
+                <i class="far fa-check-circle"></i>
+              </div>
+            </li>
+        
+      
+            <li class="entre entre__2">
+              <div class="block__menutext">
+                <h3>Bouchée de homard croustillant</h3>
+                <p>Et sa farandole de petits légumes</p>
+                <div class="price">
+                  <strong>35€</strong>
+                </div>
+              </div>
+              <div class="animation__check">
+                <i class="far fa-check-circle"></i>
+              </div>
+            </li>
 
-</form>
+            <li class="entre entre__3">
+              <div class="block__menutext">
+                <h3>Velouté de cèpes</h3>
+                <p>Aux truffes</p>
+                <div class="price">
+                  <strong>20€</strong>
+                </div>
+              </div>
+              <div class="animation__check">
+                <i class="far fa-check-circle"></i>
+              </div>
+            </li>
+        
+          </ul>
 
-</main>
+        </article>
 
+        <article class="menu menu__plat">
 
-<footer id="ohmyfooter__restaurants">
-  <a class = "ancre-footer" href="#">
-    <h3 class="footer__titre">
-      ohmyfood
-    </h3>
-  </a>
+          <h2 class="menu__plat__titre">PLATS</h2>
 
-  <ul>
-    <li class="flist">
-      <a class="flist__text" href="#"><i class="flist__icon fas fa-utensils"></i>proposer un restaurant</a>
-    </li>
-    <li class="flist">
-      <a class="flist__text" href="#"><i class="flist__icon fas fa-hands-helping"></i>devenir partenaire</a>
-    </li>
+          <ul>
 
-    <li class="flist">
-      <a class="flist__text" href="#">Mentions légales</a>
-    </li>
-    <li class="flist">
-      <a class="flist__text" href="#">Contact</a>
-    </li>
-  </ul>
+            <li class="plat plat__1">
+              <div class="block__menutext">
+                <h3>Poulet rôti aux herbes de Provence</h3>
+                <p>Et sa crème de truffe</p>
+                <div class="price">
+                  <strong>40€</strong>
+                </div>
+              </div> 
+              <div class="animation__check">
+                <i class="far fa-check-circle"></i>
+              </div>
+            </li>
 
-</footer>
+            <li class="plat plat__2">
+              <div class="block__menutext">
+                <h3>Langouste rôtie</h3>
+                <p>Et ses légumes de saison</p>
+                <div class="price">
+                  <strong>35€</strong>
+                </div>
+              </div>
+              <div class="animation__check">
+                <i class="far fa-check-circle"></i>
+              </div>
+            </li>
+
+            <li class="plat plat__3">
+              <div class="block__menutext">
+                <h3>Côte de boeuf Angus</h3>
+                <p>Et sa purée de panais</p>
+                <div class="price">
+                  <strong>44€</strong>
+                </div>
+              </div>
+              <div class="animation__check">
+                <i class="far fa-check-circle"></i>
+              </div>
+            </li> 
+
+          </ul>
+
+        </article>
+
+        <article class="menu menu__dessert">
+
+          <h2 class="menu__dessert__titre">DESSERTS</h2>
+
+            <ul>
+
+            <li class="dessert dessert__1">
+              <div class="block__menutext">
+                <h3>Farandole de desserts</h3>
+                <p>Du chef</p>
+                <div class="price">
+                  <strong>18€</strong>
+                </div>
+              </div>
+              <div class="animation__check">
+                <i class="far fa-check-circle"></i>
+              </div>
+            </li>
+
+            <li class="dessert dessert__2">
+              <div class="block__menutext">
+                <h3>Crème brulée</h3>
+                <p>Revisitée</p>
+                <div class="price">
+                  <strong>22€</strong>
+                </div>
+              </div>
+              <div class="animation__check">
+                <i class="far fa-check-circle"></i>
+              </div>
+            </li>
+
+            <li class="dessert dessert__3">
+              <div class="block__menutext">
+                <h3>Tiramisu</h3>
+                <p>À la noisette</p>
+                <div class="price">
+                  <strong>23€</strong>
+                </div>
+              </div>
+              <div class="animation__check">
+                <i class="far fa-check-circle"></i>
+              </div>
+            </li> 
+          </ul>
+        </article>
+      </section>
+
+      <form id="commande">
+        <button>Commander</button>
+      </form>
+
+    </main>
+
+    <footer id="ohmyfooter__restaurants">
+
+      <a class = "ancre-footer" href="#">
+        <h3 class="footer__titre">
+          ohmyfood
+        </h3>
+      </a>
+
+      <ul>
+        <li class="flist">
+          <a class="flist__text" href="#"><i class="flist__icon fas fa-utensils"></i>Proposer un restaurant</a>
+        </li>
+
+        <li class="flist">
+          <a class="flist__text" href="#"><i class="flist__icon fas fa-hands-helping"></i>Devenir partenaire</a>
+        </li>
+
+        <li class="flist">
+          <a class="flist__text" href="#">Mentions légales</a>
+        </li>
+
+        <li class="flist">
+          <a class="flist__text" href="#">Contact</a>
+        </li>
+      </ul>
+
+    </footer>
+
+  </body>
+</html>

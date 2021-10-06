@@ -1,59 +1,61 @@
-
+/*Ma section map, aucun breakpoint necessaire*/
 
 .map{
   background-color: $couleur-background;
   @extend %flexCol;
   padding-bottom: 20px;
   justify-content: center;
+}
 
-  
-    & .map__info{
-      width: 100%;
-      background-color:$couleur-background2;
-      border-top: 2px solid $couleur-border;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+/*Ma div map__info, enfant de map, aucun breakpoint necessaire*/
 
-      & .map__info__icone{
-        flex: 1 30%;
-        text-align: end;
-        color: $couleur-border;
-      }
-        .map__info__lieu{
-          flex: 1 50%;
-          text-align: start;
-          padding-left: 1rem;
-          color: $couleur-border;
-        }
-      }
+.map__info{
+  width: 100%;
+  background-color:$couleur-background2;
+  border-top: 2px solid $couleur-border;
+  display: flex;
+  align-items: center;
+  margin-bottom:1rem;
 
-    & .map__titre{
-      text-align: center;
-      width: 100%;
-      margin: 10px auto;
-      & .map__titre__decouvrir{
-        font-size: larger;
-        color: $couleur-border;
-      }
-    }
-
-    & .map__form{
-      width: 60%;
-      text-align: center;
-      padding : 10px 10px;
-      margin: 5px auto;
-      @extend %radius;
-      @extend %ombre;
-      @extend %gradient;
-
-      & .map__bouton{
-      
-        color: white;
-        font-size: medium;
-      }
-
-    }
+  & #localisation{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;      
   }
+}
+    
+/*Ma div map__titre, enfant de map, aucun breakpoint necessaire*/
+
+.map__titre{
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  
+  & .map__titre__decouvrir{
+    font-size: larger;
+    color: $couleur-border;
+  }
+}
+
+/*Ma div map__form, enfant de map, aucun breakpoint necessaire*/
+
+.map__form{
+    text-align: center;
+    margin: 1rem auto;
+    
+  & .map__bouton{
+    border:0px solid transparent;
+    text-align: center;
+    padding : 10px 50px;
+    margin: 5px auto;
+    @extend %radius;
+    @extend %ombre;
+    @extend %gradient;
+    color: white;
+    font-size: medium;
+    white-space: nowrap;
+  }
+}
 
 
