@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* l'importation de toute la webfront et de ses partiel*/
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -8905,6 +8906,45 @@ readers do not read off random characters that represent icons */
   content: "\f1ba";
 }
 
+/* l'importation des polices d'ecriture*/
+/* l'importation de toutes mes variables*/
+/* l'importation de tous mes partielles css */
+/* partielles de régles commune et générale  */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+/*ma couleur de fond sur toutes mes pages*/
+body {
+  background-color: #f6f6f6;
+}
+
+a, ul {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+
+h2, h3, p {
+  margin: 5px 10px;
+}
+
+#body__restaurants h2 {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+i:not(.flist__icon) {
+  font-size: 25px;
+}
+
+/* partielles de ma pages index  */
 /* Ma div loader par dessus mon body */
 #loader {
   display: flex;
@@ -8956,40 +8996,6 @@ readers do not read off random characters that represent icons */
 }
 .loader__animation #tour embed {
   width: 70%;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-}
-
-/*ma couleur de fond sur toutes mes pages*/
-body {
-  background-color: #f6f6f6;
-}
-
-a, ul {
-  list-style-type: none;
-  text-decoration: none;
-  color: black;
-  padding: 0;
-  margin: 0;
-}
-
-h2, h3, p {
-  margin: 5px 10px;
-}
-
-#body__restaurants h2 {
-  font-weight: 200;
-  font-size: 20px;
-}
-
-i:not(.flist__icon) {
-  font-size: 25px;
 }
 
 /*le placement de mes elements du header pour toutes les pages
@@ -9242,6 +9248,7 @@ footer .footer__titre {
   font-size: larger;
   font-weight: 200;
   width: 90%;
+  padding-top: 10px;
   margin: auto;
   color: white;
 }
@@ -9268,8 +9275,9 @@ footer ul .flist .flist__text i {
   padding-right: 5px;
 }
 
+/* partielles de ma pages restaurant  */
 .restaurants__header {
-  height: 400px;
+  height: 420px;
   margin: 0 0 30px 0;
 }
 .restaurants__header .image__header {
@@ -9277,14 +9285,13 @@ footer ul .flist .flist__text i {
   height: 90%;
   width: 100%;
 }
-
 .restaurants__header__figcaption {
   display: flex;
   background-color: #f6f6f6;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   width: 100%;
-  height: 10%;
+  height: 20%;
   margin-top: -60px;
   position: absolute;
 }
@@ -9421,120 +9428,7 @@ footer ul .flist .flist__text i {
   cursor: pointer;
 }
 
-/* les animation de mon loader */
-@keyframes duration__loader {
-  0% {
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  100% {
-    z-index: -3;
-    background-color: transparent;
-  }
-}
-@keyframes duration__loader__animation {
-  0% {
-    transform: scale(1);
-  }
-  10% {
-    transform: scale(0.9);
-  }
-  20% {
-    transform: scale(1.1);
-  }
-  30% {
-    transform: scale(0.9);
-  }
-  40% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-  60% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes rotation__couvert {
-  0% {
-    transform: rotateZ(0);
-  }
-  100% {
-    transform: rotateZ(1080deg);
-  }
-}
-/* les animation de mes coeurs */
-@keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* Mon icone à l'interieur de la translation, le hover est sur le meme bock que la translation */
-@keyframes rotation-icone {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/* Ma translation sur y des blocks du menu */
-@keyframes translationY {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.restaurants__thumbnail, .map, footer {
-  display: flex;
-  flex-direction: column;
-}
-
-.map__form .map__bouton, #commande button {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
-.restaurants__thumbnail, .restaurants__thumbnail .image, .entre, .plat, .dessert {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-.restaurants__thumbnail, .restaurants__thumbnail figcaption, .entre, .plat, .dessert {
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-
-.restaurants__thumbnail, .stage__block__btn, .map__form .map__bouton, .entre, .plat, .dessert, #commande button {
-  box-shadow: 5px 5px 10px #b49c9c;
-}
-
-.map__form .map__bouton, #commande button {
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
-}
-
-.map__bouton :hover, #commande button:hover {
-  background: linear-gradient(180deg, #ff88de, #9b63df);
-  box-shadow: 5px 5px 20px #5d5d5d;
-}
-
+/* partielles pour les éléments animés  */
 /*Mon loader dans sont ensemble, keyframes dans utils/keyframes*/
 #loader {
   animation: duration__loader 3s step-end forwards;
@@ -9641,6 +9535,121 @@ footer ul .flist .flist__text i {
   width: 50px;
   margin-top: 7px;
   content: "";
+}
+
+/* les animation de mon loader */
+@keyframes duration__loader {
+  0% {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    z-index: -3;
+    background-color: transparent;
+  }
+}
+@keyframes duration__loader__animation {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  30% {
+    transform: scale(0.9);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes rotation__couvert {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(1080deg);
+  }
+}
+/* les animation de mes coeurs */
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Mon icone à l'interieur de la translation, le hover est sur le meme bock que la translation */
+@keyframes rotation-icone {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Ma translation sur y des blocks du menu */
+@keyframes translationY {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* élement pour un code dry  */
+.restaurants__thumbnail, .map, footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.map__form .map__bouton, #commande button {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.restaurants__thumbnail, .restaurants__thumbnail .image, .entre, .plat, .dessert {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.restaurants__thumbnail, .restaurants__thumbnail figcaption, .entre, .plat, .dessert {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.restaurants__thumbnail, .stage__block__btn, .map__form .map__bouton, .entre, .plat, .dessert, #commande button {
+  box-shadow: 5px 5px 10px #b49c9c;
+}
+
+.map__form .map__bouton, #commande button {
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+}
+
+#commande button:hover, .map__bouton :hover {
+  background: linear-gradient(180deg, #ff88de, #9b63df);
+  box-shadow: 5px 5px 20px #5d5d5d;
 }
 
 /*# sourceMappingURL=style.css.map */
