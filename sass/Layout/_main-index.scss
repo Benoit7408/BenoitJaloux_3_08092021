@@ -1,0 +1,103 @@
+/*Sur ma page index, le placement de mes block restaurants en grille, mes breakpoint
+tablette, pas de breakpoint desktop necessaire */
+.all__restaurants{
+  display: grid;
+  grid-template-columns: 100%;
+  width: 95%;
+  margin: auto;
+  justify-items: center;
+  @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 1fr 1fr;
+    gap: 10px 10px;
+    width: 100%;
+  }
+    & .all__restaurants__header{
+      width: 95%;
+      @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
+        grid-column: 1 /span 2;
+      }
+    }
+
+    & .restaurants{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin:20px 0;
+      height: 200px;
+      width: 95%;
+      @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
+        height: 40vh;
+        width: 90%;
+      }
+    }
+  }
+
+
+/* mes figures  dans mes articles restaurants,aucun breakpoint necessaire */
+
+.restaurants__thumbnail{
+  @extend %flexCol;
+  @extend %ombre;
+  @extend %radius-top-thumbnail;
+  @extend %radius-bottom-thumbnail;
+  margin: 0;
+  height: 100%;
+
+  & .ancre-img{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 75%;
+    }
+
+    & .image{
+      height: 100%;
+      width: 100%;
+      flex-grow: 1;
+      object-fit: cover;
+      @extend %radius-top-thumbnail;
+    }
+
+  & figcaption{
+      display: grid;
+      grid-template-columns: 1fr 100px;
+      background-color:white;
+      height: 100%;
+      align-content: center;
+      @extend %radius-bottom-thumbnail;
+      
+      
+      & .ancre-figcaption__titre{
+        height: 100%;
+      }
+
+      & .figcaption__icon{
+        width: max-content;
+        align-items: center;
+        margin: 1rem 2rem;
+        
+        position: relative;
+        & .heart__1{
+          position: absolute;
+          color:black;
+        }
+        & .heart__2{
+          position: absolute;
+          color:transparent;
+        }  
+      }
+    }
+  }
+
+/* mon petit block "Nouveau" par dessus la figure*/
+
+.new-restaurant{
+  position: absolute;
+  background-color: $couleur-tertiaire;
+  margin: 10px;
+  padding: 0.5rem 1em;
+  color:darken($couleur-tertiaire,40);
+  align-self: end;
+
+}

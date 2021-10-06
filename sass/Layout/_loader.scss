@@ -10,11 +10,16 @@
   z-index:1;
   
 }
-/*Les élements d'origine de ma div qui est animer */
+/*Les tailles de ma div qui est animer */
 
 #block{
   width: 60px;
   height: 60px;
+  @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
+    width: 260px;
+    height: 260px;
+    margin: 50vh auto;
+  }
 }
 
 /*Les élements interieur graphique ou de placements de mon animation */
@@ -33,9 +38,10 @@
   border-radius: 50%;
   & .couvert{
     width:100%;
-    
+    height: 100%;
   & embed{
    width: 100%;
+   height: 100%;
     }  
   }
 

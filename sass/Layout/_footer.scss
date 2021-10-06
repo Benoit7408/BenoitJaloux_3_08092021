@@ -1,33 +1,38 @@
-#ohmyfooter__index,
-#ohmyfooter__restaurants{
+/*Mon footer avec des regle comune pour les pages index ou restaurant,
+un seul breakpoint mobile vers tablette */
+footer{
   background-color: rgba($color:#000000, $alpha: 0.8);
   @extend %flexCol;
+  width: 100%;
+
   & .footer__titre{
     font-family: "Shrikhand";
     font-size: larger;
     font-weight: 200;
-    width: 95%;
-    max-width: 1570px;
+    width: 90%;
+    
     margin: auto;
     color: white;
   }
   & ul{
-      width: 95%;
-      max-width: 1570px;
+      width: 90%;
       margin:auto;
-    }
-  
-  
-  & .flist{
-    width: 100%;
-    margin: 10px 0;
-    
-    & .flist__text{
-      color: white;
+      @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+      }  
+    & .flist{
       width: 100%;
-      & i{
-        padding-right: 5px;
-      }
+      margin: 10px 0;
+    
+      & .flist__text{
+        color: white;
+        width: 100%;
+        & i{
+          padding-right: 5px;
+        }
       }
     }
   }
+}

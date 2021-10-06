@@ -8916,10 +8916,17 @@ readers do not read off random characters that represent icons */
   z-index: 1;
 }
 
-/*Les élements d'origine de ma div qui est animer */
+/*Les tailles de ma div qui est animer */
 #block {
   width: 60px;
   height: 60px;
+}
+@media screen and (min-width: 800px) {
+  #block {
+    width: 260px;
+    height: 260px;
+    margin: 50vh auto;
+  }
 }
 
 /*Les élements interieur graphique ou de placements de mon animation */
@@ -8938,9 +8945,11 @@ readers do not read off random characters that represent icons */
 }
 .loader__animation .couvert {
   width: 100%;
+  height: 100%;
 }
 .loader__animation .couvert embed {
   width: 100%;
+  height: 100%;
 }
 .loader__animation #tour {
   text-align: center;
@@ -8955,6 +8964,11 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+/*ma couleur de fond sur toutes mes pages*/
+body {
+  background-color: #f6f6f6;
 }
 
 a, ul {
@@ -8978,42 +8992,25 @@ i:not(.flist__icon) {
   font-size: 25px;
 }
 
-/*le logo du site pour toutes les pages*/
-.hprojet__restaurants {
+/*le placement de mes elements du header pour toutes les pages
+Aucun breakpoint necessaire*/
+.hprojet {
   display: grid;
-  grid-template-columns: 30px 2fr;
-  max-width: 1570px;
+  grid-template-columns: max-content 1fr;
+  width: 100%;
+  height: 40px;
+  text-align: center;
   margin: auto;
   padding: 5px;
+  align-items: center;
 }
-.hprojet__restaurants .hprojet__img {
-  margin: 10px auto 10px auto;
-  text-align: center;
-  opacity: 0.8;
-}
-
-.hprojet__index {
-  text-align: center;
-  padding: 5px;
+.hprojet .hprojet__img {
+  grid-column: 2/3;
+  margin: auto;
 }
 
-/*sert uniquement pour les pages restaurants*/
-.fa-arrow-left {
-  font-size: 25px;
-  opacity: 0.8;
-}
-
-header > a {
-  margin: auto 0;
-  width: 10%;
-  text-align: center;
-}
-
-/*ma couleur de fond sur toutes mes pages*/
-body {
-  background-color: #f6f6f6;
-}
-
+/*Sur ma page index, le placement de mes block restaurants en grille, mes breakpoint
+tablette, pas de breakpoint desktop necessaire */
 .all__restaurants {
   display: grid;
   grid-template-columns: 100%;
@@ -9021,8 +9018,21 @@ body {
   margin: auto;
   justify-items: center;
 }
+@media screen and (min-width: 800px) {
+  .all__restaurants {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 1fr 1fr;
+    gap: 10px 10px;
+    width: 100%;
+  }
+}
 .all__restaurants .all__restaurants__header {
-  width: 90%;
+  width: 95%;
+}
+@media screen and (min-width: 800px) {
+  .all__restaurants .all__restaurants__header {
+    grid-column: 1/span 2;
+  }
 }
 .all__restaurants .restaurants {
   display: flex;
@@ -9030,60 +9040,58 @@ body {
   flex-wrap: wrap;
   margin: 20px 0;
   height: 200px;
-  width: 90%;
+  width: 95%;
 }
-.all__restaurants .restaurants__thumbnail {
+@media screen and (min-width: 800px) {
+  .all__restaurants .restaurants {
+    height: 40vh;
+    width: 90%;
+  }
+}
+
+/* mes figures  dans mes articles restaurants,aucun breakpoint necessaire */
+.restaurants__thumbnail {
   margin: 0;
   height: 100%;
 }
-.all__restaurants .restaurants__thumbnail .ancre-img {
+.restaurants__thumbnail .ancre-img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 70%;
+  height: 75%;
 }
-.all__restaurants .restaurants__thumbnail .image {
+.restaurants__thumbnail .image {
   height: 100%;
   width: 100%;
   flex-grow: 1;
   object-fit: cover;
 }
-.all__restaurants .restaurants__thumbnail figcaption {
+.restaurants__thumbnail figcaption {
   display: grid;
   grid-template-columns: 1fr 100px;
   background-color: white;
   height: 100%;
   align-content: center;
 }
-.all__restaurants .restaurants__thumbnail figcaption .ancre-figcaption__titre {
+.restaurants__thumbnail figcaption .ancre-figcaption__titre {
   height: 100%;
 }
-.all__restaurants .restaurants__thumbnail figcaption .figcaption__icon {
+.restaurants__thumbnail figcaption .figcaption__icon {
   width: max-content;
   align-items: center;
   margin: 1rem 2rem;
   position: relative;
 }
-.all__restaurants .restaurants__thumbnail figcaption .figcaption__icon .heart__1 {
-  font-size: 30px;
+.restaurants__thumbnail figcaption .figcaption__icon .heart__1 {
   position: absolute;
   color: black;
 }
-.all__restaurants .restaurants__thumbnail figcaption .figcaption__icon .heart__2 {
-  font-size: 30px;
+.restaurants__thumbnail figcaption .figcaption__icon .heart__2 {
   position: absolute;
   color: transparent;
 }
 
-.figcaption__icon :hover {
-  animation-name: heart;
-  background: linear-gradient(280deg, #FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  animation-duration: 2s;
-  cursor: pointer;
-}
-
+/* mon petit block "Nouveau" par dessus la figure*/
 .new-restaurant {
   position: absolute;
   background-color: #99E2D0;
@@ -9093,12 +9101,16 @@ body {
   align-self: end;
 }
 
+/*Ma section stage avec une liste a puce stage block,
+breakpoint tablette et desktop sur stage block
+( changement vers grid et variation de la grille ensuite*/
 .stage {
-  width: 100%;
-  justify-content: space-evenly;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+  background-color: white;
 }
 .stage .stage__header {
   width: 95%;
@@ -9106,10 +9118,24 @@ body {
 }
 
 .stage__block {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   align-items: center;
   margin-bottom: 2rem;
   padding: 0;
+}
+@media screen and (min-width: 800px) {
+  .stage__block {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .stage__block {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .stage__block__btn {
@@ -9125,11 +9151,19 @@ body {
   max-width: 380px;
   width: 70%;
 }
-.stage__block__btn:hover {
-  background-color: #e4d5f6;
+@media screen and (min-width: 800px) {
+  .stage__block__btn {
+    align-self: center;
+    min-width: 250px;
+  }
 }
-.stage__block__btn:hover .sbb__icon {
-  color: #9356DC;
+.stage__block__btn.sbbtn3 {
+  grid-column: 1/3;
+}
+@media screen and (min-width: 1200px) {
+  .stage__block__btn.sbbtn3 {
+    grid-column: 3/3;
+  }
 }
 
 .stage__number {
@@ -9148,12 +9182,15 @@ body {
   color: rgba(0, 0, 0, 0.5);
 }
 
+/*Ma section map, aucun breakpoint necessaire*/
 .map {
   background-color: #f6f6f6;
   padding-bottom: 20px;
   justify-content: center;
 }
-.map .map__info {
+
+/*Ma div map__info, enfant de map, aucun breakpoint necessaire*/
+.map__info {
   width: 100%;
   background-color: #cab9b9;
   border-top: 2px solid #b49c9c;
@@ -9161,26 +9198,30 @@ body {
   align-items: center;
   margin-bottom: 1rem;
 }
-.map .map__info #localisation {
+.map__info #localisation {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
 }
-.map .map__titre {
+
+/*Ma div map__titre, enfant de map, aucun breakpoint necessaire*/
+.map__titre {
   text-align: center;
   width: 100%;
   margin: 1rem auto;
 }
-.map .map__titre .map__titre__decouvrir {
+.map__titre .map__titre__decouvrir {
   font-size: larger;
   color: #b49c9c;
 }
-.map .map__form {
+
+/*Ma div map__form, enfant de map, aucun breakpoint necessaire*/
+.map__form {
   text-align: center;
   margin: 1rem auto;
 }
-.map .map__form .map__bouton {
+.map__form .map__bouton {
   border: 0px solid transparent;
   text-align: center;
   padding: 10px 50px;
@@ -9189,38 +9230,41 @@ body {
   font-size: medium;
   white-space: nowrap;
 }
-#ohmyfooter__index,
-#ohmyfooter__restaurants {
+
+/*Mon footer avec des regle comune pour les pages index ou restaurant,
+un seul breakpoint mobile vers tablette */
+footer {
   background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
 }
-#ohmyfooter__index .footer__titre,
-#ohmyfooter__restaurants .footer__titre {
+footer .footer__titre {
   font-family: "Shrikhand";
   font-size: larger;
   font-weight: 200;
-  width: 95%;
-  max-width: 1570px;
+  width: 90%;
   margin: auto;
   color: white;
 }
-#ohmyfooter__index ul,
-#ohmyfooter__restaurants ul {
-  width: 95%;
-  max-width: 1570px;
+footer ul {
+  width: 90%;
   margin: auto;
 }
-#ohmyfooter__index .flist,
-#ohmyfooter__restaurants .flist {
+@media screen and (min-width: 800px) {
+  footer ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+footer ul .flist {
   width: 100%;
   margin: 10px 0;
 }
-#ohmyfooter__index .flist .flist__text,
-#ohmyfooter__restaurants .flist .flist__text {
+footer ul .flist .flist__text {
   color: white;
   width: 100%;
 }
-#ohmyfooter__index .flist .flist__text i,
-#ohmyfooter__restaurants .flist .flist__text i {
+footer ul .flist .flist__text i {
   padding-right: 5px;
 }
 
@@ -9240,6 +9284,7 @@ body {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   width: 100%;
+  height: 10%;
   margin-top: -60px;
   position: absolute;
 }
@@ -9255,17 +9300,18 @@ body {
 .restaurants__header__figcaption .restaurants__header__figcaption__header h1 {
   margin-left: 14px;
 }
-.restaurants__header__figcaption #restaurants__heart {
+
+#restaurants__heart {
   display: flex;
   align-items: center;
   justify-content: end;
   margin-right: 15px;
 }
-.restaurants__header__figcaption #restaurants__heart .heart__1 {
+#restaurants__heart .heart__1 {
   position: absolute;
   font-size: 25px;
 }
-.restaurants__header__figcaption #restaurants__heart .heart__2 {
+#restaurants__heart .heart__2 {
   position: absolute;
   color: transparent;
   font-size: 25px;
@@ -9273,10 +9319,35 @@ body {
 
 .carte {
   display: grid;
+  grid-template-rows: 1fr 1fr;
   justify-content: center;
   margin: auto;
 }
-.carte .entre, .carte .plat, .carte .dessert {
+@media screen and (min-width: 800px) {
+  .carte {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 1600px;
+  }
+  .carte .menu {
+    display: grid;
+    align-content: baseline;
+  }
+  .carte .menu .menu__dessert {
+    grid-column: 1/3;
+  }
+  .carte .menu .menu__entre__titre,
+.carte .menu .menu__plat__titre .menu__dessert__titre {
+    margin: auto 5%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .carte {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.entre, .plat, .dessert {
   background-color: white;
   width: 90%;
   margin: 2rem auto;
@@ -9286,13 +9357,22 @@ body {
   cursor: pointer;
   overflow: hidden;
 }
-.carte .entre h3, .carte .plat h3, .carte .dessert h3 {
+@media screen and (min-width: 1200px) {
+  .entre .menu__dessert, .plat .menu__dessert, .dessert .menu__dessert {
+    grid-column: 3/4;
+  }
+  .entre .menu__dessert__titre, .plat .menu__dessert__titre, .dessert .menu__dessert__titre {
+    width: 90%;
+    margin: auto 5%;
+  }
+}
+.entre h3, .plat h3, .dessert h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
 }
-.carte .entre p, .carte .plat p, .carte .dessert p {
+.entre p, .plat p, .dessert p {
   white-space: nowrap;
   margin-bottom: 10px;
   width: 100%;
@@ -9427,201 +9507,39 @@ body {
     transform: translateY(0);
   }
 }
-.all__restaurants .restaurants__thumbnail, .stage__block, .map, #ohmyfooter__index,
-#ohmyfooter__restaurants {
+.restaurants__thumbnail, .map, footer {
   display: flex;
   flex-direction: column;
 }
 
-.map .map__form .map__bouton, #commande button {
+.map__form .map__bouton, #commande button {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
 
-.all__restaurants .restaurants__thumbnail, .all__restaurants .restaurants__thumbnail .image, .carte .entre, .carte .plat, .carte .dessert {
+.restaurants__thumbnail, .restaurants__thumbnail .image, .entre, .plat, .dessert {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 
-.all__restaurants .restaurants__thumbnail, .all__restaurants .restaurants__thumbnail figcaption, .carte .entre, .carte .plat, .carte .dessert {
+.restaurants__thumbnail, .restaurants__thumbnail figcaption, .entre, .plat, .dessert {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
-.all__restaurants .restaurants__thumbnail, .stage__block__btn, .map .map__form .map__bouton, .carte .entre, .carte .plat, .carte .dessert, #commande button {
+.restaurants__thumbnail, .stage__block__btn, .map__form .map__bouton, .entre, .plat, .dessert, #commande button {
   box-shadow: 5px 5px 10px #b49c9c;
 }
 
-.map .map__form .map__bouton, #commande button {
+.map__form .map__bouton, #commande button {
   background: linear-gradient(180deg, #FF79DA, #9356DC);
 }
 
-.map .map__form .map__bouton:hover, #commande button:hover {
+.map__bouton :hover, #commande button:hover {
   background: linear-gradient(180deg, #ff88de, #9b63df);
   box-shadow: 5px 5px 20px #5d5d5d;
-}
-
-@media screen and (min-width: 800px) {
-  #body__restaurants .carte {
-    grid-template-columns: 1fr 1fr;
-    max-width: 1600px;
-  }
-  #body__restaurants .menu {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-content: baseline;
-  }
-  #body__restaurants .menu .menu__entre__titre,
-#body__restaurants .menu .menu__plat__titre {
-    margin: auto 5%;
-  }
-  #body__restaurants .menu .menu__dessert__titre {
-    margin: auto;
-  }
-  #body__restaurants .menu__dessert {
-    grid-column: 1/3;
-  }
-  #body__restaurants #ohmyfooter__restaurants {
-    width: 100%;
-  }
-  #body__restaurants #ohmyfooter__restaurants ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  #body__restaurants #body__restaurants {
-    background-color: #f6f6f6;
-  }
-  #body__restaurants #main__restaurants {
-    width: 100%;
-  }
-  #body__restaurants .restaurants__thumbnail {
-    height: 30%;
-  }
-  #body__restaurants .restaurants__thumbnail .image__header {
-    object-fit: cover;
-    height: 90%;
-  }
-  #body__restaurants .restaurants__thumbnail__figcaption {
-    height: 10%;
-  }
-  #body__restaurants .carte {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  #body__restaurants .menu__dessert {
-    grid-column: 3/4;
-  }
-  #body__restaurants .menu__dessert__titre {
-    width: 90%;
-    margin: auto 5%;
-  }
-  #body__restaurants .hprojet {
-    justify-content: space-around;
-    align-items: center;
-  }
-  #body__restaurants #ohmyfooter__restaurants {
-    width: 100%;
-  }
-  #body__restaurants #ohmyfooter__restaurants ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  #body__restaurants #ohmyfooter__restaurants ul .flist {
-    display: flex;
-    flex-wrap: wrap;
-    width: 30%;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  #body__index #block {
-    width: 260px;
-    height: 260px;
-    margin: 50vh auto;
-  }
-  #body__index .stage__block {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr;
-  }
-  #body__index .stage__block .stage__block__btn {
-    align-self: center;
-    width: 30%;
-    min-width: 250px;
-  }
-  #body__index .stage__block .sbbtn3 {
-    grid-column: 1/3;
-  }
-  #body__index #ohmyfooter__index {
-    width: 100%;
-  }
-  #body__index #ohmyfooter__index ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  #body__index .all__restaurants {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40px 1fr 1fr;
-    gap: 10px 10px;
-    width: 100%;
-  }
-  #body__index .all__restaurants .all__restaurants__header {
-    grid-column: 1/span 2;
-    width: 95%;
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  #body__index #body__index {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #body__index #body__index header {
-    width: 100%;
-    height: 65px;
-  }
-  #body__index .map {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  #body__index .stage {
-    background-color: white;
-  }
-  #body__index .stage .stage__block {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  #body__index .stage .stage__block .stage__block__btn {
-    align-self: center;
-    width: 55%;
-  }
-  #body__index .stage .stage__block .sbbtn3 {
-    grid-column: 3/3;
-  }
-  #body__index #ohmyfooter__index ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  #body__index .all__restaurants {
-    width: 100%;
-    margin: 0;
-  }
-  #body__index .all__restaurants .all__restaurants__header {
-    grid-column: 1/span 2;
-  }
-  #body__index .all__restaurants .restaurants {
-    max-width: 90%;
-    height: 45vh;
-  }
 }
 
 /*Mon loader dans sont ensemble, keyframes dans utils/keyframes*/
@@ -9637,6 +9555,14 @@ body {
 /*l'animation de deux svg a l'interieur de block, keyframes dans utils/keyframes*/
 .couvert {
   animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.53) forwards 0.3s;
+}
+
+.stage__block :hover {
+  background-color: #e4d5f6;
+  cursor: pointer;
+}
+.stage__block :hover:hover .sbb__icon {
+  color: #9356DC;
 }
 
 .entre__1 {
@@ -9693,7 +9619,8 @@ body {
   animation-delay: 1.9s;
 }
 
-#restaurants__heart :hover {
+#restaurants__heart :hover,
+.figcaption__icon :hover {
   animation-name: heart;
   background: linear-gradient(280deg, #FF79DA, #9356DC);
   background-clip: text;

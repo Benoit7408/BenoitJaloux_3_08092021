@@ -1,32 +1,18 @@
 
-/*le logo du site pour toutes les pages*/
+/*le placement de mes elements du header pour toutes les pages
+Aucun breakpoint necessaire*/
 
-.hprojet__restaurants{
+.hprojet{
   display: grid;
-  grid-template-columns: 30px 2fr;
-  max-width: 1570px;
+  grid-template-columns: max-content 1fr;
+  width: 100%;
+  height: 40px;
+  text-align: center;
   margin: auto;
   padding: 5px;
+  align-items: center;
   & .hprojet__img{
-    margin:10px auto 10px auto;
-    text-align: center;
-    opacity: 0.8;
+    grid-column: 2 / 3;
+    margin: auto;
   }
-}
-
-.hprojet__index{
-  text-align: center;
-  padding: 5px;
-}
-
-/*sert uniquement pour les pages restaurants*/
-.fa-arrow-left{
-  font-size: 25px;
-  opacity: 0.8;
-}
-
-header>a{
-  margin: auto 0;
-  width: 10%;
-  text-align: center;
 }

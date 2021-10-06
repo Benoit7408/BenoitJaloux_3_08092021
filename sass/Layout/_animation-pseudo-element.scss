@@ -15,7 +15,17 @@
   animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.53) forwards 0.3s;
 }
 
+.map__bouton :hover{
+  @extend %boutonhover;
+}
 
+.stage__block :hover {
+  background-color:lighten($couleur-primaire,30);
+  cursor: pointer;
+  &:hover .sbb__icon{
+    color:$couleur-primaire;
+  }
+}
 
 .entre__1{
   animation-name: translationY;
@@ -67,7 +77,8 @@
 
 
 
-#restaurants__heart :hover{
+#restaurants__heart :hover,
+.figcaption__icon :hover{
   animation-name: heart;
   background: linear-gradient(280deg, $couleur-secondaire, $couleur-primaire);
   background-clip: text;
