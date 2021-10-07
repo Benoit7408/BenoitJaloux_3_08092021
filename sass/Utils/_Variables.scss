@@ -1,6 +1,9 @@
+/* variable de couleur utilisé */
+
 $couleur-primaire:#9356DC;
 $couleur-secondaire:#FF79DA;
 $couleur-tertiaire:#99E2D0;
+
 $couleur-background:#f6f6f6;
 $couleur-background2:darken(#f6f3f3,20);
 $couleur-tertiaire10:darken(#99E2D0,10);
@@ -9,9 +12,23 @@ $couleur-primaireL:lighten($couleur-primaire,3);
 $couleur-secondaireL:lighten($couleur-secondaire,3);
 
 
-
+/*Maps utiliser pour le responsive*/
 
 $breakpoints: (
   tablet-portrait:800px,
-  desktop:1200px
+  desktop:1200px);
+
+/*Maps utiliser pour le reglage de temps animantion translation y*/
+
+$animation-translation:(
+  animation-duration : 1s,
+  animation-delay:0.2s);
+
+/*Maps utilser pour le nombre d'element sur la carte a animer*/
+
+$restaurant-nbelement:(
+  la-palette-du-gout:9,
+  a-la-francaise:9,
+  la-note-enchante:10,
+  le-delice-des-sens:9
 );

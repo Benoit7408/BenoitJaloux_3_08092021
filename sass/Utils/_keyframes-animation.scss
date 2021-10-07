@@ -93,34 +93,28 @@
   animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.90) forwards 0.7s;
 }
 
-/* Mon animation --- axe y --- page restaurant*/
-.entre__1{
-  animation: translationY 1s 0.3s;
-}
-.entre__2{
-  animation: translationY 1s 0.5;
-}
-.entre__3{
-  animation: translationY 1s 0.7s;
+
+/*boucle pour une meilleur maintenance de l'animation de translation y */
+
+
+@for $elementn from 1 through map-get($map: $restaurant-nbelement, $key:la-palette-du-gout){
+  .a#{$elementn}{
+    animation: translationY map-get($map: $animation-translation, $key:animation-duration ) map-get($map: $animation-translation, $key:animation-delay)*$elementn;
+  }
 }
 
-.plat__1{
-  animation: translationY 1s 0.9s;
+@for $elementn from 1 through map-get($map: $restaurant-nbelement, $key:a-la-francaise){
+  .a#{$elementn}{
+    animation: translationY map-get($map: $animation-translation, $key:animation-duration ) map-get($map: $animation-translation, $key:animation-delay)*$elementn;
+  }
 }
-.plat__2{
-  animation: translationY 1s 1.1s;
-  
+@for $elementn from 1 through map-get($map: $restaurant-nbelement, $key:la-note-enchante){
+  .a#{$elementn}{
+    animation: translationY map-get($map: $animation-translation, $key:animation-duration ) map-get($map: $animation-translation, $key:animation-delay)*$elementn;
+  }
 }
-.plat__3{
-  animation: translationY 1s 1.3s;
-}
-
-.dessert__1{
-  animation: translationY 1s 1.5s;
-}
-.dessert__2{
-  animation: translationY 1s 1.7s;
-}
-.dessert__3{
-  animation: translationY 1s 1.9s;
+@for $elementn from 1 through map-get($map: $restaurant-nbelement, $key:le-delice-des-sens){
+  .a#{$elementn}{
+    animation: translationY map-get($map: $animation-translation, $key:animation-duration ) map-get($map: $animation-translation, $key:animation-delay)*$elementn;
+  }
 }
