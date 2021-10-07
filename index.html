@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -11,26 +11,24 @@
 
   <body id="body__index">
 
+<!-- Mon loader contenant un block et 3 sous éléments dont 2 animés -->
+
   <div id="loader">
 
     <div id="block">
-      
       <div class="loader__animation">
-        
         <div class="couvert couvert1">
-          <embed class="couvert__fourchette"src="src/images/loader/fourchette.svg" alt="fourchette">
+          <img class="couvert__fourchette"src="src/images/loader/fourchette.svg" alt="fourchette">
         </div>
-
         <div id="tour">
-          <embed src="src/images/loader/tour.svg "alt="tour">
+          <img class="tour"src="src/images/loader/tour.png" alt="tour">
         </div>
-
         <div class="couvert couvert2">
-          <embed class="couvert__couteau"src="src/images/loader/couteau.svg" alt="couteau">
+          <img class="couvert__couteau"src="src/images/loader/couteau.svg" alt="couteau">
         </div>
       </div>
       </div>
-    </div>
+  </div>
 
     
   
@@ -40,30 +38,25 @@
         <img class=hprojet__img src="src/images/logo/ohmyfood@2x.svg" alt="logo du site ohmyfood">
     </header>
 
-    <aside>
+    <!-- Ma section presentation et fonctionnement contient deux class map et stage -->
+    <section id="presentation-fonctionnement">
 
       <section class="map">
 
         <div class="map__info">
-
           <a id="localisation" >
             <i class=" map__info__icone fa fa-map-marker"></i>
             <h3 class="map__info__lieu">Paris, Belleville</h3>
           </a>
-
         </div>
 
         <div class="map__titre">
-
           <h2 class="map__titre__reservation">Réservez le menu qui vous convient</h2>
-          <p class="map__titre__decouvrir">Découvrez des restaurants d'execption, séléctionnés par nos soins.</p>
-
+          <p class="map__titre__decouvrir">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
         </div>
 
         <div class="map__form">
-
           <a class="map__bouton" href="">Explorer nos restaurants</a> 
-          
         </div>
 
       </section>
@@ -96,8 +89,9 @@
 
       </section>
 
-    </aside>
-          
+    </section>
+
+    <!-- Mon id main__index contenant article, figure, sous-titre et image -->
     <main id="main__index">
 
       <section class="all__restaurants">
@@ -112,12 +106,12 @@
               </a>
 
               <figcaption>
-                <a class="ancre-figcaption__titre" href="#">
+                <a class="ancre-figcaption" href="#">
                   <h3>La palette du goût</h3>
                   <p>Ménilmontant</p>
                 </a>
 
-                <div class="figcaption__icon">
+                <div class="restaurants__heart">
                   <i class="heart heart__1 far fa-heart"></i>
                   <i class="heart heart__2 fas fa-heart"></i>
                 </div>
@@ -138,7 +132,7 @@
                 <p>Charonne</p>
               </a>
 
-              <div class="figcaption__icon">
+              <div class="restaurants__heart">
                 <i class="heart heart__1 far fa-heart"></i>
                 <i class="heart heart__2 fas fa-heart"></i>
               </div>
@@ -158,7 +152,7 @@
                 <p>Cité Rouge</p>
               </a>
               
-              <div class="figcaption__icon">
+              <div class="restaurants__heart">
                 <i class="heart heart__1 far fa-heart"></i>
                 <i class="heart heart__2 fas fa-heart"></i>
               </div>
@@ -173,12 +167,12 @@
             </a>
 
             <figcaption>
-              <a class="ancre-figcaption__titre" href="#">
+              <a class="ancre-figcaption" href="#">
                 <h3>Le délice des sens</h3>
                 <p>Folie-Mericourt</p>
               </a>
 
-              <div class="figcaption__icon">
+              <div class="restaurants__heart">
                 <i class="heart heart__1 far fa-heart"></i>
                 <i class="heart heart__2 fas fa-heart"></i>
               </div>
@@ -186,9 +180,10 @@
           </figure>
         </article>
       </section>
-
+    
     </main>
 
+<!-- Mon footer contenant un sous titre et une liste à puce-->
     <footer id="ohmyfooter__index">
 
       <a class = "ancre-footer" href="#">

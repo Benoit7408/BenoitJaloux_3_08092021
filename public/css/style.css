@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* l'importation de toute la webfront et de ses partiel*/
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -8905,59 +8906,14 @@ readers do not read off random characters that represent icons */
   content: "\f1ba";
 }
 
-/* Ma div loader par dessus mon body */
-#loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-}
-
-/*Les tailles de ma div qui est animer */
-#block {
-  width: 60px;
-  height: 60px;
-}
-@media screen and (min-width: 800px) {
-  #block {
-    width: 260px;
-    height: 260px;
-    margin: 50vh auto;
-  }
-}
-
-/*Les élements interieur graphique ou de placements de mon animation */
-.loader__animation {
-  display: flex;
-  align-items: flex-end;
-  background: #4acbab;
-  width: 100%;
-  height: 100%;
-  border: 25px solid;
-  border-top-color: blue;
-  border-left-color: white;
-  border-right-color: white;
-  border-bottom-color: red;
-  border-radius: 50%;
-}
-.loader__animation .couvert {
-  width: 100%;
-  height: 100%;
-}
-.loader__animation .couvert embed {
-  width: 100%;
-  height: 100%;
-}
-.loader__animation #tour {
-  text-align: center;
-}
-.loader__animation #tour embed {
-  width: 70%;
-}
-
+/* l'importation des polices d'ecriture*/
+/* l'importation de toutes mes variables*/
+/* variable de couleur utilisé */
+/*Maps utiliser pour le responsive*/
+/*Maps utiliser pour le reglage de temps animantion translation y*/
+/*Maps utilser pour le nombre d'element sur la carte a animer*/
+/* l'importation de tous mes partielles css */
+/* partielles de régles commune et générale  */
 html, body {
   width: 100%;
   height: 100%;
@@ -8990,6 +8946,69 @@ h2, h3, p {
 
 i:not(.flist__icon) {
   font-size: 25px;
+}
+
+/* partielles de ma pages index  */
+/* Ma div loader par dessus mon body */
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+/*Les tailles de ma div qui est animer */
+#block {
+  width: 60px;
+  height: 60px;
+}
+@media screen and (min-width: 800px) {
+  #block {
+    width: 150px;
+    height: 150px;
+    margin: 50vh auto;
+  }
+}
+
+/*Les élements interieur graphique ou de placements de mon animation */
+.loader__animation {
+  display: flex;
+  align-items: flex-end;
+  background: #4acbab;
+  width: 100%;
+  height: 100%;
+  border: 5px solid;
+  border-top-color: blue;
+  border-left-color: white;
+  border-right-color: white;
+  border-bottom-color: red;
+  border-radius: 50%;
+}
+@media screen and (min-width: 800px) {
+  .loader__animation {
+    border: 25px solid;
+    border-top-color: blue;
+    border-left-color: white;
+    border-right-color: white;
+    border-bottom-color: red;
+  }
+}
+.loader__animation .couvert {
+  width: 100%;
+  height: 100%;
+}
+.loader__animation .couvert img {
+  height: 100%;
+}
+.loader__animation #tour {
+  text-align: center;
+}
+.loader__animation #tour img {
+  height: 100%;
+  width: 100%;
 }
 
 /*le placement de mes elements du header pour toutes les pages
@@ -9044,6 +9063,12 @@ tablette, pas de breakpoint desktop necessaire */
 }
 @media screen and (min-width: 800px) {
   .all__restaurants .restaurants {
+    height: 30vh;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .all__restaurants .restaurants {
     height: 40vh;
     width: 90%;
   }
@@ -9058,7 +9083,7 @@ tablette, pas de breakpoint desktop necessaire */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 75%;
+  height: 70%;
 }
 .restaurants__thumbnail .image {
   height: 100%;
@@ -9067,26 +9092,21 @@ tablette, pas de breakpoint desktop necessaire */
   object-fit: cover;
 }
 .restaurants__thumbnail figcaption {
-  display: grid;
-  grid-template-columns: 1fr 100px;
   background-color: white;
-  height: 100%;
-  align-content: center;
+  height: 30%;
 }
-.restaurants__thumbnail figcaption .ancre-figcaption__titre {
+.restaurants__thumbnail figcaption .restaurants__heart {
+  display: flex;
+  width: 85%;
   height: 100%;
-}
-.restaurants__thumbnail figcaption .figcaption__icon {
-  width: max-content;
+  text-align: center;
   align-items: center;
-  margin: 1rem 2rem;
-  position: relative;
+  justify-content: flex-end;
 }
-.restaurants__thumbnail figcaption .figcaption__icon .heart__1 {
+.restaurants__thumbnail figcaption .restaurants__heart .heart__1 {
   position: absolute;
-  color: black;
 }
-.restaurants__thumbnail figcaption .figcaption__icon .heart__2 {
+.restaurants__thumbnail figcaption .restaurants__heart .heart__2 {
   position: absolute;
   color: transparent;
 }
@@ -9242,6 +9262,7 @@ footer .footer__titre {
   font-size: larger;
   font-weight: 200;
   width: 90%;
+  padding-top: 10px;
   margin: auto;
   color: white;
 }
@@ -9268,8 +9289,9 @@ footer ul .flist .flist__text i {
   padding-right: 5px;
 }
 
+/* partielles de ma pages restaurant  */
 .restaurants__header {
-  height: 400px;
+  height: 420px;
   margin: 0 0 30px 0;
 }
 .restaurants__header .image__header {
@@ -9277,23 +9299,18 @@ footer ul .flist .flist__text i {
   height: 90%;
   width: 100%;
 }
-
 .restaurants__header__figcaption {
   display: flex;
   background-color: #f6f6f6;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   width: 100%;
-  height: 10%;
-  margin-top: -60px;
+  height: 15%;
+  max-height: 100px;
+  margin-top: -50px;
   position: absolute;
 }
 .restaurants__header__figcaption .restaurants__header__figcaption__header {
-  display: grid;
-  grid-template-columns: 2fr 20%;
-  width: 100%;
-  max-width: 1570px;
-  margin: auto;
   font-family: "Shrikhand";
   font-size: small;
 }
@@ -9301,27 +9318,27 @@ footer ul .flist .flist__text i {
   margin-left: 14px;
 }
 
-#restaurants__heart {
+.restaurants__heart {
   display: flex;
+  width: 85%;
+  height: 100%;
+  text-align: center;
   align-items: center;
-  justify-content: end;
-  margin-right: 15px;
+  justify-content: flex-end;
 }
-#restaurants__heart .heart__1 {
+.restaurants__heart .heart__1 {
   position: absolute;
-  font-size: 25px;
 }
-#restaurants__heart .heart__2 {
+.restaurants__heart .heart__2 {
   position: absolute;
   color: transparent;
-  font-size: 25px;
 }
 
 .carte {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  margin: auto;
+  margin: 70px 0;
 }
 @media screen and (min-width: 800px) {
   .carte {
@@ -9417,14 +9434,55 @@ footer ul .flist .flist__text i {
   color: white;
   border: 0px solid transparent;
 }
-#commande button:hover {
+
+/* partielles pour les éléments animés  */
+/* Mon hover sur le bouton "explorer nos restaurant" ---  page index ---*/
+/* Mon hover sur le bouton "commander --- page restaurant ---*/
+button :hover {
   cursor: pointer;
+}
+
+/* Mon hover sur les blocks de ma liste a puce, son élément interieur icon et en excluant stage__number --- page index ---*/
+.stage__block :not(.stage__number):hover {
+  background-color: #e4d5f6;
+  cursor: pointer;
+}
+.stage__block :not(.stage__number):hover:hover .sbb__icon {
+  color: #9356DC;
+}
+
+/* Mon hover sur les coeurs --- page index et restaurant ---*/
+.restaurants__heart :hover {
+  animation-name: heart;
+  background: linear-gradient(280deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation-duration: 2s;
+  cursor: pointer;
+}
+
+/* Mon hover sur la translation des élément de menu --- axe x --- restaurant ---
+permet également d'actionner l'animation rotation-icone*/
+.menu li:hover .animation__check {
+  margin: 0 0 0 0;
+}
+.menu li:hover .fa-check-circle {
+  animation: rotation-icone 1.2s;
+}
+
+/* Mon after pour la creation d'un demi-soulignement pour les titre de menu --- page restaurant ---*/
+.menu h2:after {
+  border-top: 4px solid #99E2D0;
+  display: block;
+  width: 50px;
+  margin-top: 7px;
+  content: "";
 }
 
 /* les animation de mon loader */
 @keyframes duration__loader {
   0% {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
   }
   100% {
     z-index: -3;
@@ -9435,23 +9493,11 @@ footer ul .flist .flist__text i {
   0% {
     transform: scale(1);
   }
-  10% {
-    transform: scale(0.9);
-  }
-  20% {
-    transform: scale(1.1);
-  }
-  30% {
-    transform: scale(0.9);
-  }
-  40% {
-    transform: scale(1.1);
-  }
   50% {
-    transform: scale(0.9);
+    transform: scale(3);
   }
-  60% {
-    transform: scale(1.1);
+  80% {
+    transform: scale(1);
   }
   100% {
     transform: scale(0);
@@ -9477,7 +9523,7 @@ footer ul .flist .flist__text i {
     opacity: 1;
   }
 }
-/* Mon icone à l'interieur de la translation, le hover est sur le meme bock que la translation */
+/* Mon icone à l'interieur de la translation, le hover est sur le meme block que la translation */
 @keyframes rotation-icone {
   0% {
     transform: rotate(0);
@@ -9489,7 +9535,7 @@ footer ul .flist .flist__text i {
     transform: rotate(360deg);
   }
 }
-/* Ma translation sur y des blocks du menu */
+/* Ma keyframes translation sur --- axe y --- des blocks du menu */
 @keyframes translationY {
   0% {
     opacity: 0;
@@ -9500,6 +9546,175 @@ footer ul .flist .flist__text i {
     transform: translateY(0);
   }
 }
+/*----------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+----------------------- Mes animations ---------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------*/
+/*Mon loader dans sont ensemble.*/
+#loader {
+  animation: duration__loader 3s step-end forwards;
+}
+
+/*Mon animation du block contient 2 svg et 1 png*/
+#block {
+  animation: duration__loader__animation 2.2s forwards linear 0.8s;
+}
+
+/*l'animation de deux svg a l'interieur de block*/
+.couvert {
+  animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.9) forwards 0.7s;
+}
+
+/*boucle pour une meilleur maintenance de l'animation de translation y */
+.a1 {
+  animation: translationY 1s 0.2s;
+}
+
+.a2 {
+  animation: translationY 1s 0.4s;
+}
+
+.a3 {
+  animation: translationY 1s 0.6s;
+}
+
+.a4 {
+  animation: translationY 1s 0.8s;
+}
+
+.a5 {
+  animation: translationY 1s 1s;
+}
+
+.a6 {
+  animation: translationY 1s 1.2s;
+}
+
+.a7 {
+  animation: translationY 1s 1.4s;
+}
+
+.a8 {
+  animation: translationY 1s 1.6s;
+}
+
+.a9 {
+  animation: translationY 1s 1.8s;
+}
+
+.a1 {
+  animation: translationY 1s 0.2s;
+}
+
+.a2 {
+  animation: translationY 1s 0.4s;
+}
+
+.a3 {
+  animation: translationY 1s 0.6s;
+}
+
+.a4 {
+  animation: translationY 1s 0.8s;
+}
+
+.a5 {
+  animation: translationY 1s 1s;
+}
+
+.a6 {
+  animation: translationY 1s 1.2s;
+}
+
+.a7 {
+  animation: translationY 1s 1.4s;
+}
+
+.a8 {
+  animation: translationY 1s 1.6s;
+}
+
+.a9 {
+  animation: translationY 1s 1.8s;
+}
+
+.a1 {
+  animation: translationY 1s 0.2s;
+}
+
+.a2 {
+  animation: translationY 1s 0.4s;
+}
+
+.a3 {
+  animation: translationY 1s 0.6s;
+}
+
+.a4 {
+  animation: translationY 1s 0.8s;
+}
+
+.a5 {
+  animation: translationY 1s 1s;
+}
+
+.a6 {
+  animation: translationY 1s 1.2s;
+}
+
+.a7 {
+  animation: translationY 1s 1.4s;
+}
+
+.a8 {
+  animation: translationY 1s 1.6s;
+}
+
+.a9 {
+  animation: translationY 1s 1.8s;
+}
+
+.a10 {
+  animation: translationY 1s 2s;
+}
+
+.a1 {
+  animation: translationY 1s 0.2s;
+}
+
+.a2 {
+  animation: translationY 1s 0.4s;
+}
+
+.a3 {
+  animation: translationY 1s 0.6s;
+}
+
+.a4 {
+  animation: translationY 1s 0.8s;
+}
+
+.a5 {
+  animation: translationY 1s 1s;
+}
+
+.a6 {
+  animation: translationY 1s 1.2s;
+}
+
+.a7 {
+  animation: translationY 1s 1.4s;
+}
+
+.a8 {
+  animation: translationY 1s 1.6s;
+}
+
+.a9 {
+  animation: translationY 1s 1.8s;
+}
+
+/* élement pour un code dry  */
 .restaurants__thumbnail, .map, footer {
   display: flex;
   flex-direction: column;
@@ -9530,117 +9745,16 @@ footer ul .flist .flist__text i {
   background: linear-gradient(180deg, #FF79DA, #9356DC);
 }
 
-.map__bouton :hover, #commande button:hover {
+.map__bouton :hover, button :hover {
   background: linear-gradient(180deg, #ff88de, #9b63df);
   box-shadow: 5px 5px 20px #5d5d5d;
 }
 
-/*Mon loader dans sont ensemble, keyframes dans utils/keyframes*/
-#loader {
-  animation: duration__loader 3s step-end forwards;
-}
-
-/*Mon animation du block contient 3 svg, keyframes dans utils/keyframes*/
-#block {
-  animation: duration__loader__animation 2.2s forwards linear;
-}
-
-/*l'animation de deux svg a l'interieur de block, keyframes dans utils/keyframes*/
-.couvert {
-  animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.53) forwards 0.3s;
-}
-
-.stage__block :hover {
-  background-color: #e4d5f6;
-  cursor: pointer;
-}
-.stage__block :hover:hover .sbb__icon {
-  color: #9356DC;
-}
-
-.entre__1 {
-  animation-name: translationY;
-  animation-duration: 1s;
-  animation-delay: 0.3s;
-}
-
-.entre__2 {
-  animation-name: translationY;
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-}
-
-.entre__3 {
-  animation-name: translationY;
-  animation-duration: 1s;
-  animation-delay: 0.7s;
-}
-
-.plat__1 {
-  animation-name: translationY;
-  animation-duration: 1s;
-  animation-delay: 0.9s;
-}
-
-.plat__2 {
-  animation-name: translationY;
-  animation-duration: 1s;
-  animation-delay: 1.1s;
-}
-
-.plat__3 {
-  animation-name: translationY;
-  animation-duration: 1s;
-  animation-delay: 1.3s;
-}
-
-.dessert__1 {
-  animation-name: translationY;
-  animation-duration: 1s;
-  animation-delay: 1.5s;
-}
-
-.dessert__2 {
-  animation-name: translationY;
-  animation-duration: 1s;
-  animation-delay: 1.7s;
-}
-
-.dessert__3 {
-  animation-name: translationY;
-  animation-duration: 1s;
-  animation-delay: 1.9s;
-}
-
-#restaurants__heart :hover,
-.figcaption__icon :hover {
-  animation-name: heart;
-  background: linear-gradient(280deg, #FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  animation-duration: 2s;
-  cursor: pointer;
-}
-
-.entre:hover .animation__check,
-.plat:hover .animation__check,
-.dessert:hover .animation__check {
-  margin: 0 0 0 0;
-}
-.entre:hover .fa-check-circle,
-.plat:hover .fa-check-circle,
-.dessert:hover .fa-check-circle {
-  animation: rotation-icone 1.2s;
-}
-
-.menu__entre__titre::after,
-.menu__plat__titre::after,
-.menu__dessert__titre::after {
-  border-top: 4px solid #99E2D0;
-  display: block;
-  width: 50px;
-  margin-top: 7px;
-  content: "";
+.restaurants__thumbnail figcaption, .restaurants__header__figcaption .restaurants__header__figcaption__header {
+  display: grid;
+  grid-template-columns: 2fr 20%;
+  width: 100%;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

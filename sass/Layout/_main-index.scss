@@ -27,6 +27,10 @@ tablette, pas de breakpoint desktop necessaire */
       height: 200px;
       width: 95%;
       @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
+        height: 30vh;
+        width: 90%;
+      }
+      @media screen and (min-width:(map-get($breakpoints , desktop ))){
         height: 40vh;
         width: 90%;
       }
@@ -48,7 +52,7 @@ tablette, pas de breakpoint desktop necessaire */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 75%;
+    height: 70%;
     }
 
     & .image{
@@ -60,28 +64,23 @@ tablette, pas de breakpoint desktop necessaire */
     }
 
   & figcaption{
-      display: grid;
-      grid-template-columns: 1fr 100px;
+      @extend %disposition-figcaption-heart;
       background-color:white;
-      height: 100%;
-      align-content: center;
+      height: 30%;
       @extend %radius-bottom-thumbnail;
-      
-      
-      & .ancre-figcaption__titre{
+    
+      & .restaurants__heart{
+        display: flex;
+        width: 85%;
         height: 100%;
-      }
-
-      & .figcaption__icon{
-        width: max-content;
+        text-align: center;
         align-items: center;
-        margin: 1rem 2rem;
+        justify-content: flex-end;
         
-        position: relative;
         & .heart__1{
           position: absolute;
-          color:black;
         }
+
         & .heart__2{
           position: absolute;
           color:transparent;
