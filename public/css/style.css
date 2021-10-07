@@ -9003,7 +9003,8 @@ i:not(.flist__icon) {
   text-align: center;
 }
 .loader__animation #tour img {
-  width: 70%;
+  height: 100%;
+  width: 100%;
 }
 
 /*le placement de mes elements du header pour toutes les pages
