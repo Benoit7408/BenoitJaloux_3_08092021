@@ -1,0 +1,58 @@
+
+/* Mon hover sur le bouton "explorer nos restaurant" ---  page index ---*/
+
+.map__bouton :hover{
+  @extend %boutonhover;
+}
+/* Mon hover sur le bouton "commander --- page restaurant ---*/
+button :hover{
+  cursor: pointer;
+  @extend %boutonhover;
+}
+
+/* Mon hover sur les blocks de ma liste a puce, son élément interieur icon et en excluant stage__number --- page index ---*/
+
+.stage__block :not(.stage__number):hover{
+  background-color:lighten($couleur-primaire,30);
+  cursor: pointer;
+
+  &:hover .sbb__icon{
+    color:$couleur-primaire;
+  }
+}
+
+/* Mon hover sur les coeurs --- page index et restaurant ---*/
+
+.restaurants__heart :hover{
+  animation-name: heart;
+  background: linear-gradient(280deg, $couleur-secondaire, $couleur-primaire);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation-duration: 2s;
+  cursor: pointer;
+}
+
+/* Mon hover sur la translation des élément de menu --- axe x --- restaurant ---
+permet également d'actionner l'animation rotation-icone*/
+
+.menu li{
+  &:hover .animation__check{
+    margin: 0 0 0 0;
+  }
+  &:hover .fa-check-circle {
+  animation: rotation-icone 1.2s;
+  }
+}
+
+
+/* Mon after pour la creation d'un demi-soulignement pour les titre de menu --- page restaurant ---*/
+
+.menu h2:after{
+  border-top: 4px solid $couleur-tertiaire;
+  display: block;
+  width: 50px;
+  margin-top: 7px;
+  content:"";
+}
+
+

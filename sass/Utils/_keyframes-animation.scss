@@ -1,0 +1,126 @@
+/* les animation de mon loader */
+
+
+@keyframes duration__loader{
+  0%{
+    background-color: rgba($color: white, $alpha: 0.8);
+    
+  }
+  100%{
+   z-index: -3;
+   background-color: transparent;
+  }
+}
+@keyframes duration__loader__animation{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(3);
+  }
+  80%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+@keyframes rotation__couvert{
+  0%{
+    transform: rotateZ(0);
+  }
+  100%{
+    transform: rotateZ(1080deg);
+  }
+}
+/* les animation de mes coeurs */
+
+@keyframes heart{
+  0%{
+    opacity: 0;
+    }
+  50%{
+    opacity: 0.5;
+    }
+  100%{
+    opacity: 1;
+      }
+}
+
+/* Mon icone à l'interieur de la translation, le hover est sur le meme block que la translation */
+@keyframes rotation-icone{
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/* Ma keyframes translation sur --- axe y --- des blocks du menu */
+@keyframes translationY{
+  0%{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*----------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+----------------------- Mes animations ---------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------*/
+
+
+/*Mon loader dans sont ensemble.*/
+#loader{
+  animation: duration__loader 3s step-end forwards;
+}
+
+/*Mon animation du block contient 2 svg et 1 png*/
+#block{
+  animation:duration__loader__animation 2.2s forwards linear 0.8s;
+  
+}
+/*l'animation de deux svg a l'interieur de block*/
+.couvert{
+  animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.90) forwards 0.7s;
+}
+
+/* Mon animation --- axe y --- page restaurant*/
+.entre__1{
+  animation: translationY 1s 0.3s;
+}
+.entre__2{
+  animation: translationY 1s 0.5;
+}
+.entre__3{
+  animation: translationY 1s 0.7s;
+}
+
+.plat__1{
+  animation: translationY 1s 0.9s;
+}
+.plat__2{
+  animation: translationY 1s 1.1s;
+  
+}
+.plat__3{
+  animation: translationY 1s 1.3s;
+}
+
+.dessert__1{
+  animation: translationY 1s 1.5s;
+}
+.dessert__2{
+  animation: translationY 1s 1.7s;
+}
+.dessert__3{
+  animation: translationY 1s 1.9s;
+}
