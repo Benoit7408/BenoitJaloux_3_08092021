@@ -1,11 +1,11 @@
 
 /* Mon hover sur le bouton "explorer nos restaurant" ---  page index ---*/
 
-.map__bouton :hover{
+.map__form :hover{
   @extend %boutonhover;
 }
 /* Mon hover sur le bouton "commander --- page restaurant ---*/
-button :hover{
+#commande :hover{
   cursor: pointer;
   @extend %boutonhover;
 }
@@ -51,8 +51,13 @@ permet également d'actionner l'animation rotation-icone*/
   border-top: 4px solid $couleur-tertiaire;
   display: block;
   width: 50px;
-  margin-top: 7px;
+  margin-top: 5px;
   content:"";
+}
+ .menu__dessert__titre:after{
+  margin: 5px  auto;
+  @media screen and (min-width:(map-get($breakpoints , desktop ))){
+  margin: 5px 0px 0px 0px;}
 }
 
 

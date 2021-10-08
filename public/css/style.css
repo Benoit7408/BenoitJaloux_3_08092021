@@ -8912,11 +8912,53 @@ readers do not read off random characters that represent icons */
 /*Maps utiliser pour le responsive*/
 /*Maps utiliser pour le reglage de temps animantion translation y*/
 /*Maps utilser pour le nombre d'element sur la carte a animer*/
+/* élement pour un code dry  */
+footer, .map, .restaurants__thumbnail {
+  display: flex;
+  flex-direction: column;
+}
+
+#commande button, .map__form .map__bouton {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.entre, .plat, .dessert, .restaurants__thumbnail .image, .restaurants__thumbnail {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.entre, .plat, .dessert, .restaurants__thumbnail figcaption, .restaurants__thumbnail {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#commande button, .entre, .plat, .dessert, .map__form .map__bouton, .stage__block__btn, .restaurants__thumbnail {
+  box-shadow: 5px 5px 10px #b49c9c;
+}
+
+#commande button, .map__form .map__bouton {
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+}
+
+#commande :hover, .map__form :hover {
+  background: linear-gradient(180deg, #ff88de, #9b63df);
+  box-shadow: 5px 5px 20px #5d5d5d;
+}
+
+.restaurants__header__figcaption .restaurants__header__figcaption__header, .restaurants__thumbnail figcaption {
+  display: grid;
+  grid-template-columns: 2fr 20%;
+  width: 100%;
+  align-items: center;
+}
+
 /* l'importation de tous mes partielles css */
 /* partielles de régles commune et générale  */
 html, body {
   width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -8936,7 +8978,7 @@ a, ul {
 }
 
 h2, h3, p {
-  margin: 5px 10px;
+  margin: 5px 0px 5px 10px;
 }
 
 #body__restaurants h2 {
@@ -8956,18 +8998,20 @@ i:not(.flist__icon) {
   align-items: center;
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
 }
 
 /*Les tailles de ma div qui est animer */
 #block {
-  width: 60px;
+  display: flex;
+  align-items: center;
+  width: 100px;
   height: 60px;
 }
 @media screen and (min-width: 800px) {
   #block {
-    width: 150px;
+    width: 200px;
     height: 150px;
     margin: 50vh auto;
   }
@@ -9020,7 +9064,7 @@ Aucun breakpoint necessaire*/
   height: 40px;
   text-align: center;
   margin: auto;
-  padding: 5px;
+  padding: 10px 0;
   align-items: center;
 }
 .hprojet .hprojet__img {
@@ -9256,14 +9300,14 @@ un seul breakpoint mobile vers tablette */
 footer {
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
+  padding: 20px 0;
 }
 footer .footer__titre {
   font-family: "Shrikhand";
   font-size: larger;
   font-weight: 200;
   width: 90%;
-  padding-top: 10px;
-  margin: auto;
+  margin: 10px auto;
   color: white;
 }
 footer ul {
@@ -9278,15 +9322,24 @@ footer ul {
   }
 }
 footer ul .flist {
-  width: 100%;
   margin: 10px 0;
+}
+footer ul .flist:nth-child(1) {
+  font-weight: bold;
+}
+footer ul .flist:nth-child(2) {
+  font-weight: bold;
 }
 footer ul .flist .flist__text {
   color: white;
-  width: 100%;
 }
-footer ul .flist .flist__text i {
-  padding-right: 5px;
+
+.fa-utensils {
+  margin-right: 10px;
+}
+
+.fa-hands-helping {
+  margin-right: 4px;
 }
 
 /* partielles de ma pages restaurant  */
@@ -9338,7 +9391,6 @@ footer ul .flist .flist__text i {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  margin: 70px 0;
 }
 @media screen and (min-width: 800px) {
   .carte {
@@ -9349,7 +9401,7 @@ footer ul .flist .flist__text i {
     grid-column: 1/3;
   }
   .carte .menu__dessert .menu__dessert__titre {
-    width: 100%;
+    width: 90%;
     text-align: center;
   }
 }
@@ -9438,7 +9490,7 @@ footer ul .flist .flist__text i {
 /* partielles pour les éléments animés  */
 /* Mon hover sur le bouton "explorer nos restaurant" ---  page index ---*/
 /* Mon hover sur le bouton "commander --- page restaurant ---*/
-button :hover {
+#commande :hover {
   cursor: pointer;
 }
 
@@ -9475,8 +9527,17 @@ permet également d'actionner l'animation rotation-icone*/
   border-top: 4px solid #99E2D0;
   display: block;
   width: 50px;
-  margin-top: 7px;
+  margin-top: 5px;
   content: "";
+}
+
+.menu__dessert__titre:after {
+  margin: 5px auto;
+}
+@media screen and (min-width: 1200px) {
+  .menu__dessert__titre:after {
+    margin: 5px 0px 0px 0px;
+  }
 }
 
 /* les animation de mon loader */
@@ -9562,7 +9623,7 @@ permet également d'actionner l'animation rotation-icone*/
 
 /*l'animation de deux svg a l'interieur de block*/
 .couvert {
-  animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.9) forwards 0.7s;
+  animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.7) forwards 0.7s;
 }
 
 /*boucle pour une meilleur maintenance de l'animation de translation y */
@@ -9712,49 +9773,6 @@ permet également d'actionner l'animation rotation-icone*/
 
 .a9 {
   animation: translationY 1s 1.8s;
-}
-
-/* élement pour un code dry  */
-.restaurants__thumbnail, .map, footer {
-  display: flex;
-  flex-direction: column;
-}
-
-.map__form .map__bouton, #commande button {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
-.restaurants__thumbnail, .restaurants__thumbnail .image, .entre, .plat, .dessert {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-.restaurants__thumbnail, .restaurants__thumbnail figcaption, .entre, .plat, .dessert {
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-
-.restaurants__thumbnail, .stage__block__btn, .map__form .map__bouton, .entre, .plat, .dessert, #commande button {
-  box-shadow: 5px 5px 10px #b49c9c;
-}
-
-.map__form .map__bouton, #commande button {
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
-}
-
-.map__bouton :hover, button :hover {
-  background: linear-gradient(180deg, #ff88de, #9b63df);
-  box-shadow: 5px 5px 20px #5d5d5d;
-}
-
-.restaurants__thumbnail figcaption, .restaurants__header__figcaption .restaurants__header__figcaption__header {
-  display: grid;
-  grid-template-columns: 2fr 20%;
-  width: 100%;
-  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

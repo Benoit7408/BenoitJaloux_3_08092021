@@ -6,17 +6,19 @@
   align-items: center;
   position:fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index:1;
   
 }
 /*Les tailles de ma div qui est animer */
 
 #block{
-  width: 60px;
+  display: flex;
+  align-items: center;
+  width: 100px;
   height: 60px;
   @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
-    width: 150px;
+    width: 200px;
     height: 150px;
     margin: 50vh auto;
   }
