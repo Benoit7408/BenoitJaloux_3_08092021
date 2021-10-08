@@ -2,7 +2,7 @@
 
 #loader{
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   position:fixed;
   width: 100%;
@@ -15,12 +15,13 @@
 #block{
   display: flex;
   align-items: center;
+  
   width: 100px;
   height: 60px;
   @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
     width: 200px;
     height: 150px;
-    margin: 50vh auto;
+   
   }
 }
 
