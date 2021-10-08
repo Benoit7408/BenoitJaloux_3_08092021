@@ -55,7 +55,8 @@ permet également d'actionner l'animation rotation-icone*/
   content:"";
 }
  .menu__dessert__titre:after{
-  margin: 5px  auto;
+  @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
+  margin: 5px  auto;}
   @media screen and (min-width:(map-get($breakpoints , desktop ))){
   margin: 5px 0px 0px 0px;}
 }

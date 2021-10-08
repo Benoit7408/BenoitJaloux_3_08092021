@@ -9531,8 +9531,10 @@ permet également d'actionner l'animation rotation-icone*/
   content: "";
 }
 
-.menu__dessert__titre:after {
-  margin: 5px auto;
+@media screen and (min-width: 800px) {
+  .menu__dessert__titre:after {
+    margin: 5px auto;
+  }
 }
 @media screen and (min-width: 1200px) {
   .menu__dessert__titre:after {
