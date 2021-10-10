@@ -82,19 +82,6 @@
 }
 }
 .entre,.plat,.dessert{
-    background-color: white;
-    width: 90%;
-    margin: 2rem auto;
-    @extend %radius-bottom-thumbnail;
-    @extend %radius-top-thumbnail;
-    @extend %ombre;
-    display: flex;
-    padding:0;
-    max-width: 600px;
-    cursor: pointer;
-    overflow: hidden;
-  
-    
     & h3{
       white-space: nowrap;
       overflow: hidden;
@@ -102,7 +89,7 @@
       width: 100%;
     }
     & p{
-      white-space: nowrap;;
+      white-space: nowrap;
       margin-bottom: 10px;
       width: 100%;
       grid-column: 1 / 2;
@@ -112,6 +99,8 @@
     }
 
   }
+
+  
 
 .block__menutext{
   width: 100%;

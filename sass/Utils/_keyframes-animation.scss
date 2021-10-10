@@ -18,15 +18,12 @@
   }
   50%{
     transform: scale(3);
-    
-  }
-  80%{
-    transform: scale(1);
     width:  20%;
   }
+ 
   100%{
     transform: scale(1);
-    width: 40%;
+    width: 42%;
   
   }
 }
@@ -35,7 +32,7 @@
     transform: rotateZ(0);
   }
   100%{
-    transform: rotateZ(1080deg);
+    transform: rotateZ(1440deg);
   }
 }
 /* les animation de mes coeurs */
@@ -75,6 +72,7 @@
   100%{
     opacity: 1;
     transform: translateY(0);
+
   }
 }
 /*----------------------------------------------------------------------------------------------------------------
@@ -91,7 +89,7 @@
 }
 /*l'animation de deux svg a l'interieur de block*/
 .couvert{
-  animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.70) forwards 0.4s;
+  animation: rotation__couvert 1.9s cubic-bezier(0.2, 1.6, 0.5, 1.70) forwards 0.4s;
 }
 #loader{
   animation: duration__loader 3s step-end forwards;
@@ -104,22 +102,71 @@
 
 @for $elementn from 1 through map-get($map: $restaurant-nbelement, $key:la-palette-du-gout){
   .a#{$elementn}{
-    animation: translationY map-get($map: $animation-translation, $key:animation-duration ) map-get($map: $animation-translation, $key:animation-delay)*$elementn;
+    opacity: 0;
+    background-color: white;
+    width: 90%;
+    margin: 2rem auto;
+    @extend %radius-bottom-thumbnail;
+    @extend %radius-top-thumbnail;
+    @extend %ombre;
+    display: flex;
+    padding:0;
+    max-width: 600px;
+    cursor: pointer;
+    overflow: hidden;
+    animation: translationY map-get($map: $animation-translation, $key:animation-duration ) map-get($map: $animation-translation, $key:animation-delay)*$elementn forwards;
+  
   }
 }
 
 @for $elementn from 1 through map-get($map: $restaurant-nbelement, $key:a-la-francaise){
   .a#{$elementn}{
-    animation: translationY map-get($map: $animation-translation, $key:animation-duration ) map-get($map: $animation-translation, $key:animation-delay)*$elementn;
+    opacity: 0;
+    background-color: white;
+    width: 90%;
+    margin: 2rem auto;
+    @extend %radius-bottom-thumbnail;
+    @extend %radius-top-thumbnail;
+    @extend %ombre;
+    display: flex;
+    padding:0;
+    max-width: 600px;
+    cursor: pointer;
+    overflow: hidden;
+    animation: translationY map-get($map: $animation-translation, $key:animation-duration ) map-get($map: $animation-translation, $key:animation-delay)*$elementn forwards;
   }
 }
 @for $elementn from 1 through map-get($map: $restaurant-nbelement, $key:la-note-enchante){
   .a#{$elementn}{
-    animation: translationY map-get($map: $animation-translation, $key:animation-duration ) map-get($map: $animation-translation, $key:animation-delay)*$elementn;
+    opacity: 0;
+    background-color: white;
+    width: 90%;
+    margin: 2rem auto;
+    @extend %radius-bottom-thumbnail;
+    @extend %radius-top-thumbnail;
+    @extend %ombre;
+    display: flex;
+    padding:0;
+    max-width: 600px;
+    cursor: pointer;
+    overflow: hidden;
+    animation: translationY map-get($map: $animation-translation, $key:animation-duration ) map-get($map: $animation-translation, $key:animation-delay)*$elementn forwards;
   }
 }
 @for $elementn from 1 through map-get($map: $restaurant-nbelement, $key:le-delice-des-sens){
   .a#{$elementn}{
-    animation: translationY map-get($map: $animation-translation, $key:animation-duration ) map-get($map: $animation-translation, $key:animation-delay)*$elementn;
+    opacity: 0;
+    background-color: white;
+    width: 90%;
+    margin: 2rem auto;
+    @extend %radius-bottom-thumbnail;
+    @extend %radius-top-thumbnail;
+    @extend %ombre;
+    display: flex;
+    padding:0;
+    max-width: 600px;
+    cursor: pointer;
+    overflow: hidden;
+    animation: translationY map-get($map: $animation-translation, $key:animation-duration ) map-get($map: $animation-translation, $key:animation-delay)*$elementn forwards;
   }
 }

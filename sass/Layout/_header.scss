@@ -11,6 +11,7 @@ Aucun breakpoint necessaire*/
   margin: auto;
   padding: 10px 0;
   align-items: center;
+  & a{margin-left:10px;}
   & .hprojet__img{
     grid-column: 2 / 3;
     margin: auto;
