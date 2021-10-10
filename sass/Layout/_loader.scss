@@ -2,25 +2,24 @@
 
 #loader{
   display: flex;
-  justify-content:center;
-  align-items: center;
+  align-items:center;
+  justify-content: center;
   position:fixed;
   width: 100%;
   height: 100%;
   z-index:1;
+  padding: 10% 0 ;
   
 }
 /*Les tailles de ma div qui est animer */
 
 #block{
   display: flex;
-  align-items: center;
-  
-  width: 100px;
-  height: 60px;
+  width: 70px;
+  height: 40px;
   @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
-    width: 200px;
-    height: 150px;
+    width: 170px;
+    height: 140px;
    
   }
 }
@@ -49,9 +48,10 @@
 
   }
   & .couvert{
+    display:flex ;
     width:100%;
     height: 100%;
-    
+    justify-content: center;
   & img{
       
       height: 100%;
@@ -59,7 +59,9 @@
   }
 
   & #tour{
+    display: flex;
     text-align: center;
+    width: 170%;
     
       & img{
       height: 100%;

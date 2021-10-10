@@ -8994,25 +8994,25 @@ i:not(.flist__icon) {
 /* Ma div loader par dessus mon body */
 #loader {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: 1;
+  padding: 10% 0;
 }
 
 /*Les tailles de ma div qui est animer */
 #block {
   display: flex;
-  align-items: center;
-  width: 100px;
-  height: 60px;
+  width: 70px;
+  height: 40px;
 }
 @media screen and (min-width: 800px) {
   #block {
-    width: 200px;
-    height: 150px;
+    width: 170px;
+    height: 140px;
   }
 }
 
@@ -9040,14 +9040,18 @@ i:not(.flist__icon) {
   }
 }
 .loader__animation .couvert {
+  display: flex;
   width: 100%;
   height: 100%;
+  justify-content: center;
 }
 .loader__animation .couvert img {
   height: 100%;
 }
 .loader__animation #tour {
+  display: flex;
   text-align: center;
+  width: 170%;
 }
 .loader__animation #tour img {
   height: 100%;
@@ -9547,8 +9551,9 @@ permet également d'actionner l'animation rotation-icone*/
     background-color: rgba(255, 255, 255, 0.8);
   }
   100% {
-    z-index: -3;
+    z-index: -5;
     background-color: transparent;
+    opacity: 0;
   }
 }
 @keyframes duration__loader__animation {
@@ -9560,7 +9565,7 @@ permet également d'actionner l'animation rotation-icone*/
   }
   80% {
     transform: scale(1);
-    width: 30%;
+    width: 20%;
   }
   100% {
     transform: scale(1);
@@ -9615,10 +9620,6 @@ permet également d'actionner l'animation rotation-icone*/
 ----------------------- Mes animations ---------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------*/
 /*Mon loader dans sont ensemble.*/
-#loader {
-  animation: duration__loader 3s step-end forwards;
-}
-
 /*Mon animation du block contient 2 svg et 1 png*/
 #block {
   animation: duration__loader__animation 2.2s forwards linear 0.4s;
@@ -9627,6 +9628,10 @@ permet également d'actionner l'animation rotation-icone*/
 /*l'animation de deux svg a l'interieur de block*/
 .couvert {
   animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.7) forwards 0.4s;
+}
+
+#loader {
+  animation: duration__loader 3s step-end forwards;
 }
 
 /*boucle pour une meilleur maintenance de l'animation de translation y */

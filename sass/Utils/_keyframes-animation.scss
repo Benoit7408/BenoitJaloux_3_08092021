@@ -7,8 +7,9 @@
     
   }
   100%{
-   z-index: -3;
+   z-index: -5;
    background-color: transparent;
+   opacity: 0;
   }
 }
 @keyframes duration__loader__animation{
@@ -21,11 +22,12 @@
   }
   80%{
     transform: scale(1);
-    width:  30%;
+    width:  20%;
   }
   100%{
     transform: scale(1);
     width: 40%;
+  
   }
 }
 @keyframes rotation__couvert{
@@ -82,9 +84,6 @@
 
 
 /*Mon loader dans sont ensemble.*/
-#loader{
-  animation: duration__loader 3s step-end forwards;
-}
 
 /*Mon animation du block contient 2 svg et 1 png*/
 #block{
@@ -93,6 +92,10 @@
 /*l'animation de deux svg a l'interieur de block*/
 .couvert{
   animation: rotation__couvert 1.5s cubic-bezier(0.2, 1.6, 0.5, 1.70) forwards 0.4s;
+}
+#loader{
+  animation: duration__loader 3s step-end forwards;
+  
 }
 
 
