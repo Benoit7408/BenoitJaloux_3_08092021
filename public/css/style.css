@@ -9618,7 +9618,7 @@ permet également d'actionner l'animation rotation-icone*/
 }
 
 .loader__animation {
-  animation: ombre-animation 2s linear;
+  animation: ombre-animation 2.2s ease-in-out;
 }
 
 /*l'animation de deux svg a l'interieur de block*/
