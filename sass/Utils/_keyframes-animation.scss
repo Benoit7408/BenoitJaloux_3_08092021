@@ -18,21 +18,28 @@
   }
   50%{
     transform: scale(2);
-    width: 20%;
+    
   }
- 
+  70%{
+    transform: scale(2);
+    width: 30%;
+    height: 20%;
+  }
   100%{
     transform: scale(1);
-    width: 40%;
+    width: 30%;
+    height: 5%;
   }
 }
 @keyframes rotation__couvert{
   0%{
     transform: rotateZ(0);
+    
   }
+  
   100%{
     transform: rotateZ(1440deg);
-    height: 200%;
+   
   }
 }
 /* les animation de mes coeurs */
