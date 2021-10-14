@@ -18,17 +18,11 @@
   }
   50%{
     transform: scale(2);
-    
   }
-  70%{
-    transform: scale(2);
-    width: 30%;
-    height: 20%;
-  }
+ 
   100%{
     transform: scale(1);
-    width: 30%;
-    height: 5%;
+    width: 45%;
   }
 }
 @keyframes rotation__couvert{
@@ -92,7 +86,7 @@
 
 /*Mon animation du block contient 2 svg et 1 png*/
 #block{
-  animation:duration__loader__animation 2s forwards linear 0.2s;
+  animation:duration__loader__animation 2s forwards linear  0.2s;
 }
 /*l'animation de deux svg a l'interieur de block*/
 .couvert{

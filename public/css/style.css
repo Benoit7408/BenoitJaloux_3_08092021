@@ -9006,8 +9006,8 @@ i:not(.flist__icon) {
 /*Les tailles de ma div qui est animer */
 #block {
   display: flex;
-  width: 70px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 }
 
 /*Les élements interieur graphique ou de placements de mon animation */
@@ -9554,15 +9554,9 @@ permet également d'actionner l'animation rotation-icone*/
   50% {
     transform: scale(2);
   }
-  70% {
-    transform: scale(2);
-    width: 30%;
-    height: 20%;
-  }
   100% {
     transform: scale(1);
-    width: 30%;
-    height: 5%;
+    width: 45%;
   }
 }
 @keyframes rotation__couvert {
