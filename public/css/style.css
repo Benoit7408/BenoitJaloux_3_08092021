@@ -9006,8 +9006,8 @@ i:not(.flist__icon) {
 /*Les tailles de ma div qui est animer */
 #block {
   display: flex;
-  width: 60px;
-  height: 60px;
+  width: 120px;
+  height: 120px;
 }
 
 /*Les élements interieur graphique ou de placements de mon animation */
@@ -9026,17 +9026,19 @@ i:not(.flist__icon) {
 }
 .loader__animation .couvert {
   display: flex;
-  width: 100%;
+  width: 30%;
   height: 100%;
   justify-content: center;
+  align-items: center;
 }
 .loader__animation .couvert img {
-  height: 100%;
+  height: 70%;
 }
 .loader__animation #tour {
   display: flex;
   justify-content: center;
-  width: 400%;
+  width: 70%;
+  height: 100%;
 }
 @media screen and (min-width: 800px) {
   .loader__animation #tour {
@@ -9044,7 +9046,7 @@ i:not(.flist__icon) {
   }
 }
 .loader__animation #tour img {
-  width: 80%;
+  width: 100%;
 }
 
 /*le placement de mes elements du header pour toutes les pages
@@ -9549,7 +9551,17 @@ permet également d'actionner l'animation rotation-icone*/
   }
   100% {
     transform: scale(1);
-    width: 45%;
+  }
+}
+@keyframes ombre-animation {
+  0% {
+    box-shadow: 0 0 0 0px black;
+  }
+  50% {
+    box-shadow: 0px 0px 80px black;
+  }
+  100% {
+    box-shadow: 0 0 0 black;
   }
 }
 @keyframes rotation__couvert {
@@ -9602,7 +9614,11 @@ permet également d'actionner l'animation rotation-icone*/
 /*Mon loader dans sont ensemble.*/
 /*Mon animation du block contient 2 svg et 1 png*/
 #block {
-  animation: duration__loader__animation 2s forwards linear 0.2s;
+  animation: duration__loader__animation 2s linear forwards 0.2s;
+}
+
+.loader__animation {
+  animation: ombre-animation 2s linear;
 }
 
 /*l'animation de deux svg a l'interieur de block*/

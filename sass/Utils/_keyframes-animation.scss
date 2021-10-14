@@ -15,20 +15,34 @@
 @keyframes duration__loader__animation{
   0%{
     transform: scale(1);
+   
   }
   50%{
     transform: scale(2);
   }
- 
   100%{
     transform: scale(1);
-    width: 45%;
+    
   }
 }
+
+@keyframes ombre-animation {
+  0%{
+    box-shadow: 0 0 0 0px black;
+  }
+ 
+  50%{
+    box-shadow: 0px 0px  80px black ;
+  }
+  
+  100%{
+    box-shadow: 0 0 0 black;
+  }
+}
+
 @keyframes rotation__couvert{
   0%{
     transform: rotateZ(0);
-    
   }
   
   100%{
@@ -86,7 +100,12 @@
 
 /*Mon animation du block contient 2 svg et 1 png*/
 #block{
-  animation:duration__loader__animation 2s forwards linear  0.2s;
+  
+  animation:duration__loader__animation 2s linear forwards 0.2s;
+}
+
+.loader__animation{
+animation: ombre-animation 2s linear;
 }
 /*l'animation de deux svg a l'interieur de block*/
 .couvert{
