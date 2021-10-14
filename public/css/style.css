@@ -9064,6 +9064,11 @@ Aucun breakpoint necessaire*/
 .hprojet a {
   margin-left: 10px;
 }
+.hprojet .hprojet__h1 {
+  grid-column: 2/3;
+  margin: auto;
+  font-family: "Shrikhand";
+}
 .hprojet .hprojet__img {
   grid-column: 2/3;
   margin: auto;
