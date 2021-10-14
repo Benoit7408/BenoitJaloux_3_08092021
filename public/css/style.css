@@ -9024,15 +9024,6 @@ i:not(.flist__icon) {
   border-bottom-color: red;
   border-radius: 50%;
 }
-@media screen and (min-width: 800px) {
-  .loader__animation {
-    border: 10px solid;
-    border-top-color: blue;
-    border-left-color: white;
-    border-right-color: white;
-    border-bottom-color: red;
-  }
-}
 .loader__animation .couvert {
   display: flex;
   width: 100%;
@@ -9145,11 +9136,12 @@ tablette, pas de breakpoint desktop necessaire */
 }
 .restaurants__thumbnail figcaption .restaurants__heart {
   display: flex;
-  width: 85%;
+  width: max-content;
   height: 100%;
   text-align: center;
   align-items: center;
   justify-content: flex-end;
+  margin: 0 0 0 85%;
 }
 .restaurants__thumbnail figcaption .restaurants__heart .heart__1 {
   position: absolute;
@@ -9377,11 +9369,12 @@ footer ul .flist .flist__text {
 
 .restaurants__heart {
   display: flex;
-  width: 85%;
+  width: max-content;
   height: 100%;
   text-align: center;
   align-items: center;
   justify-content: flex-end;
+  margin: 0 0 0 85%;
 }
 .restaurants__heart .heart__1 {
   position: absolute;
