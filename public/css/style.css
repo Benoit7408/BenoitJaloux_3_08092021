@@ -9007,13 +9007,7 @@ i:not(.flist__icon) {
 #block {
   display: flex;
   width: 70px;
-  height: 40px;
-}
-@media screen and (min-width: 1200px) {
-  #block {
-    width: 170px;
-    height: 140px;
-  }
+  height: 30px;
 }
 
 /*Les élements interieur graphique ou de placements de mon animation */
@@ -9032,7 +9026,7 @@ i:not(.flist__icon) {
 }
 @media screen and (min-width: 800px) {
   .loader__animation {
-    border: 20px solid;
+    border: 10px solid;
     border-top-color: blue;
     border-left-color: white;
     border-right-color: white;
@@ -9050,12 +9044,16 @@ i:not(.flist__icon) {
 }
 .loader__animation #tour {
   display: flex;
-  text-align: center;
-  width: 170%;
+  justify-content: center;
+  width: 400%;
+}
+@media screen and (min-width: 800px) {
+  .loader__animation #tour {
+    width: 100%;
+  }
 }
 .loader__animation #tour img {
-  height: 100%;
-  width: 100%;
+  width: 80%;
 }
 
 /*le placement de mes elements du header pour toutes les pages
@@ -9554,12 +9552,12 @@ permet également d'actionner l'animation rotation-icone*/
     transform: scale(1);
   }
   50% {
-    transform: scale(3);
+    transform: scale(2);
     width: 20%;
   }
   100% {
     transform: scale(1);
-    width: 42%;
+    width: 40%;
   }
 }
 @keyframes rotation__couvert {
@@ -9568,6 +9566,7 @@ permet également d'actionner l'animation rotation-icone*/
   }
   100% {
     transform: rotateZ(1440deg);
+    height: 200%;
   }
 }
 /* les animation de mes coeurs */
@@ -9612,12 +9611,12 @@ permet également d'actionner l'animation rotation-icone*/
 /*Mon loader dans sont ensemble.*/
 /*Mon animation du block contient 2 svg et 1 png*/
 #block {
-  animation: duration__loader__animation 2.2s forwards linear 0.4s;
+  animation: duration__loader__animation 2s forwards linear 0.2s;
 }
 
 /*l'animation de deux svg a l'interieur de block*/
 .couvert {
-  animation: rotation__couvert 1.9s cubic-bezier(0.2, 1.6, 0.5, 1.7) forwards 0.4s;
+  animation: rotation__couvert 2.1s cubic-bezier(0.2, 1.6, 0.5, 1.8) forwards 0.1s;
 }
 
 #loader {

@@ -17,14 +17,13 @@
     transform: scale(1);
   }
   50%{
-    transform: scale(3);
-    width:  20%;
+    transform: scale(2);
+    width: 20%;
   }
  
   100%{
     transform: scale(1);
-    width: 42%;
-  
+    width: 40%;
   }
 }
 @keyframes rotation__couvert{
@@ -33,6 +32,7 @@
   }
   100%{
     transform: rotateZ(1440deg);
+    height: 200%;
   }
 }
 /* les animation de mes coeurs */
@@ -85,11 +85,11 @@
 
 /*Mon animation du block contient 2 svg et 1 png*/
 #block{
-  animation:duration__loader__animation 2.2s forwards linear 0.4s;
+  animation:duration__loader__animation 2s forwards linear 0.2s;
 }
 /*l'animation de deux svg a l'interieur de block*/
 .couvert{
-  animation: rotation__couvert 1.9s cubic-bezier(0.2, 1.6, 0.5, 1.70) forwards 0.4s;
+  animation: rotation__couvert 2.1s cubic-bezier(0.2, 1.6, 0.5, 1.80) forwards 0.1s;
 }
 #loader{
   animation: duration__loader 3s step-end forwards;

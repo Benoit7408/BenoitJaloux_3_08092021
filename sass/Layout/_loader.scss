@@ -16,12 +16,8 @@
 #block{
   display: flex;
   width: 70px;
-  height: 40px;
-  @media screen and (min-width:(map-get($breakpoints , desktop ))){
-    width: 170px;
-    height: 140px;
-   
-  }
+  height: 30px;
+ 
 }
 
 /*Les élements interieur graphique ou de placements de mon animation */
@@ -40,7 +36,7 @@
   border-radius: 50%;
 
   @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
-    border: 20px solid;
+    border: 10px solid;
     border-top-color: blue;
     border-left-color: white;
     border-right-color: white;
@@ -53,19 +49,18 @@
     height: 100%;
     justify-content: center;
   & img{
-      
       height: 100%;
     }  
   }
 
   & #tour{
     display: flex;
-    text-align: center;
-    width: 170%;
-    
+    justify-content: center;
+    width: 400%;
+    @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
+      width: 100%;}
       & img{
-      height: 100%;
-      width: 100%;
+      width: 80%;
       }
     }
 }
