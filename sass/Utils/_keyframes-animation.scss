@@ -15,14 +15,12 @@
 @keyframes duration__loader__animation{
   0%{
     transform: scale(1);
-   
   }
   50%{
     transform: scale(2);
   }
   100%{
     transform: scale(1);
-    
   }
 }
 
@@ -30,11 +28,9 @@
   0%{
     box-shadow: 0 0 0 0px black;
   }
- 
   50%{
     box-shadow: 0px 0px  80px black ;
   }
-  
   100%{
     box-shadow: 0 0 0 black;
   }
@@ -44,10 +40,8 @@
   0%{
     transform: rotateZ(0);
   }
-  
   100%{
     transform: rotateZ(1440deg);
-   
   }
 }
 /* les animation de mes coeurs */
@@ -61,7 +55,7 @@
     }
   100%{
     opacity: 1;
-      }
+    }
 }
 
 /* Mon icone à l'interieur de la translation, le hover est sur le meme block que la translation */
@@ -83,7 +77,6 @@
     opacity: 0;
     transform: translateY(30px);
   }
-  
   100%{
     opacity: 1;
     transform: translateY(0);
@@ -100,7 +93,6 @@
 
 /*Mon animation du block contient 2 svg et 1 png*/
 #block{
-  
   animation:duration__loader__animation 2s linear forwards 0.2s;
 }
 
@@ -113,12 +105,9 @@ animation: ombre-animation 2.2s ease-in-out;
 }
 #loader{
   animation: duration__loader 3s step-end forwards;
-  
 }
 
-
 /*boucle pour une meilleur maintenance de l'animation de translation y */
-
 
 @for $elementn from 1 through map-get($map: $restaurant-nbelement, $key:la-palette-du-gout){
   .a#{$elementn}{
