@@ -13,7 +13,7 @@ tablette, pas de breakpoint desktop necessaire */
     width: 100%;
   }
     & .all__restaurants__header{
-      width: 95%;
+      width: 96%;
       @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
         grid-column: 1 /span 2;
       }
@@ -25,7 +25,7 @@ tablette, pas de breakpoint desktop necessaire */
       flex-wrap: wrap;
       margin:20px 0;
       height: 200px;
-      width: 95%;
+      width: 94%;
       @media screen and (min-width:(map-get($breakpoints , tablet-portrait ))){
         height: 30vh;
         width: 90%;

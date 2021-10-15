@@ -25,11 +25,10 @@
 /* Mon hover sur les coeurs --- page index et restaurant ---*/
 
 .restaurants__heart :hover{
-  animation-name: heart;
+  animation: heart 1.7s  ease-in-out;
   background: linear-gradient(280deg, $couleur-secondaire, $couleur-primaire);
   background-clip: text;
   -webkit-background-clip: text;
-  animation-duration: 2s;
   cursor: pointer;
 }
 

@@ -9092,7 +9092,7 @@ tablette, pas de breakpoint desktop necessaire */
   }
 }
 .all__restaurants .all__restaurants__header {
-  width: 95%;
+  width: 96%;
 }
 @media screen and (min-width: 800px) {
   .all__restaurants .all__restaurants__header {
@@ -9105,7 +9105,7 @@ tablette, pas de breakpoint desktop necessaire */
   flex-wrap: wrap;
   margin: 20px 0;
   height: 200px;
-  width: 95%;
+  width: 94%;
 }
 @media screen and (min-width: 800px) {
   .all__restaurants .restaurants {
@@ -9180,8 +9180,14 @@ breakpoint tablette et desktop sur stage block
   background-color: white;
 }
 .stage .stage__header {
-  width: 95%;
+  width: 90%;
   margin: 1rem;
+}
+@media screen and (min-width: 800px) {
+  .stage .stage__header {
+    width: 95%;
+    margin: 1rem;
+  }
 }
 
 .stage__block {
@@ -9210,13 +9216,13 @@ breakpoint tablette et desktop sur stage block
   align-items: center;
   text-align: center;
   padding: 1rem 2rem 1rem 1rem;
-  margin: 1rem;
+  margin: 1rem 1rem 1rem 2rem;
   border-radius: 15px;
   background-color: #f6f6f6;
   position: relative;
   justify-content: space-around;
   max-width: 380px;
-  width: 70%;
+  width: 75%;
 }
 @media screen and (min-width: 800px) {
   .stage__block__btn {
@@ -9499,11 +9505,10 @@ footer ul .flist .flist__text {
 
 /* Mon hover sur les coeurs --- page index et restaurant ---*/
 .restaurants__heart :hover {
-  animation-name: heart;
+  animation: heart 1.7s ease-in-out;
   background: linear-gradient(280deg, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
-  animation-duration: 2s;
   cursor: pointer;
 }
 
