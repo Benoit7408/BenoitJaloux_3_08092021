@@ -25,7 +25,7 @@
 /* Mon hover sur les coeurs --- page index et restaurant ---*/
 
 .restaurants__heart :hover{
-  animation: heart 1.7s  ease-in-out;
+  animation: heart 1s  linear;
   background: linear-gradient(280deg, $couleur-secondaire, $couleur-primaire);
   background-clip: text;
   -webkit-background-clip: text;
@@ -40,7 +40,7 @@ permet également d'actionner l'animation rotation-icone*/
     margin: 0 0 0 0;
   }
   &:hover .fa-check-circle {
-  animation: rotation-icone 1.2s;
+  animation: rotation-icone 1s;
   }
 }
 
